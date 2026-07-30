@@ -1,0 +1,117 @@
+{
+  "rele": {
+    "modelo": "AREVA MICOM P142",
+    "RTC": 60,
+    "RTP": 120,
+    "51": {
+      "sec": 6.0,
+      "prim_A": 360.0,
+      "TMS": 0.1,
+      "curva": "IEC VI"
+    },
+    "50": {
+      "sec": 36.0,
+      "prim_A": 2160.0,
+      "delay_s": 0.0
+    },
+    "51N": {
+      "sec": 2.0,
+      "prim_A": 120.0,
+      "TMS": 0.15,
+      "curva": "IEC VI"
+    },
+    "50N": {
+      "sec": 20.0,
+      "prim_A": 1200.0
+    },
+    "79": "15/30 s, reset 60 s"
+  },
+  "demanda": {
+    "I_max_A": 70.41,
+    "I_min_A": 26.35,
+    "I_9": 61.05,
+    "I_12": 70.41,
+    "I_15": 68.55
+  },
+  "generador": {
+    "I_nom_LV_A": 314.92,
+    "I_nom_MT_A": 5.249,
+    "I_sc_LV_A": 472.38,
+    "I_sc_MT_A": 7.873,
+    "I_trafo_HV_A": 6.561
+  },
+  "breakers_LV": {
+    "inversor_A": 200.0,
+    "acometida_A": 400.0,
+    "inv_MT_A": 3.333,
+    "acom_MT_A": 6.667,
+    "acom_mag_MT_A": 66.67
+  },
+  "cortocircuito": {
+    "Ik3_SE_kA": 27.382,
+    "Ik3_POC_kA": 5.12027,
+    "Ik1_SE_kA": 30.083,
+    "Ik1_POC_kA": 3.14984,
+    "Ik_thru_trafo_kA": 0.134,
+    "Ik_LV_falla_A": 8033.6
+  },
+  "evaluacion": {
+    "margen_51_vs_Iload": 5.11,
+    "criterio_margen_pickup": ">= 1.5 (recomendado)",
+    "cumple_margen_pickup": true,
+    "I_gen_MT_vs_51": 0.0146,
+    "exportacion_no_dispara_51": true,
+    "t51_en_Ik3_POC_s": 0.1021,
+    "t51_en_2x_s": 1.35,
+    "opera_50_en_POC": true,
+    "opera_50N_en_POC_1ph": true,
+    "t51N_en_Ik1_POC_s": 0.0802,
+    "t_breaker_acom_falla_LV_s": 0.02,
+    "t_51_falla_LV_ref_MT_s": null,
+    "delta_t_selectividad_s": null,
+    "selectividad_OK": false,
+    "aporte_SSFV_pct_Ik3_POC": 0.1538
+  },
+  "tiempos_51": {
+    "I_load_max": {
+      "I_A": 70.41,
+      "t_51_s": null,
+      "opera_50": false
+    },
+    "1.5x_I_load": {
+      "I_A": 105.615,
+      "t_51_s": null,
+      "opera_50": false
+    },
+    "2x_I51": {
+      "I_A": 720.0,
+      "t_51_s": 1.35,
+      "opera_50": false
+    },
+    "5x_I51": {
+      "I_A": 1800.0,
+      "t_51_s": 0.3375,
+      "opera_50": false
+    },
+    "10x_I51": {
+      "I_A": 3600.0,
+      "t_51_s": 0.15000000000000002,
+      "opera_50": true
+    },
+    "Ik3_POC_A": {
+      "I_A": 5120.2699999999995,
+      "t_51_s": 0.1020950492304008,
+      "opera_50": true
+    },
+    "Ik3_SE_A": {
+      "I_A": 27382.0,
+      "t_51_s": 0.02,
+      "opera_50": true
+    },
+    "Ik1_POC_A": {
+      "I_A": 3149.84,
+      "t_51_s": 0.1742035385541823,
+      "opera_50": true
+    }
+  }
+}

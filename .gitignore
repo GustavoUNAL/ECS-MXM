@@ -1,0 +1,14 @@
+.venv/
+.mplconfig/
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.pyc
+.Python
+proyecto/*.aux
+proyecto/*.log
+proyecto/*.toc
+proyecto/*.lof
+proyecto/*.lot
+proyecto/*.out
+proyecto/*.synctex.gz

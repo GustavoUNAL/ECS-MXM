@@ -1,0 +1,268 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║         INSTRUCCIONES PARA SUBIR EL PROYECTO A OVERLEAF                     ║
+║      Estudio de Conexión Simplificado - Proyecto Solar MAS X MENOS          ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+CONTENIDO DEL PROYECTO
+═══════════════════════════════════════════════════════════════════════════════
+
+El proyecto incluye los siguientes archivos:
+
+📁 Archivos Principales:
+   ├── main.tex (archivo principal - COMIENZA AQUÍ)
+   └── README.md (instrucciones generales)
+
+📁 Carpeta: secciones/
+   ├── 01_introduccion.tex
+   ├── 02_antecedentes.tex
+   ├── 03_informacion_general.tex
+   ├── 04_metodologia.tex
+   ├── 05_resultados.tex
+   └── 06_recomendaciones.tex
+
+📁 Carpeta: anexos/
+   └── anexo_A.tex
+
+
+MÉTODO 1: DESCARGA E IMPORTACIÓN RÁPIDA (RECOMENDADO)
+═══════════════════════════════════════════════════════════════════════════════
+
+Paso 1: DESCARGAR LOS ARCHIVOS
+   ✓ Todos los archivos .tex han sido creados
+   ✓ Debes descargarlos en tu computadora
+
+Paso 2: CREAR ESTRUCTURA DE CARPETAS
+   En tu computadora, crea la siguiente estructura:
+   
+   mi_proyecto_solar/
+   ├── main.tex
+   ├── README.md
+   ├── INSTRUCCIONES_OVERLEAF.txt
+   ├── secciones/
+   │   ├── 01_introduccion.tex
+   │   ├── 02_antecedentes.tex
+   │   ├── 03_informacion_general.tex
+   │   ├── 04_metodologia.tex
+   │   ├── 05_resultados.tex
+   │   └── 06_recomendaciones.tex
+   └── anexos/
+       └── anexo_A.tex
+
+Paso 3: COMPRIMIR LA CARPETA
+   ✓ Click derecho en "mi_proyecto_solar"
+   ✓ Selecciona "Comprimir" o "Send to > Compressed folder"
+   ✓ Se creará "mi_proyecto_solar.zip"
+
+Paso 4: SUBIR A OVERLEAF
+   1. Entra a www.overleaf.com
+   2. Inicia sesión (o crea una cuenta si no tienes)
+   3. Haz clic en "New Project"
+   4. Selecciona "Upload Project"
+   5. Arrastra el archivo ZIP o haz clic para seleccionar
+   6. Espera a que termine la carga (progreso en pantalla)
+   7. Automáticamente se abrirá el proyecto
+
+Paso 5: COMPILAR
+   1. En Overleaf, asegúrate que main.tex está abierto
+   2. Haz clic en "Recompile" (botón azul a la derecha)
+   3. Espera 30-60 segundos
+   4. El PDF aparecerá en la derecha
+
+
+MÉTODO 2: CREACIÓN MANUAL EN OVERLEAF
+═══════════════════════════════════════════════════════════════════════════════
+
+Paso 1: CREAR NUEVO PROYECTO VACÍO
+   1. Entra a www.overleaf.com
+   2. Haz clic en "New Project"
+   3. Selecciona "Blank Project"
+   4. Nombre: "Estudio Solar MAS X MENOS"
+   5. Haz clic en "Create"
+
+Paso 2: CREAR ESTRUCTURA DE CARPETAS
+   En Overleaf, haz clic en el ícono de carpeta:
+   
+   ✓ New Folder: "secciones"
+   ✓ New Folder: "anexos"
+
+Paso 3: SUBIR ARCHIVOS PRINCIPALES
+   1. Haz clic en "Upload" (arriba de la lista de archivos)
+   2. Sube: main.tex
+   3. Abre main.tex y reemplaza el contenido vacío
+
+Paso 4: AGREGAR ARCHIVOS DE SECCIONES
+   1. Haz doble clic en la carpeta "secciones"
+   2. Haz clic en "New file"
+   3. Nombre: "01_introduccion.tex"
+   4. Copia y pega el contenido del archivo
+   5. Repite para cada archivo de sección:
+      - 02_antecedentes.tex
+      - 03_informacion_general.tex
+      - 04_metodologia.tex
+      - 05_resultados.tex
+      - 06_recomendaciones.tex
+
+Paso 5: AGREGAR ARCHIVO DE ANEXOS
+   1. Haz doble clic en la carpeta "anexos"
+   2. Haz clic en "New file"
+   3. Nombre: "anexo_A.tex"
+   4. Copia y pega el contenido
+
+Paso 6: COMPILAR
+   1. Selecciona main.tex
+   2. Haz clic en "Recompile"
+   3. El documento PDF se generará
+
+
+INFORMACIÓN IMPORTANTE
+═══════════════════════════════════════════════════════════════════════════════
+
+⚠️  ARCHIVO PRINCIPAL: main.tex
+    Este es el único archivo que necesitas compilar.
+    Los otros archivos se incluyen automáticamente.
+
+🔧 COMPILADOR: Usa pdfLaTeX (por defecto en Overleaf)
+
+📝 IDIOMA: El documento está en español
+    - Soporta acentos: á, é, í, ó, ú, ñ
+    - Configurado con \usepackage[spanish]{babel}
+
+📊 CONTENIDO DEL DOCUMENTO:
+    - Portada profesional
+    - Tabla de contenidos automática
+    - 6 capítulos principales
+    - Anexos técnicos
+    - Bibliografía
+    - Múltiples tablas y figuras
+
+⏱️  TIEMPO DE COMPILACIÓN: 30-60 segundos
+
+
+SOLUCIÓN DE PROBLEMAS
+═══════════════════════════════════════════════════════════════════════════════
+
+❌ PROBLEMA: "File not found"
+   ✓ Verifica que main.tex está en la raíz
+   ✓ Verifica que las carpetas "secciones" y "anexos" existen
+   ✓ Revisa las rutas en los comandos \include{}
+
+❌ PROBLEMA: Caracteres extraños (acentos no aparecen)
+   ✓ En Menu (arriba a la izquierda)
+   ✓ Settings
+   ✓ Compiler: Cambia a "XeLaTeX"
+
+❌ PROBLEMA: El PDF tarda demasiado o no compila
+   ✓ Haz clic en "Logs and output files"
+   ✓ Busca mensajes de error en rojo
+   ✓ Intenta con "Recompile from scratch"
+
+❌ PROBLEMA: No puedo subir el ZIP
+   ✓ Asegúrate que el archivo es .zip
+   ✓ El tamaño debe ser menor a 50 MB
+   ✓ Intenta fragmentar el proyecto
+
+
+CARACTERÍSTICAS DEL DOCUMENTO
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ Portada profesional con:
+   - Título del proyecto
+   - Logo y empresa
+   - Tabla de revisiones
+   - Fechas y responsables
+
+✅ Tabla de contenidos automática
+
+✅ Lista de figuras y tablas
+
+✅ 6 Capítulos completos:
+   1. Introducción y resumen ejecutivo
+   2. Antecedentes y alcance del proyecto
+   3. Información general técnica
+   4. Metodología de análisis
+   5. Resultados y análisis
+   6. Recomendaciones y conclusiones
+
+✅ Múltiples tablas con datos:
+   - Parámetros técnicos
+   - Resultados de flujo de carga
+   - Análisis de cortocircuito
+   - Pérdidas del sistema
+
+✅ Referencias y bibliografía
+
+✅ Anexos técnicos
+
+✅ Formateo profesional:
+   - Márgenes calibrados
+   - Encabezados y pies
+   - Numeración automática
+   - Índices automáticos
+
+
+PERSONALIZACIONES
+═══════════════════════════════════════════════════════════════════════════════
+
+Para cambiar datos específicos, edita main.tex:
+
+📌 Cambiar título/fecha:
+   Edita la sección PORTADA en main.tex
+
+📌 Cambiar márgenes:
+   Línea: \usepackage[margin=2cm]{geometry}
+   Cambia 2cm a tu valor deseado
+
+📌 Cambiar espaciado entre líneas:
+   Línea: \setstretch{1.15}
+   Cambia 1.15 a: 1.0, 1.5, 2.0, etc.
+
+📌 Cambiar colores:
+   Edita las definiciones de \definecolor
+
+
+EXPORTAR EL DOCUMENTO FINAL
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Una vez compilado, verás el PDF en la derecha
+
+2. Para descargar:
+   ✓ Haz clic en "Download PDF"
+   ✓ Se descargará: main.pdf
+
+3. Para descargar proyecto completo:
+   ✓ Haz clic en Menu (arriba a la izquierda)
+   ✓ Selecciona "Download Source"
+   ✓ Se descarga un ZIP con todos los archivos
+
+
+NOTAS FINALES
+═══════════════════════════════════════════════════════════════════════════════
+
+✓ Este es un template profesional completamente funcional
+✓ Contiene estructura completa con todos los capítulos
+✓ Los datos son ficticios (de demostración)
+✓ Puedes modificar cualquier dato según necesites
+✓ Se puede usar como base para otros proyectos
+✓ Compatible con Overleaf, MiKTeX, TexLive y otros compiladores LaTeX
+
+
+CONTACTO Y SOPORTE
+═══════════════════════════════════════════════════════════════════════════════
+
+Si tienes problemas con LaTeX:
+- Documentación Overleaf: www.overleaf.com/learn
+- Foros LaTeX: reddit.com/r/LaTeX
+- Comunidad: tex.stackexchange.com
+
+Para consultas sobre el documento técnico:
+- COPOWER LTDA
+- Bucaramanga, Santander - Colombia
+- Julio de 2026
+
+
+═══════════════════════════════════════════════════════════════════════════════
+               ¡Felicidades! Ya tienes tu proyecto LaTeX listo.
+═══════════════════════════════════════════════════════════════════════════════
+
+Versión: 1.0
+Última actualización: 29 de Julio de 2026

@@ -1,0 +1,41 @@
+\chapter{Introducción}
+
+Este documento contiene el \textbf{estudio de conexión simplificado} del proyecto solar fotovoltaico que se instalará en el supermercado MAS X MENOS sede Guarín (Bucaramanga, Santander). El análisis evalúa el impacto de la generación sobre el Sistema de Distribución Local (SDL) de ESSA, específicamente sobre el \textbf{circuito 10-502} alimentado desde la subestación Conucos a 13,8~kV.
+
+El estudio se elaboró a partir de la información oficial de red entregada por el operador (archivo \textit{Datos Circuito 10 502 - 2026.xlsx} y diagrama unifilar \textit{CTO 10 502.pdf}), e incluye análisis de flujo de carga, cortocircuito, protecciones y pérdidas técnicas, conforme a la Resolución CREG 030 de 2018 y demás normativa aplicable.
+
+\section{Resumen Ejecutivo}
+
+El supermercado MAS X MENOS sede Guarín contempla la instalación de un sistema fotovoltaico de \textbf{141,6~kWp} (DC) / \textbf{120~kW} (AC), compuesto por 240 paneles JINKO de 590~W y dos inversores SOLIS 60K-LV-5G de 60~kW. La relación DC/AC es de 1,18.
+
+La conexión se realizará en el \textbf{nodo 3272966} del circuito 10-502, mediante un transformador de 150~kVA, 13,2~kV/220~V, grupo Dyn5. La carga del cliente modelada en dicho nodo es de 150~kVA con factor de potencia 0,9 (135~kW).
+
+\begin{table}[H]
+    \centering
+    \caption{Datos clave del proyecto y del punto de conexión}
+    \begin{tabular}{ll}
+    \toprule
+    \textbf{Parámetro} & \textbf{Valor} \\
+    \midrule
+    Proyecto & Solar MAS X MENOS Guarín \\
+    Capacidad DC / AC & 141,6 kWp / 120 kW \\
+    Operador de red & ESSA \\
+    Subestación / circuito & Conucos / 10-502 \\
+    Nivel de tensión & 13,8 kV \\
+    Punto de conexión (POC) & Nodo 3272966 \\
+    Tramo de conexión & Línea 807675 (3272869--3272966A) \\
+    Conductor de conexión & 3F\_15\_CU\_2\_XLPE, 3 m, $I_n=155$~A \\
+    Demanda máxima del circuito & 1,683 MVA (12:00 h, 19/03/2024) \\
+    Equivalente SC trifásico (SE) & 654,49 MVA / 27,38 kA \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+De los resultados se destaca que, para la alternativa de conexión evaluada:
+
+\begin{itemize}
+    \item No se presentan violaciones a los límites de tensión (0,90--1,10~p.u.).
+    \item La cargabilidad de líneas se reduce (consumo local de la generación); el transformador de conexión permanece por debajo del 56\%.
+    \item El aporte de cortocircuito de los inversores es despreciable frente al equivalente de red; no se requieren cambios en las protecciones del circuito.
+    \item Se observa una reducción de pérdidas técnicas de hasta 0,34~kW en las horas de análisis.
+\end{itemize}

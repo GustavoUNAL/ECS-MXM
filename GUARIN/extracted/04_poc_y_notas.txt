@@ -1,0 +1,25 @@
+# PUNTO DE CONEXIÓN AGPE Y NOTAS DEL OR
+# Extraído de Cargas_Demanda_corto columnas O-S
+#================================================================================
+POC_NODO = 3272966
+NOTA = El apoyo donde se conectará el AGPE es el 3272966
+
+HORAS_ANALISIS:
+  09:00 -> S_cabecera = 1.459139 MVA
+  12:00 -> S_cabecera = 1.682856 MVA
+  15:00 -> S_cabecera = 1.638498 MVA
+
+CORTOCIRCUITO EN BARRAJE 13.8 kV S/E CONUCOS:
+  Tipo	Sk_MVA	Ik_kA	Ip_kA	RX
+  Trifasico	654.488	27.382	70.401	0.068
+  Monofasico_a_tierra	239.681	30.083	77.345	0.068
+
+CARGA_EN_POC:
+  Name=730199_LV_LOAD
+  Terminal=3272966
+  S_MVA=0.15
+  FP=0.9
+  P_kW=135.000
+  Q_kVAr=65.383
+  I_LV_A_aprox (si 220V) = 393.65
+  I_MT_A_aprox (13.2kV) = 6.561

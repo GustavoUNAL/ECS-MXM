@@ -1,0 +1,18 @@
+EXTRACCIÓN DE DATOS — CIRCUITO 10-502 (ESSA)
+Fuente: Datos Circuito 10 502 - 2026.xlsx
+
+Archivos:
+  00_indice.txt                     — este índice
+  01_lineas.txt                     — 215 tramos (R,X,In,conductor)
+  02_cargas.txt                     — 51 cargas LV (S, FP, P, Q)
+  03_demanda_horaria.txt            — perfil 24 h cabecera (I, S)
+  04_poc_y_notas.txt                — POC 3272966, SC SE, horas estudio
+  05_protecciones.txt               — ajustes MICOM P142
+  06_ruta_poc.txt                   — tramos hacia POC
+  07_coordinacion_protecciones.txt  — TCC, selectividad y conclusión
+
+Notas clave:
+  POC = 3272966
+  Demanda máx = 1.682856 MVA / 70.41 A @ 12:00
+  Relé = MICOM P142 RTC=60 → 51=360 A, 50=2160 A
+  Selectividad BT/MT = NATURAL (Ik thru trafo ≈134 A < 360 A)

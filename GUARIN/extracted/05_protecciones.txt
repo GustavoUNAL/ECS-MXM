@@ -1,0 +1,40 @@
+# PROTECCIÓN PRINCIPAL CIRCUITO 10-502
+# Fuente: hoja 'Protecciones'
+#================================================================================
+SUBESTACION = CONUCO
+BAHIA = CTO 10502
+TENSION_kV = 13.8
+RTC = 60
+RTP = 120
+FABRICANTE = AREVA
+MODELO = MICOM P142
+SERIAL = 360
+PROTECCIONES = (50), (50N), (51), (51N)
+FUNCION = Sobrecorriente
+TIPO = Protección Principal
+
+[AJUSTES DE FASE]
+Dir = None
+51_pickup_sec_A = 6
+51_dial_TMS = 0.1
+51_curva = IEC VI
+50_1_pickup_sec_A = 36
+50_1_delay_s = 0
+
+[AJUSTES DE TIERRA]
+Dir = None
+51N_pickup_sec_A = 2
+51N_dial_TMS = 0.15
+51N_curva = IEC VI
+50N_pickup_sec_A = 20
+50N_delay_s = (vacío/None)
+
+[RECIERRE]
+79_1_79_2 = 15/30
+Reset_time_s = 60
+
+# CONVERSION A PRIMARIO (Iprim = Isec * RTC)
+51_pickup_prim_A = 360
+50_1_pickup_prim_A = 2160
+51N_pickup_prim_A = 120
+50N_pickup_prim_A = 1200

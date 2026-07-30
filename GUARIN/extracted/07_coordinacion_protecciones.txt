@@ -1,0 +1,108 @@
+# COORDINACIÓN DE PROTECCIONES — AGPE MAS X MENOS GUARÍN
+# Circuito 10-502 / SE Conucos / POC 3272966
+# Fuente de ajustes: Datos Circuito 10 502 - 2026.xlsx / hoja Protecciones
+#==========================================================================================
+
+1. PROTECCIÓN PRINCIPAL DEL CIRCUITO (MICOM P142)
+   SUBESTACION = CONUCO | BAHIA = CTO 10502 | V = 13.8 kV
+   FABRICANTE/MODELO = AREVA / MICOM P142 | SERIAL = 360
+   RTC = 60  →  I_primario = I_secundario × 60
+   RTP = 120
+   FUNCIONES = (50), (50N), (51), (51N) — Sobrecorriente, Protección Principal
+
+   AJUSTES FASE:
+     51  : pickup 6.0 A sec  →  360 A prim  | TMS=0.1 | Curva=IEC VI (Very Inverse)
+     50-1: pickup 36.0 A sec → 2160 A prim  | delay=0.0 s
+
+   AJUSTES TIERRA:
+     51N : pickup 2.0 A sec  →  120 A prim  | TMS=0.15 | Curva=IEC VI
+     50N : pickup 20.0 A sec → 1200 A prim
+
+   RECIERRE 79: 15/30 s | Reset = 60 s
+
+   ECUACIÓN IEC VI:  t = TMS × 13.5 / ((I/Is) − 1)
+
+2. DEMANDA DEL CIRCUITO (base para verificar pickup)
+   Fecha registro cabecera: 2024-03-19 | SE Conucos | 13.8 kV | Campo 10-502
+   Imax = 70.41 A @ 12:00 (S = 1.682856 MVA)
+   Imin = 26.35 A @ 04:00 (S = 0.629870 MVA)
+   I @ 09:00 = 61.05 A | I @ 15:00 = 68.55 A
+
+   Margen pickup 51 / Imax = 360 / 70.41 = 5.11  → CUMPLE (≥ 1.5 recomendado)
+   Margen pickup 51N / Imax = 120 / 70.41 = 1.70 → CUMPLE para residual (carga balanceada)
+
+3. GENERADOR Y TRANSFORMADOR (corrientes referidas a MT 13.2 kV)
+   Pnom AC = 120 kW | Strafo = 150 kVA | Zcc = 4.9 % | Dyn5
+   I_nom generador LV = 314.92 A @ 220 V
+   I_nom generador MT = 5.249 A @ 13.2 kV
+   I_sc inversores LV (1.5×In) = 472.38 A
+   I_sc inversores MT = 7.873 A
+   Aporte SSFV / Ik3_POC = 7.873 / 5120.27 = 0.154 %
+
+   ¿La exportación del AGPE dispara el 51 de cabecera?
+     NO — Igen_MT (5.25 A) << I51 (360 A)
+
+4. PROTECCIONES DEL PROYECTO (BT)
+   Breaker por inversor: 200 A LV (rango 140–200 A) → 3.333 A MT
+   Breaker acometida:    400 A LV (rango 350–500 A) → 6.667 A MT
+   Magnético acometida (≈10×): 4000 A LV → 66.67 A MT
+   Funciones AGPE (Acuerdo CNO 1322): 27, 59, 81U/O, anti-isla — en inversores
+
+5. CORTOCIRCUITOS DE DISEÑO
+   Barraje SE Conucos 13.8 kV:
+     Trifásico:   Sk=654.488 MVA | Ik=27.382 kA | Ip=70.401 kA | R/X=0.068
+     Monofásico:  Sk=239.681 MVA | Ik=30.083 kA | Ip=77.345 kA | R/X=0.068
+   Nodo POC 3272966 (estudio de red):
+     Ik3 = 5.12027 kA | Ik1 = 3.14984 kA
+
+   Impedancia trafo 150 kVA:
+     Zbase = V²/S = 13.2² / 0.15 = 1161.6 Ω
+     Zt = 0.049 × Zbase = 56.918 Ω
+     Ik máximo a través del trafo (falla BT) ≈ 133.9 A referidos a 13.2 kV
+       (≈ 8034 A en el lado 220 V)
+
+6. TIEMPOS DE OPERACIÓN — FUNCIÓN 51 (IEC VI, TMS=0.1, Is=360 A)
+   Condición                 I [A]      t_51 [s]     ¿Opera 50 (2160 A)?
+   I_load_max                 70.41     no arranca   No
+   1.5 × I_load              105.61     no arranca   No
+   2 × I51                   720.00     1.350        No
+   5 × I51                  1800.00     0.338        No
+   10 × I51                 3600.00     0.150        Sí
+   Ik3_POC                  5120.27     0.102        Sí
+   Ik3_SE                  27382.00     0.020        Sí
+   Ik1_POC                  3149.84     0.174        Sí (fase)
+
+7. SELECTIVIDAD BREAKER BT vs RELÉ DE CABECERA
+   Ik a través del trafo (falla BT) ≈ 133.9 A  <  Pickup 51 = 360 A
+   Relación I51 / Ik_thru = 2.69
+
+   CONCLUSIÓN DE SELECTIVIDAD:
+     → La corriente de una falla en el lado BT, vista desde MT, NO alcanza el pickup 51.
+     → El MICOM P142 NO arranca ante fallas internas BT del proyecto.
+     → Selectividad NATURAL y TOTAL respecto al relé de circuito.
+     → Solo operan los breakers BT (inversor / acometida) y protecciones del inversor.
+     → El 50/51 del circuito quedan para fallas en la red MT (POC y aguas arriba).
+
+8. VERIFICACIÓN 50 / 50N EN EL POC
+   Ik3_POC (5120 A) ≥ I50 (2160 A)?   SÍ → función 50 opera (instantánea)
+   Ik1_POC (3150 A) ≥ I50N (1200 A)?  SÍ → función 50N opera
+   t_51N @ Ik1_POC (IEC VI, TMS=0.15, Is=120 A) ≈ 0.080 s
+
+9. CRITERIOS DE ACEPTACIÓN Y RESULTADO
+
+   Criterio                                          Resultado
+   -------------------------------------------------------------------------
+   Pickup 51 ≥ 1.5 × Imax demanda                    CUMPLE (5.11×)
+   Exportación AGPE no dispara 51/50                 CUMPLE
+   Aporte CC del SSFV < 1% de Ik en POC              CUMPLE (0.15%)
+   Selectividad BT vs relé cabecera                  CUMPLE (selectividad natural)
+   50/50N ven fallas MT en POC                       CUMPLE
+   ¿Modificar ajustes MICOM P142?                    NO REQUERIDO
+
+10. CONCLUSIÓN
+   La coordinación de protecciones entre el AGPE Guarín (120 kW) y el circuito 10-502
+   es satisfactoria. No se requieren cambios en los ajustes del relé AREVA MICOM P142.
+   Se recomienda:
+     - Mantener breakers BT en los rangos: inversor 140–200 A; acometida 350–500 A.
+     - Verificar en campo las funciones 27/59/81/anti-isla de los inversores SOLIS.
+     - Coordinar con ESSA cualquier cambio futuro de RTC o de ajustes del circuito.
