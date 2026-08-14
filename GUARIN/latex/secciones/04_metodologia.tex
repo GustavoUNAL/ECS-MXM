@@ -1,0 +1,77 @@
+\chapter{Metodología}
+
+El estudio simplificado de conexión se desarrolló mediante análisis de flujo de carga y de cortocircuito centrados en el nodo 3272966 del circuito 10-502. En las secciones siguientes se describen las fuentes de información empleadas, los criterios de modelado y los límites operativos que sirven de referencia para interpretar los resultados.
+
+\section{Fuentes de Información}
+
+La base de datos del estudio proviene, en lo esencial, de la información oficial entregada por ESSA. El archivo \textit{Datos Circuito 10 502 - 2026.xlsx} concentra los parámetros de 215 líneas, 51 cargas, el perfil horario de demanda y el equivalente de cortocircuito en la subestación. Complementan ese insumo el diagrama unifilar \textit{CTO 10 502.pdf}, las fichas técnicas de los inversores SOLIS~60K-LV-5G y de los módulos JINKO de 590~W, y los datos del transformador de conexión de 150~kVA. La consistencia entre estas fuentes permite reconstruir un modelo representativo del alimentador y del proyecto.
+
+\section{Flujo de Carga}
+
+El análisis de flujo de carga tiene por objeto determinar si, en estado estable, la incorporación del SSFV introduce sobrecargas en líneas o transformadores, o bien viola los límites de tensión establecidos para la operación normal del sistema. Para ello se aplica lo dispuesto en la Resolución CREG~025 de 1995 (Código de Redes), en la Resolución CREG~174 de 2021 y en la Resolución CREG~030 de 2018, normas que fijan tanto los criterios de aceptación como el alcance mínimo del estudio simplificado.
+
+\subsection{Límites Operativos}
+
+Se adoptaron dos límites operativos principales. Las tensiones en barras se consideran aceptables cuando se mantienen entre 0,90 y 1,10~p.u. de la tensión nominal. La cargabilidad de líneas y transformadores, por su parte, no debe superar el 100\% de la corriente o potencia nominal del equipo respectivo. Cualquier excedencia de estos umbrales se interpretaría como una condición que requiere mitigación antes de autorizar la conexión.
+
+\subsection{Escenarios y Franjas Horarias}
+
+Con el fin de capturar el comportamiento del alimentador bajo distintas condiciones de demanda, se compararon dos escenarios ---sin SSFV y con SSFV--- en tres franjas horarias: las 9:00~a.m., representativa de la demanda matutina (1,459~MVA en cabecera); las 12:00~p.m., correspondiente a la demanda máxima del día (1,683~MVA); y las 3:00~p.m., asociada a la demanda vespertina (1,638~MVA). La demanda del alimentador se ajustó a partir del registro horario del 19/03/2024 suministrado por el operador de red, lo que garantiza coherencia entre el modelo y las condiciones reales de operación.
+
+\section{Análisis de Cortocircuito}
+
+Los cálculos de cortocircuito se realizaron conforme a la norma \textbf{IEC~60909}, adoptando tensiones de prefalla equivalentes al 110\% de la tensión nominal. Esta metodología es la de uso habitual en estudios de conexión y permite obtener corrientes simétricas y de cresta comparables con los ajustes de protección del circuito.
+
+\subsection{Contribuciones Consideradas}
+
+Se consideraron dos aportes principales. El primero es el equivalente de red de la SE~Conucos a 13,8~kV, con potencias de cortocircuito $S_{k3}=654,49$~MVA y $S_{k1}=239,68$~MVA. El segundo corresponde a los inversores, para los cuales se adoptó una corriente de cortocircuito simétrica igual a 1,5 veces la corriente nominal, criterio habitual para esta tecnología.
+
+Con $S=120$~kVA y $V=220$~V se obtiene:
+
+\begin{equation}
+I_{L} = \frac{120}{\sqrt{3}\times 0{,}22} = 314{,}92~\text{A}
+\quad\Rightarrow\quad
+I_{sc,inv}^{LV} = 1{,}5\times I_{L} = 472{,}38~\text{A}
+\end{equation}
+
+Referida a 13,2~kV, esa corriente se reduce a:
+
+\begin{equation}
+I_{sc,inv}^{HV} = 472{,}38\times\frac{0{,}22}{13{,}2} = 7{,}87~\text{A} \approx 0{,}008~\text{kA}
+\end{equation}
+
+El aporte resultante es despreciable frente a los aproximadamente 5,12~kA trifásicos calculados en el punto de conexión, lo que anticipa una afectación mínima sobre los niveles de falla del circuito.
+
+\subsection{Parámetros Calculados}
+
+Para cada nodo de interés se reportan la corriente simétrica de cortocircuito $I_k$ y la corriente de cresta $I_p$, tanto en falla trifásica como monofásica. Estos valores permiten verificar la capacidad de interrupción de los equipos y contrastar el efecto neto de la generación distribuida.
+
+\section{Modelado del Sistema}
+
+\subsection{Red de Distribución}
+
+Se modeló la topología completa del circuito 10-502, incluyendo las impedancias de secuencia positiva y cero de cada tramo, las capacidades térmicas ($I_n$) asociadas a cada tipo de conductor y las cargas en baja tensión con factor de potencia 0,9. El modelo refleja, así, tanto la estructura topológica del alimentador como sus restricciones térmicas y de calidad de tensión.
+
+\subsection{Transformador y Generación}
+
+El transformador de conexión se representó con 150~kVA, relación 13,2/0,22~kV, grupo Dyn5 e impedancia de cortocircuito $Z_{cc}=4{,}9\%$. La generación se modeló como una inyección de 120~kW en corriente alterna a factor de potencia 0,99, conectada en el lado de baja tensión del transformador. Esta representación es coherente con la arquitectura real del proyecto y con las condiciones de operación esperadas en el punto de conexión.
+
+\section{Criterios de Aceptación}
+
+La Tabla~\ref{tab:criterios} resume los criterios cuantitativos utilizados para emitir el concepto técnico. El cumplimiento simultáneo de estos umbrales constituye la condición necesaria para considerar viable la conexión del proyecto.
+
+\begin{table}[H]
+    \centering
+    \caption{Criterios de aceptación para el análisis}
+    \label{tab:criterios}
+    \begin{tabular}{ll}
+    \toprule
+    \textbf{Parámetro} & \textbf{Criterio} \\
+    \midrule
+    Tensión en barras & 0,90 -- 1,10 p.u. \\
+    Cargabilidad de líneas & $\leq$ 100\% \\
+    Cargabilidad de transformadores & $\leq$ 100\% \\
+    Aumento de cortocircuito & $<$ 1\% \\
+    \bottomrule
+    \end{tabular}
+\end{table}

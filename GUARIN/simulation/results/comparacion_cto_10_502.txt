@@ -1,0 +1,74 @@
+======================================================================
+COMPARACION DIAGRAMA CTO_10_502 vs OR vs MODELO PF
+======================================================================
+
+=== NODOS ===
+Diagrama (listados):     184  (origen=1, primarias=78, secundarios=105)
+OR buses raiz:           184
+Modelo PF buses raiz:    180
+
+Diagrama ∩ OR:           183
+Diagrama ∩ Modelo:       179
+En diagrama, NO en OR:   0
+En diagrama, NO en PF:   4
+En OR, NO en diagrama:   0
+En PF, NO en diagrama:   0
+
+--- Origen CONUCO_13.8 ---
+En diagrama: CONUCO_13.8
+En OR (candidatos): ['10 502_Term', '5605024']
+En PF (candidatos): ['Terminal(1)', '5605024']
+  -> Equivalencia tipica: CONUCO_13.8 ≈ 10 502_Term (OR) ≈ Terminal(1) (PF)
+
+--- Nodos del diagrama que FALTAN en OR ---
+(ninguno)
+
+--- Nodos del diagrama que FALTAN en el modelo PF ---
+  4637844	[secundario]	si en OR
+  4637852	[secundario]	si en OR
+  4637861	[secundario]	si en OR
+  4916671	[primaria]	si en OR
+
+--- Nodos en OR que NO estan en el diagrama ---
+
+--- Nodos en PF que NO estan en el diagrama ---
+
+======================================================================
+=== LINEAS (IDs mencionados en el diagrama) ===
+IDs unicos en diagrama:  187
+OR lineas:               215
+PF lineas:               191
+
+Diagrama ∩ OR:           187
+Diagrama ∩ PF:           176
+En diagrama, NO en OR:   0
+En diagrama, NO en PF:   11
+En OR, NO en diagrama:   28
+En PF, NO en diagrama:   15
+
+--- Lineas del diagrama que FALTAN en OR ---
+(ninguna)
+
+--- Lineas del diagrama que FALTAN en PF ---
+  9344	1154575 -> 1154583	3F_15_CU_2_XLPE (ya identificada por crear)
+  825166	1101277B -> 1103431	3F_15_CU_2_XLPE (ya identificada por crear)
+  825167	1103431 -> 1103458A	3F_15_CU_2_XLPE (ya identificada por crear)
+  828934	1101447A -> 1101455A	3F_15_CU_4/0_XLPE (ya identificada por crear)
+  828942	1101455E -> 1101471A	3F_15_CU_4/0_XLPE (ya identificada por crear)
+  828945	1101471A -> 1101480A	3F_15_CU_4/0_XLPE (ya identificada por crear)
+  828948	1101480A -> 2479567B	3F_15_CU_4/0_XLPE (ya identificada por crear)
+  830653	1101382E -> 4637844	3F_15_CU_2_XLPE (ya identificada por crear)
+  830654	4637844 -> 4637852	3F_15_CU_2_XLPE (ya identificada por crear)
+  830655	4637852 -> 4637861	3F_15_CU_2_XLPE (ya identificada por crear)
+  830657	4637861 -> 4916671A	3F_15_CU_2_XLPE (ya identificada por crear)
+
+--- Lineas en OR / PF que el diagrama NO menciona ---
+OR omitidas por diagrama: 28 -> 5129, 5131, 5133, 5134, 5141, 5144, 5146, 5155, 5158, 5284, 5286, 5294, 5299, 9138, 9274, 9275, 9341, 9342, 9991, 10400, 26922, 747634, 783432, 783433, 796468, 802784, 806782, 830652
+PF omitidas por diagrama: 15 -> 5129, 5158, 5294, 5303, 5305, 9138, 9274, 9275, 9341, 9342, 9991, 10396, 10397, 26920, 26921
+
+======================================================================
+=== VEREDICTO ===
+Cobertura nodos diagrama→OR: 183/183 (sin CONUCO)
+Cobertura nodos diagrama→PF: 179/183 (sin CONUCO)
+Cobertura lineas diagrama→OR: 187/187
+Cobertura lineas diagrama→PF: 176/187

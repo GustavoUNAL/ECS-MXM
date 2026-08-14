@@ -1,0 +1,35 @@
+\chapter{Introducción}
+
+El presente documento desarrolla el \textbf{estudio de conexión simplificado} del sistema solar fotovoltaico proyectado en el supermercado MAS~X~MENOS sede Guarín, ubicado en Bucaramanga (Santander). Su propósito es evaluar, de manera sistemática y conforme a la regulación vigente, el impacto que la generación distribuida tendría sobre el Sistema de Distribución Local (SDL) operado por ESSA, en particular sobre el \textbf{circuito 10-502}, alimentado desde la subestación Conucos a 13,8~kV.
+
+La evaluación se construyó a partir de la información oficial de red suministrada por el operador ---el archivo \textit{Datos Circuito 10 502 - 2026.xlsx} y el diagrama unifilar \textit{CTO 10 502.pdf}--- e incorpora análisis de flujo de carga, cortocircuito, protecciones y pérdidas técnicas. El marco normativo de referencia es la Resolución CREG~030 de 2018, complementada por las resoluciones y acuerdos técnicos aplicables a la autogeneración a pequeña escala.
+
+\section{Resumen Ejecutivo}
+
+El proyecto contempla la instalación de un sistema fotovoltaico de \textbf{141,6~kWp} en corriente continua y \textbf{120~kW} en corriente alterna. La planta estará integrada por 240 paneles JINKO de 590~W y dos inversores SOLIS~60K-LV-5G de 60~kW cada uno, con una relación DC/AC de 1,18. Esta configuración permite aprovechar de manera eficiente el recurso solar disponible en el sitio, sin sobredimensionar de forma excesiva el lado de corriente alterna.
+
+La inyección a la red se realizará en el \textbf{nodo 3272966} del circuito 10-502, a través de un transformador de 150~kVA, 13,2~kV/220~V y grupo de conexión Dyn5. En el modelo del operador, la carga asociada a ese nodo corresponde a 150~kVA con factor de potencia 0,9, equivalentes a aproximadamente 135~kW de demanda activa del cliente. La Tabla~\ref{tab:datos_clave} resume los parámetros que definen el proyecto y su punto de conexión.
+
+\begin{table}[H]
+    \centering
+    \caption{Datos clave del proyecto y del punto de conexión}
+    \label{tab:datos_clave}
+    \begin{tabular}{ll}
+    \toprule
+    \textbf{Parámetro} & \textbf{Valor} \\
+    \midrule
+    Proyecto & Solar MAS X MENOS Guarín \\
+    Capacidad DC / AC & 141,6 kWp / 120 kW \\
+    Operador de red & ESSA \\
+    Subestación / circuito & Conucos / 10-502 \\
+    Nivel de tensión & 13,8 kV \\
+    Punto de conexión (POC) & Nodo 3272966 \\
+    Línea de conexión MT & 3272869 -- 3272966 \\
+    Conductor de conexión & Cable CU 2 XLPE \\
+    Demanda máxima del circuito & 1,683 MVA (12:00 h, 19/03/2024) \\
+    Equivalente SC trifásico (SE) & 654,49 MVA / 27,38 kA \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+Los análisis desarrollados a lo largo de este estudio permiten anticipar un comportamiento favorable de la red ante la conexión del sistema fotovoltaico. En la alternativa evaluada no se identifican violaciones a la banda de tensión admisible (0,90--1,10~p.u.). La cargabilidad de las líneas cercanas tiende a reducirse por el consumo local de la generación, mientras que el transformador de conexión permanece por debajo del 56\% de su capacidad. El aporte de cortocircuito de los inversores resulta despreciable frente al equivalente de red, de modo que no se requieren cambios en las protecciones del circuito. Adicionalmente, se estima una reducción de pérdidas técnicas de hasta 0,34~kW en las franjas horarias de análisis. En conjunto, estos hallazgos sustentan un concepto técnico favorable a la conexión, el cual se desarrolla y justifica en los capítulos siguientes.

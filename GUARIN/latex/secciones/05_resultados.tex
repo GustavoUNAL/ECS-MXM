@@ -1,0 +1,314 @@
+\chapter{Resultados de Análisis Eléctricos}
+
+Este capítulo presenta los resultados del flujo de carga, del estudio de cortocircuito, de la verificación de protecciones en el punto de conexión y del cálculo de pérdidas técnicas. En cada caso se contrastan los escenarios sin y con sistema solar fotovoltaico, con el fin de cuantificar el impacto neto de la generación sobre el circuito 10-502.
+
+\section{Flujos de Carga en Operación Normal}
+
+Los análisis de flujo de carga se realizaron en condición normal de operación, con el propósito de evaluar el desempeño del sistema ante la entrada en servicio del proyecto fotovoltaico. Las franjas de las 9:00, 12:00 y 15:00 permiten observar el comportamiento de tensiones y cargabilidades bajo distintos niveles de demanda del alimentador.
+
+\subsection{Análisis de Tensiones}
+
+La incorporación del proyecto ocasiona variaciones de tensión en los nodos cercanos al punto de conexión. El cambio máximo en media tensión es de aproximadamente \textbf{0,00062~p.u.}, magnitud que no genera violación alguna a los límites del Código de Redes. Las Figuras~\ref{fig:tensiones9}, \ref{fig:tensiones} y \ref{fig:tensiones15} muestran las tensiones en los nodos afectados a las 9:00, 12:00 y 15:00, con y sin SSFV; las Tablas~\ref{tab:v_9}, \ref{tab:v_12} y \ref{tab:v_15} detallan las variaciones en la ruta hacia el POC.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figuras/fig_tensiones_09.png}
+    \caption{Tensiones en los nodos afectados por el proyecto Mas X Menos sede Guarín 120~kW a las 9~am}
+    \label{fig:tensiones9}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figuras/fig_tensiones_12.png}
+    \caption{Tensiones en los nodos afectados por el proyecto Mas X Menos sede Guarín 120~kW a las 12~pm}
+    \label{fig:tensiones}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figuras/fig_tensiones_15.png}
+    \caption{Tensiones en los nodos afectados por el proyecto Mas X Menos sede Guarín 120~kW a las 3~pm}
+    \label{fig:tensiones15}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Variación de tensión a las 9:00 a.m.}
+    \label{tab:v_9}
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Nodo} & \textbf{Sin SSFV (p.u.)} & \textbf{Con SSFV (p.u.)} & \textbf{Variación (p.u.)} \\
+    \midrule
+    3272869 & 0,995408 & 0,996020 & 0,000612 \\
+    3272966 & 0,995407 & 0,996021 & 0,000614 \\
+    3272761 & 0,995409 & 0,996020 & 0,000611 \\
+    3272664 & 0,995411 & 0,996019 & 0,000608 \\
+    3272567 & 0,995416 & 0,996016 & 0,000600 \\
+    1065971 & 0,995415 & 0,996010 & 0,000595 \\
+    2479567 & 0,995415 & 0,996010 & 0,000595 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Variación de tensión a las 12:00 p.m.}
+    \label{tab:v_12}
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Nodo} & \textbf{Sin SSFV (p.u.)} & \textbf{Con SSFV (p.u.)} & \textbf{Variación (p.u.)} \\
+    \midrule
+    3272869 & 0,994703 & 0,995319 & 0,000616 \\
+    3272966 & 0,994702 & 0,995319 & 0,000617 \\
+    3272761 & 0,994705 & 0,995319 & 0,000614 \\
+    3272664 & 0,994707 & 0,995318 & 0,000611 \\
+    3272567 & 0,994713 & 0,995317 & 0,000604 \\
+    1065971 & 0,994711 & 0,995310 & 0,000599 \\
+    2479567 & 0,994711 & 0,995310 & 0,000599 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Variación de tensión a las 15:00}
+    \label{tab:v_15}
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Nodo} & \textbf{Sin SSFV (p.u.)} & \textbf{Con SSFV (p.u.)} & \textbf{Variación (p.u.)} \\
+    \midrule
+    3272869 & 0,994843 & 0,995458 & 0,000615 \\
+    3272966 & 0,994842 & 0,995459 & 0,000617 \\
+    3272761 & 0,994844 & 0,995458 & 0,000614 \\
+    3272664 & 0,994847 & 0,995457 & 0,000610 \\
+    3272567 & 0,994853 & 0,995455 & 0,000602 \\
+    1065971 & 0,994851 & 0,995449 & 0,000598 \\
+    2479567 & 0,994851 & 0,995449 & 0,000598 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+En las tres franjas evaluadas las tensiones permanecen dentro de la banda 0,90--1,10~p.u. en todos los nodos considerados. El efecto del SSFV es, por tanto, una leve elevación local de tensión, plenamente compatible con los criterios de operación del SDL.
+
+\subsection{Cargabilidad de Líneas de Distribución}
+
+Se evaluaron las líneas cercanas al proyecto para identificar posibles sobrecargas o redistribuciones adversas de flujo. A las 9:00~a.m.\ se identifican 45 tramos con variación de cargabilidad mayor o igual a 0,5~puntos porcentuales; en todos ellos el loading se reduce al conectar el SSFV. La variación máxima observada es de \textbf{$-$1,833\%}. Este comportamiento indica que la energía generada se consume predominantemente de forma local y que los tramos aguas arriba resultan aliviados. La Figura~\ref{fig:carglineas} y la Tabla~\ref{tab:carg_lineas} sintetizan la comparación a las 9:00~a.m.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figuras/fig_cargabilidad_lineas_09.png}
+    \caption{Cargabilidad de líneas afectadas por el proyecto Mas X Menos sede Guarín a las 9~am}
+    \label{fig:carglineas}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Cargabilidad de líneas a las 9:00 (máxima reducción)}
+    \label{tab:carg_lineas}
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Línea} & \textbf{Sin SSFV (\%)} & \textbf{Con SSFV (\%)} & \textbf{Variación (\%)} \\
+    \midrule
+    5148 & 14,453 & 12,620 & $-$1,833 \\
+    5281 & 9,024 & 7,218 & $-$1,807 \\
+    5282 & 8,689 & 6,885 & $-$1,804 \\
+    5283 & 8,690 & 6,886 & $-$1,804 \\
+    5285 & 6,636 & 4,858 & $-$1,778 \\
+    5287 & 5,378 & 3,631 & $-$1,747 \\
+    5288 & 4,246 & 2,552 & $-$1,695 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+No se violan los límites de cargabilidad del SDL de ESSA. Más aún, en ninguna de las líneas evaluadas se observa un aumento de cargabilidad atribuible a la generación, lo que refuerza el carácter benigno de la conexión desde el punto de vista térmico del alimentador.
+
+\subsection{Cargabilidad de Transformadores}
+
+El transformador de conexión de 150~kVA experimenta un aumento de cargabilidad asociado a la circulación de la potencia generada hacia la red y hacia la carga local. El incremento máximo es de 28,833 puntos porcentuales; aun así, la cargabilidad permanece siempre por debajo del 56\%, como se observa en la Figura~\ref{fig:cargtrafo} y en la Tabla~\ref{tab:carg_trafo}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{figuras/fig_cargabilidad_trafo.png}
+    \caption{Cargabilidad del transformador de conexión (150 kVA)}
+    \label{fig:cargtrafo}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Cargabilidad del transformador de conexión}
+    \label{tab:carg_trafo}
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Hora} & \textbf{Sin SSFV (\%)} & \textbf{Con SSFV (\%)} & \textbf{Variación (\%)} \\
+    \midrule
+    9:00 a.m. & 29,645 & 53,655 & 24,010 \\
+    12:00 p.m. & 28,598 & 54,403 & 25,805 \\
+    15:00 & 27,000 & 55,833 & 28,833 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+La cargabilidad se mantiene, por tanto, holgadamente bajo el 100\%, con margen suficiente para eventuales crecimientos de demanda o ampliaciones futuras del sistema fotovoltaico dentro de la capacidad del transformador.
+
+\section{Resultados del Estudio de Cortocircuito}
+
+Se calcularon los niveles de cortocircuito trifásico y monofásico en el nodo 3272966 y en nodos aledaños, considerando la entrada en servicio del SSFV de 120~kW. La Figura~\ref{fig:cc} resume los resultados y permite apreciar la similitud entre los escenarios con y sin generación.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figuras/fig_cortocircuito.png}
+    \caption{Niveles de cortocircuito trifásico y monofásico cerca del POC}
+    \label{fig:cc}
+\end{figure}
+
+\subsection{Cortocircuito Monofásico}
+
+La Tabla~\ref{tab:cc_1f} presenta las corrientes de falla monofásica a las 12:00 en los nodos principales de la ruta hacia el POC. Las magnitudes se mantienen prácticamente invariantes al incorporar el SSFV, lo que confirma el carácter despreciable del aporte de los inversores en media tensión.
+
+\begin{table}[H]
+    \centering
+    \caption{Cortocircuito monofásico a las 12:00 (nodos principales)}
+    \label{tab:cc_1f}
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Nodo} & \textbf{Sin SSFV (kA)} & \textbf{Con SSFV (kA)} & \textbf{Variación (kA)} \\
+    \midrule
+    3272869 & 3,15235 & 3,15235 & 0,00000 \\
+    3272966 & 3,14984 & 3,14984 & 0,00000 \\
+    3272761 & 3,15571 & 3,15571 & 0,00000 \\
+    3272664 & 3,16218 & 3,16218 & 0,00000 \\
+    3272567 & 3,17766 & 3,17766 & 0,00000 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Cortocircuito Trifásico}
+
+De manera análoga, la Tabla~\ref{tab:cc_3f} reporta las corrientes de falla trifásica. En el POC se obtienen aproximadamente 5,12~kA, sin variación apreciable entre escenarios. La diferencia máxima es del orden de $10^{-8}$~kA, inferior al 0,01\%. El aporte del SSFV, estimado en 0,008~kA referidos a media tensión, resulta despreciable frente al equivalente de red. En consecuencia, no se requieren modificaciones en las protecciones existentes del circuito 10-502.
+
+\begin{table}[H]
+    \centering
+    \caption{Cortocircuito trifásico a las 12:00 (nodos principales)}
+    \label{tab:cc_3f}
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Nodo} & \textbf{Sin SSFV (kA)} & \textbf{Con SSFV (kA)} & \textbf{Variación (kA)} \\
+    \midrule
+    3272869 & 5,12685 & 5,12685 & 0,00000 \\
+    3272966 & 5,12027 & 5,12027 & 0,00000 \\
+    3272761 & 5,13564 & 5,13564 & 0,00000 \\
+    3272664 & 5,15265 & 5,15265 & 0,00000 \\
+    3272567 & 5,19351 & 5,19351 & 0,00000 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Protección en el Punto de Conexión}
+
+Además de verificar el impacto sobre el relé de cabecera, es necesario confirmar que el propio proyecto dispone de las funciones de protección exigidas por la regulación. Esta sección resume la corriente nominal del generador, los requisitos del Acuerdo CNO~1322 y los elementos de interrupción previstos.
+
+\subsection{Corriente Nominal del Generador}
+
+La corriente de carga nominal del sistema en baja tensión se obtiene a partir de la potencia AC y de la tensión de salida de los inversores:
+
+\begin{equation}
+I_L = \frac{S}{\sqrt{3}\times V_l} = \frac{120}{\sqrt{3}\times 0{,}22} = 314{,}92~\text{A}
+\end{equation}
+
+Este valor sirve de referencia para dimensionar los breakers de inversor y de acometida, así como para referir el aporte de generación a media tensión.
+
+\subsection{Requisitos de Protección (Acuerdo CNO 1322)}
+
+El Acuerdo CNO~1322 establece umbrales y tiempos de operación para las funciones de baja tensión, sobretensión y frecuencia que deben incorporar los generadores conectados al SDL. La Tabla~\ref{tab:cno_req} resume esos requerimientos, y la Tabla~\ref{tab:cno_val} presenta la validación correspondiente al proyecto Guarín. El sistema cumple las funciones ANSI~27, 59 y 81~U/O, así como la protección anti-isla; la función de sobrepotencia adelante (ANSI~32) no aplica a esta configuración. La coordinación con el MICOM~P142 del circuito 10-502 no se ve afectada, como se desarrolla en el capítulo de protecciones.
+
+\begin{table}[H]
+    \centering
+    \caption{Requerimientos de protección por nivel de tensión}
+    \label{tab:cno_req}
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Función} & \textbf{Umbral} & \textbf{Tiempo} & \textbf{Unidad} \\
+    \midrule
+    Baja tensión (ANSI 27) -- Etapa 1 & 0,85 & 2,0 & p.u. / s \\
+    Baja tensión (ANSI 27) -- Etapa 2 & 0,50 & 0,2 & p.u. / s \\
+    Sobretensión (ANSI 59) -- Etapa 1 & $\geq 1{,}15$ & 2,0 & p.u. / s \\
+    Sobretensión (ANSI 59) -- Etapa 2 & $\geq 1{,}20$ & 0,1--0,2 & p.u. / s \\
+    Subfrecuencia (ANSI 81U) & 57 & 0,5 & Hz / s \\
+    Sobrefrecuencia (ANSI 81O) & 63 & 0,5 & Hz / s \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Validación de requisitos de protección}
+    \label{tab:cno_val}
+    \begin{tabular}{lc}
+    \toprule
+    \textbf{Requerimiento} & \textbf{Validación} \\
+    \midrule
+    Baja tensión (ANSI 27) & Cumple \\
+    Sobrepotencia adelante (ANSI 32) & No aplica \\
+    Sobretensión (ANSI 59) & Cumple \\
+    Frecuencia (ANSI 81 U/O) & Cumple \\
+    Anti-isla & Cumple \\
+    Coordinación con MICOM P142 (CTO 10-502) & Sin afectación \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Elemento de Interrupción}
+
+Como elementos de interrupción se contemplan protecciones de inversor en el rango $3\times(140\textrm{--}200)$~A y protección de acometida en el rango $3\times(350\textrm{--}500)$~A. Los tiempos de respuesta de estos dispositivos son coherentes con los criterios de las normas IEC~60909 e IEEE~242, y permiten aislar fallas del lado de baja tensión sin comprometer la selectividad respecto al relé de cabecera.
+
+\section{Cálculo de Pérdidas}
+
+La generación distribuida tiende a reducir las pérdidas técnicas del alimentador cuando la energía se consume cerca del punto de inyección. La Figura~\ref{fig:perdidas} y la Tabla~\ref{tab:perdidas} cuantifican ese efecto para las tres franjas de análisis: la reducción alcanza 0,30~kW a las 9:00 y 0,34~kW tanto a las 12:00 como a las 15:00.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{figuras/fig_perdidas.png}
+    \caption{Pérdidas técnicas del sistema con y sin SSFV}
+    \label{fig:perdidas}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Pérdidas totales del sistema}
+    \label{tab:perdidas}
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Hora} & \textbf{Con SSFV (kW)} & \textbf{Sin SSFV (kW)} & \textbf{Reducción (kW)} \\
+    \midrule
+    9:00 a.m. & 4,47 & 4,77 & 0,30 \\
+    12:00 p.m. & 5,03 & 5,37 & 0,34 \\
+    15:00 & 5,69 & 6,03 & 0,34 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+En las tres franjas evaluadas, por tanto, la generación distribuida contribuye a disminuir las pérdidas técnicas del alimentador, lo cual constituye un beneficio adicional de la conexión para el sistema de distribución.
+
+\subsection{Pérdidas Consideradas en Energía Generada}
+
+Para la estimación de energía anual se adoptó un factor global de pérdidas del 26\%, desglosado en la Tabla~\ref{tab:perdidas_fv}. Este desglose incluye temperatura, mismatch, pérdidas resistivas, conversión DC/AC y otras pérdidas asociadas; las pérdidas por sombreado se consideran nulas, en coherencia con la evaluación del sitio.
+
+\begin{table}[H]
+    \centering
+    \caption{Desglose de pérdidas del sistema fotovoltaico}
+    \label{tab:perdidas_fv}
+    \begin{tabular}{lc}
+    \toprule
+    \textbf{Tipo de pérdida} & \textbf{Porcentaje} \\
+    \midrule
+    Pérdidas por temperatura & 3,00\% \\
+    Pérdidas por mismatch & 2,00\% \\
+    Pérdidas resistivas & 4,00\% \\
+    Pérdidas por conversión DC/AC & 1,00\% \\
+    Otras pérdidas asociadas & 16,00\% \\
+    Pérdidas por sombreado & 0,00\% \\
+    \midrule
+    \textbf{Total} & \textbf{26,00\%} \\
+    \bottomrule
+    \end{tabular}
+\end{table}

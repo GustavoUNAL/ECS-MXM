@@ -1,0 +1,49 @@
+\chapter{Recomendaciones y Conclusiones}
+
+A partir de los análisis de flujo de carga, cortocircuito, protecciones y pérdidas desarrollados en los capítulos precedentes, este apartado sintetiza las conclusiones principales, formula recomendaciones de seguimiento y emite el concepto técnico de conexión del proyecto.
+
+\section{Conclusiones Principales}
+
+\subsection{Análisis de Flujo de Carga}
+
+Ante la entrada en servicio de la generación en el nodo 3272966 del circuito 10-502, el alimentador mantiene un comportamiento operativo estable. La cargabilidad de las líneas evaluadas y del transformador de conexión permanece dentro de los límites admisibles; la variación máxima de tensión es de apenas 0,00062~p.u.; y no se observa aumento de cargabilidad en los tramos analizados. Por el contrario, la energía tiende a consumirse de forma local, lo que alivia el flujo aguas arriba y mejora las condiciones térmicas del circuito en las horas de generación.
+
+\subsection{Análisis de Cortocircuito}
+
+El aporte del SSFV referido a media tensión es del orden de 0,008~kA, frente a aproximadamente 5,12~kA trifásicos en el punto de conexión. La variación de la corriente de falla $I_k$ respecto al caso base es inferior al 0,01\%. En estas condiciones, no se requieren cambios en el relé MICOM~P142 ni en los ajustes de las funciones 50/51/50N/51N del circuito 10-502.
+
+\subsection{Protecciones y Pérdidas}
+
+El proyecto cumple los requisitos del Acuerdo CNO~1322 en lo referente a las funciones de tensión (27 y 59), frecuencia (81~U/O) y anti-isla. Paralelamente, las pérdidas técnicas del sistema se reducen hasta 0,34~kW en las franjas horarias de análisis, lo que confirma un beneficio neto para el alimentador cuando la generación se consume cerca del punto de inyección.
+
+\section{Recomendaciones}
+
+\subsection{Medición de Calidad de Potencia}
+
+Se recomienda realizar mediciones de calidad de potencia una vez el proyecto entre en servicio, con el fin de verificar que el factor de potencia se mantenga dentro del rango regulatorio. Si, ante una reducción de potencia activa con reactiva sensiblemente constante, el factor de potencia descendiera por debajo de los umbrales admisibles, podrá valorarse la instalación de compensación capacitiva u otra estrategia de control de reactivos disponible en los inversores.
+
+\subsection{Uso de Resultados de Cortocircuito}
+
+Los niveles de falla calculados en este estudio deben emplearse como referencia para especificar las capacidades de interrupción de breakers, fusibles y seccionadores; para evaluar la saturación de los transformadores de corriente; para diseñar o verificar las mallas de puesta a tierra; y para dimensionar nuevos equipos en eventuales ampliaciones futuras del proyecto o de la instalación del cliente.
+
+\subsection{Validación en Campo}
+
+Antes y después de la puesta en servicio conviene contrastar el modelo con mediciones reales de tensión en el punto de conexión y en nodos aledaños, de cargabilidad del transformador de 150~kVA, y de la calidad de la potencia inyectada ---en particular armónicos, factor de potencia y flicker---. Esta validación permite confirmar que las condiciones de operación se mantienen dentro de lo previsto y detectar oportunamente desviaciones.
+
+\subsection{Coordinación con ESSA}
+
+Se recomienda mantener una coordinación permanente con el operador de red para reportar anomalías de operación y para actualizar ajustes o procedimientos si cambian las condiciones topológicas o de demanda del circuito 10-502. La comunicación oportuna entre el desarrollador y ESSA es esencial para preservar la selectividad y la seguridad del esquema de protecciones a lo largo de la vida útil del proyecto.
+
+\section{Hallazgos Positivos}
+
+El estudio permite destacar varios hallazgos favorables. El impacto sobre tensiones y cortocircuito es mínimo; el transformador de conexión opera con holgura (cargabilidad inferior al 56\%); las pérdidas técnicas del alimentador se reducen; la generación se consume predominantemente de forma local; y las protecciones existentes del circuito resultan adecuadas y no se ven afectadas por la conexión del AGPE. Estos elementos refuerzan la viabilidad técnica de la alternativa evaluada.
+
+\section{Concepto Técnico}
+
+El presente estudio de conexión simplificado concluye que:
+
+\begin{quote}
+\textit{``El proyecto de generación solar fotovoltaica de 141,6~kWp propuesto para el Supermercado MAS X MENOS sede Guarín puede conectarse al Sistema de Distribución Local de ESSA en el nodo 3272966 del circuito 10-502 (SE Conucos, 13,8~kV) sin generar violaciones a los parámetros de operación normal de la red. La tecnología de inversores limita efectivamente el aporte de cortocircuito. Las protecciones existentes cumplen los requisitos regulatorios y no requieren modificaciones. La instalación contribuye a la reducción de pérdidas técnicas en la red local.''}
+\end{quote}
+
+Por lo anterior, se emite \textbf{concepto técnico favorable} a la conexión del proyecto, recomendando las medidas de monitoreo y validación de calidad de potencia descritas en este documento.

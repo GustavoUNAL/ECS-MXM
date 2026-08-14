@@ -1,0 +1,151 @@
+\chapter{Resultados Detallados de Análisis}
+
+\section{Anexo A: Diagrama Unifilar Simplificado del Sistema}
+
+\subsection{Descripción General}
+
+El sistema eléctrico del proyecto solar fotovoltaico MAS X MENOS está compuesto por los siguientes elementos principales:
+
+\begin{enumerate}
+    \item \textbf{Paneles Solares:} 240 paneles JINKO monocristalinos de 590 W cada uno, total 141.6 kWp
+    
+    \item \textbf{Inversores:} 2 inversores SOLIS 60K-LV-5G de 60 kW cada uno, total 120 kW en AC
+    
+    \item \textbf{Transformador de Conexión:} 150 kVA, 13.2 kV / 220 V, grupo Dyn5
+    
+    \item \textbf{Protecciones en Inversor:} Breaker trifásico 3 × (140-200) A
+    
+    \item \textbf{Protecciones en Acometida:} Breaker trifásico 3 × (350-500) A
+    
+    \item \textbf{Punto de Conexión:} Nodo 3272966, red de ESSA a 13.8 kV
+\end{enumerate}
+
+\subsection{Diagrama de Bloques}
+
+\begin{center}
+    \begin{tabular}{c}
+    \toprule
+    \textbf{COMPONENTES DEL SISTEMA} \\
+    \midrule
+    \\
+    Paneles Fotovoltaicos \\
+    (240 × 590 W = 141.6 kWp) \\
+    \textbar \\
+    \textbar \\
+    Inversores SOLIS \\
+    (2 × 60 kW = 120 kW AC) \\
+    \textbar \\
+    \textbar \\
+    Protección de Inversor \\
+    (3 × 140-200 A) \\
+    \textbar \\
+    \textbar \\
+    Protección de Acometida \\
+    (3 × 350-500 A) \\
+    \textbar \\
+    \textbar \\
+    Transformador de Conexión \\
+    (150 kVA, 13.2 kV/220 V, Dyn5) \\
+    \textbar \\
+    \textbar \\
+    Red de ESSA \\
+    (Nodo 3272966, 13.8 kV) \\
+    \\
+    \bottomrule
+    \end{tabular}
+\end{center}
+
+\section{Tabla de Especificaciones Técnicas Resumen}
+
+\begin{table}[H]
+    \centering
+    \caption{Especificaciones técnicas generales del proyecto}
+    \begin{tabular}{ll}
+    \toprule
+    \textbf{Parámetro} & \textbf{Valor} \\
+    \midrule
+    Ubicación & Bucaramanga, Santander \\
+    Latitud & 7.12621563° \\
+    Longitud & -73.11227598° \\
+    Capacidad instalada DC & 141.6 kWp \\
+    Capacidad instalada AC & 120 kW \\
+    Tecnología & Paneles monocristalinos JINKO \\
+    Número de paneles & 240 \\
+    Potencia por panel & 590 W \\
+    Eficiencia de paneles & 22.84\% \\
+    Número de inversores & 2 \\
+    Potencia por inversor & 60 kW \\
+    Factor de potencia & 0.99 \\
+    Tensión de salida & 220 VAC, 60 Hz \\
+    Relación DC/AC & 1.18 \\
+    Transformador & 150 kVA, 13.2/0.22 kV \\
+    Punto de conexión & Nodo 3272966 \\
+    Nivel de tensión conexión & 13.8 kV \\
+    Año de entrada en operación & 2025 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Matriz de Evaluación de Impacto}
+
+\begin{table}[H]
+    \centering
+    \caption{Evaluación de impacto en parámetros del sistema}
+    \begin{tabular}{lcccc}
+    \toprule
+    \textbf{Parámetro} & \textbf{Límite} & \textbf{Máximo} & \textbf{Cumple} & \textbf{Impacto} \\
+    \midrule
+    Tensión (p.u.) & 0.90-1.10 & 0.9953 & ✓ & Mínimo \\
+    Cargabilidad líneas (\%) & ≤ 100 & 4.57 & ✓ & Mínimo \\
+    Cargabilidad trafo (\%) & ≤ 100 & 55.83 & ✓ & Bajo \\
+    Variación CC (kA) & < 1\% & 0.00\% & ✓ & Nulo \\
+    Factor de potencia & ≥ 0.90 & 0.99 & ✓ & Positivo \\
+    Pérdidas técnicas (kW) & Reducción & -0.34 & ✓ & Positivo \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Cronograma de Validación Recomendado}
+
+\begin{table}[H]
+    \centering
+    \caption{Actividades de validación post-conexión}
+    \begin{tabular}{llcl}
+    \toprule
+    \textbf{Fase} & \textbf{Actividad} & \textbf{Plazo} & \textbf{Responsable} \\
+    \midrule
+    Pre-operación & Inspección de instalaciones & 2 semanas & COPOWER + ESSA \\
+    Pre-operación & Pruebas de protecciones & 2 semanas & COPOWER + ESSA \\
+    Operación & Mediciones de calidad & 1 mes & COPOWER + ESSA \\
+    Operación & Validación de tensiones & 3 meses & ESSA \\
+    Operación & Reporte de desempeño & Trimestral & COPOWER \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Documentos de Referencia}
+
+Durante el desarrollo de este estudio se utilizaron los siguientes documentos:
+
+\begin{itemize}
+    \item Resolución CREG 030 de 2018 - Conexión de generadores
+    \item Resolución CREG 025 de 1995 - Código de Redes
+    \item Resolución CREG 174 de 2021 - Generación distribuida
+    \item Acuerdo 1322 del CNO - Protecciones de generadores
+    \item Norma IEC 60909 - Cálculo de cortocircuito
+    \item Norma IEEE 242 - Protecciones de sistemas
+    \item Datos de Circuito 10502 - ESSA
+    \item Ficha técnica inversor SOLIS 60K-LV-5G
+    \item Ficha técnica paneles JINKO Monocristalinos
+\end{itemize}
+
+\section{Contacto y Consultas}
+
+Para consultas técnicas adicionales respecto a este estudio, contactar a:
+
+\begin{center}
+    \textbf{COPOWER LTDA} \\
+    Especialistas en Energías Renovables \\
+    Bucaramanga, Santander - Colombia \\
+    Julio de 2026
+\end{center}

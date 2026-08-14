@@ -18,21 +18,85 @@
   --path: #f4c95d;
   --load: #2ec4b6;
   --ok: #5dd39e;
+  --header-top: #152038;
+  --header-bot: #0b1220;
+  --strip-bg: #0e1628;
+  --row-hover: #1a2742;
+  --bar-track: #243353;
+  --chart-bar: #2a4a86;
+  --tab-active-bg: #1e3a8a;
+  --tab-active-border: #3d8bfd;
+  --sc-active-bg: #1e3a8a;
+  --sc-gen-active-bg: #0f4c45;
+  --node-font: #dbe7ff;
+  --node-border-default: #0b1220;
+  --tooltip-bg: #000;
+  --tooltip-text: #fff;
 }
+html[data-theme="light"] {
+  --bg: #eef2f8;
+  --panel: #ffffff;
+  --panel2: #f4f7fb;
+  --line: #c5d0e0;
+  --text: #1a2742;
+  --muted: #5a6a85;
+  --accent: #2563eb;
+  --header-top: #f8fafc;
+  --header-bot: #eef2f8;
+  --strip-bg: #f1f5f9;
+  --row-hover: #e8eef8;
+  --bar-track: #d8e2ef;
+  --chart-bar: #93b4e8;
+  --tab-active-bg: #dbeafe;
+  --tab-active-border: #2563eb;
+  --sc-active-bg: #dbeafe;
+  --sc-gen-active-bg: #ccfbf1;
+  --node-font: #1a2742;
+  --node-border-default: #ffffff;
+  --tooltip-bg: #1a2742;
+  --tooltip-text: #fff;
+}
+html[data-theme="light"] .sc-btn.active { color: #1e3a8a; }
+html[data-theme="light"] .sc-btn.gen.active { color: #0f4c45; }
+html[data-theme="light"] .tab.active { color: #1e3a8a; }
 * { box-sizing: border-box; }
 html, body { margin:0; height:100%; background:var(--bg); color:var(--text); font-family: Inter, ui-sans-serif, system-ui, Segoe UI, sans-serif; }
 header {
   display:flex; justify-content:space-between; align-items:flex-end; gap:16px;
   padding:16px 22px 12px; border-bottom:1px solid var(--line);
-  background: linear-gradient(180deg, #152038, #0b1220);
+  background: linear-gradient(180deg, var(--header-top), var(--header-bot));
 }
+.header-actions { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
 h1 { font-size:20px; margin:0; letter-spacing:.2px; }
 .sub { color:var(--muted); font-size:13px; margin-top:4px; }
+.or-note { padding:8px 22px 10px; margin:0; font-size:12px; color:var(--muted); border-bottom:1px solid var(--line); background:var(--strip-bg); }
 .kpis { display:grid; grid-template-columns:repeat(8,minmax(90px,1fr)); gap:8px; padding:12px 22px; }
 .kpi { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:10px 12px; }
 .kpi b { display:block; font-size:18px; }
 .kpi span { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.4px; }
 .layout { display:grid; grid-template-columns: 1.4fr .9fr; gap:12px; padding:0 22px 16px; height: calc(100% - 168px); }
+.scenarios-wrap { padding:10px 22px 0; border-bottom:1px solid var(--line); background:var(--strip-bg); }
+.scenarios-wrap h3 { margin:0 0 8px; font-size:12px; color:var(--muted); font-weight:600; letter-spacing:.3px; text-transform:uppercase; }
+.scenarios { display:flex; flex-wrap:wrap; gap:6px; padding-bottom:10px; }
+.sc-btn { background:var(--panel2); color:var(--text); border:1px solid var(--line); border-radius:999px; padding:6px 12px; font-size:12px; cursor:pointer; }
+.sc-btn:hover { border-color:var(--accent); }
+.sc-btn.active { background:var(--sc-active-bg); border-color:var(--tab-active-border); }
+.sc-btn.gen { border-color:#2ec4b6; }
+.sc-btn.gen.active { background:var(--sc-gen-active-bg); border-color:#2ec4b6; }
+.sc-info { font-size:12px; color:var(--muted); margin:0 0 10px; min-height:18px; }
+.esc-charts { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:0 0 12px; }
+@media (max-width:900px) { .esc-charts { grid-template-columns:1fr; } }
+.esc-chart-mini { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:10px 12px; }
+.esc-chart-mini h4 { margin:0 0 8px; font-size:11px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.3px; }
+.esc-row { display:grid; grid-template-columns:92px 1fr 48px; gap:6px; align-items:center; font-size:11px; margin-bottom:4px; }
+.esc-bar { height:8px; background:var(--bar-track); border-radius:99px; overflow:hidden; }
+.esc-bar i { display:block; height:100%; border-radius:99px; }
+.esc-bar.pos i { background:#5dd39e; }
+.esc-bar.neg i { background:#ff6b4a; }
+.esc-bar.neu i { background:#3d8bfd; }
+.esc-nodes-mini { font-size:10px; line-height:1.45; color:var(--muted); max-height:72px; overflow:auto; }
+.esc-nodes-mini code { background:var(--bar-track); padding:0 3px; border-radius:3px; }
+.kpis.scenario { grid-template-columns:repeat(7,minmax(90px,1fr)); }
 .card { background:var(--panel); border:1px solid var(--line); border-radius:14px; min-height:0; display:flex; flex-direction:column; overflow:hidden; }
 .card h2 { margin:0; font-size:14px; padding:12px 14px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; }
 .toolbar { display:flex; gap:8px; flex-wrap:wrap; padding:10px 12px; border-bottom:1px solid var(--line); }
@@ -42,30 +106,55 @@ input, select, button {
 }
 button { cursor:pointer; }
 button:hover, .tab:hover { border-color: var(--accent); }
+button.toggle-on { border-color: var(--accent); background: var(--sc-active-bg); }
 #net { flex:1; min-height:420px; }
 .legend { display:flex; gap:12px; flex-wrap:wrap; padding:8px 12px; color:var(--muted); font-size:12px; }
 .dot { width:9px; height:9px; border-radius:50%; display:inline-block; margin-right:5px; }
 .side { overflow:auto; }
 .tabs { display:flex; gap:6px; padding:10px 12px; border-bottom:1px solid var(--line); }
 .tab { padding:6px 10px; border-radius:999px; font-size:12px; cursor:pointer; border:1px solid var(--line); }
-.tab.active { background:#1e3a8a; border-color:#3d8bfd; }
+.tab.active { background:var(--tab-active-bg); border-color:var(--tab-active-border); }
 .panel { display:none; padding:12px; overflow:auto; }
 .panel.active { display:block; }
 table { width:100%; border-collapse:collapse; font-size:12px; }
 th, td { padding:7px 6px; border-bottom:1px solid var(--line); text-align:left; white-space:nowrap; }
 th { color:var(--muted); position:sticky; top:0; background:var(--panel); cursor:pointer; }
-tr:hover { background:#1a2742; }
+tr:hover { background:var(--row-hover); }
 .hl { color: var(--poc); font-weight:700; }
 .ok { color: var(--ok); }
 .detail { background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:10px; font-size:13px; line-height:1.45; }
 .bars { display:flex; flex-direction:column; gap:6px; }
 .barrow { display:grid; grid-template-columns: 160px 1fr 48px; gap:8px; align-items:center; font-size:12px; }
-.bar { height:8px; background:#243353; border-radius:99px; overflow:hidden; }
+.bar { height:8px; background:var(--bar-track); border-radius:99px; overflow:hidden; }
 .bar > i { display:block; height:100%; background:linear-gradient(90deg,#3d8bfd,#2ec4b6); }
 .chart { display:flex; align-items:flex-end; gap:3px; height:110px; padding:8px 0; }
-.col { flex:1; background:#2a4a86; border-radius:3px 3px 0 0; min-height:2px; position:relative; }
+.col { flex:1; background:var(--chart-bar); border-radius:3px 3px 0 0; min-height:2px; position:relative; }
 .col.peak { background:#ff6b4a; }
-.col:hover::after { content:attr(data-tip); position:absolute; bottom:100%; left:50%; transform:translateX(-50%); background:#000; color:#fff; font-size:10px; padding:3px 5px; border-radius:4px; white-space:nowrap; }
+.col:hover::after { content:attr(data-tip); position:absolute; bottom:100%; left:50%; transform:translateX(-50%); background:var(--tooltip-bg); color:var(--tooltip-text); font-size:10px; padding:3px 5px; border-radius:4px; white-space:nowrap; }
+.cmp-section { margin: 14px 0 18px; }
+.cmp-section h4 { font-size: 13px; color: var(--muted); margin: 0 0 8px; font-weight: 600; }
+.cmp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.cmp-grid.wide { grid-template-columns: 1fr; }
+@media (max-width: 900px) { .cmp-grid { grid-template-columns: 1fr; } }
+.cmp-chart { background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+.cmp-row { display: grid; grid-template-columns: 118px 1fr 56px; gap: 8px; align-items: center; font-size: 11px; margin-bottom: 5px; border-radius: 6px; padding: 2px 4px; }
+.cmp-row.active-sc { background: rgba(61,139,253,.12); box-shadow: inset 0 0 0 1px var(--accent); }
+.cmp-bar { height: 10px; background: var(--bar-track); border-radius: 99px; overflow: hidden; }
+.cmp-bar > i { display: block; height: 100%; border-radius: 99px; }
+.bar-sin { background: #6ea8fe; }
+.bar-con { background: #2ec4b6; }
+.bar-u { background: linear-gradient(90deg,#ffa502,#5dd39e); }
+.bar-load { background: #3d8bfd; }
+.bar-perd { background: #ff6b4a; }
+.bar-trafo { background: #a78bfa; }
+.cmp-legend { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; color: var(--muted); margin-bottom: 10px; }
+.cmp-legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: -1px; }
+.cmp-note { font-size: 12px; line-height: 1.5; color: var(--muted); }
+.cmp-delta { font-size: 11px; }
+.cmp-delta b.up { color: var(--ok); }
+.cmp-delta b.down { color: var(--poc); }
+.cmp-nodes { font-size: 11px; line-height: 1.55; }
+table tbody tr.active-sc { background: rgba(61,139,253,.12); box-shadow: inset 0 0 0 1px var(--accent); }
 @media (max-width: 1100px) {
   .layout { grid-template-columns:1fr; height:auto; }
   .kpis { grid-template-columns:repeat(4,1fr); }
@@ -78,9 +167,13 @@ tr:hover { background:#1a2742; }
     <h1>Circuito 10-502 — Topología de red</h1>
     <div class="sub">SE Conucos · 13,8 kV · ESSA · AGPE MAS X MENOS Guarín (POC 3272966)</div>
   </div>
-  <div class="sub">Clic en un nodo o línea para ver detalle · Buscar · Filtrar ruta al POC</div>
+  <div class="header-actions">
+    <button type="button" id="btnTheme" title="Alternar tema claro/oscuro">Modo claro</button>
+    <div class="sub">Clic en un nodo o línea · Buscar · Filtrar</div>
+  </div>
 </header>
 
+<p class="or-note">Datos del operador de red (ESSA): topología, líneas, cargas y perfil de demanda. Sin resultados de flujo de carga simulado.</p>
 <section class="kpis" id="kpis"></section>
 
 <div class="layout">
@@ -99,6 +192,7 @@ tr:hover { background:#1a2742; }
       </select>
       <button id="fit">Encajar</button>
       <button id="focusPoc">Ir al POC</button>
+      <button id="btnLayout" title="Ordenado: unifilar sin cruces. Desordenado: grafo libre aleatorio.">Ordenado</button>
     </div>
     <div id="net"></div>
     <div class="legend">
@@ -106,7 +200,9 @@ tr:hover { background:#1a2742; }
       <span><i class="dot" style="background:#f4c95d"></i>Ruta al POC</span>
       <span><i class="dot" style="background:#2ec4b6"></i>Nodo con carga</span>
       <span><i class="dot" style="background:#6ea8fe"></i>Barra</span>
-      <span><i class="dot" style="background:#94a3b8;border-radius:2px"></i>Línea</span>
+      <span><i class="dot" style="background:#94a3b8;border-radius:2px"></i>Línea (ordenado)</span>
+      <span><i class="dot" style="background:transparent;border:1px dashed #5a6a85;border-radius:2px"></i>Lazo (ordenado)</span>
+      <span id="legendOrganic" style="display:none"><i class="dot" style="background:#7b8aa5;border-radius:2px"></i>Grafo libre · aristas curvas</span>
     </div>
   </div>
 
@@ -157,22 +253,260 @@ function nodeColor(n) {
   if (n.role === "load") return "#2ec4b6";
   return "#6ea8fe";
 }
+function nodeBorder(n) {
+  if (n.role === "poc") return "#ff6b4a";
+  if (n.role === "path") return "#f4c95d";
+  return getComputedStyle(document.documentElement).getPropertyValue("--node-border-default").trim() || "#0b1220";
+}
 function nodeSize(n) {
   if (n.role === "poc") return 22;
   return 8 + Math.min(14, n.degree * 1.3 + (n.s_mva ? 4 : 0));
 }
+function nodeFontColor() {
+  return getComputedStyle(document.documentElement).getPropertyValue("--node-font").trim() || "#dbe7ff";
+}
 
-const allNodes = D.nodes.map(n => ({
-  id: n.id, label: n.id, title: tipNode(n),
-  color: { background: nodeColor(n), border: "#0b1220" },
-  size: nodeSize(n), font: { color: "#dbe7ff", size: 11 },
-  _role: n.role, _data: n
-}));
+/** Posiciones aleatorias iniciales (semilla distinta en cada activación). */
+function buildRandomLayout(seed) {
+  let s = (seed * 2654435761) >>> 0;
+  const rnd = () => {
+    s = (s * 1664525 + 1013904223) >>> 0;
+    return s / 4294967296;
+  };
+  const pos = new Map();
+  const w = 3200, h = 2600;
+  D.nodes.forEach(n => {
+    pos.set(n.id, { x: (rnd() - 0.5) * w, y: (rnd() - 0.5) * h });
+  });
+  return pos;
+}
+
+/** Layout unifilar vertical sin cruces (solo modo ordenado). */
+function buildFeederLayout(lines, rootId) {
+  const adj = new Map();
+  const link = (a, b) => {
+    if (a === b) return;
+    if (!adj.has(a)) adj.set(a, []);
+    if (!adj.has(b)) adj.set(b, []);
+    adj.get(a).push(b);
+    adj.get(b).push(a);
+  };
+  lines.forEach(L => link(L.from, L.to));
+
+  const parent = new Map();
+  const children = new Map();
+  const depth = new Map([[rootId, 0]]);
+  const visited = new Set([rootId]);
+  const q = [rootId];
+  while (q.length) {
+    const u = q.shift();
+    if (!children.has(u)) children.set(u, []);
+    for (const v of adj.get(u) || []) {
+      if (visited.has(v)) continue;
+      visited.add(v);
+      parent.set(v, u);
+      children.get(u).push(v);
+      depth.set(v, depth.get(u) + 1);
+      q.push(v);
+    }
+  }
+
+  const spanPos = new Map();
+  let leafIdx = 0;
+  function assignSpan(u) {
+    const ch = (children.get(u) || []).slice().sort((a, b) => {
+      const da = D.nodes.find(n => n.id === a)?.degree || 0;
+      const db = D.nodes.find(n => n.id === b)?.degree || 0;
+      return db - da || String(a).localeCompare(String(b), "es");
+    });
+    if (!ch.length) {
+      spanPos.set(u, leafIdx++);
+      return spanPos.get(u);
+    }
+    const vals = ch.map(assignSpan);
+    spanPos.set(u, vals.reduce((s, v) => s + v, 0) / vals.length);
+    return spanPos.get(u);
+  }
+  assignSpan(rootId);
+
+  const yGap = 72;
+  const xGap = 42;
+  const pos = new Map();
+  for (const [id, d] of depth) {
+    const s = spanPos.get(id) || 0;
+    pos.set(id, { x: s * xGap, y: d * yGap });
+  }
+  D.nodes.forEach(n => {
+    if (pos.has(n.id)) return;
+    pos.set(n.id, { x: leafIdx++ * xGap, y: (Math.max(...depth.values()) + 2) * yGap });
+  });
+
+  const treePairs = new Set();
+  for (const [child, par] of parent) {
+    treePairs.add([par, child].sort().join("|"));
+  }
+  return { pos, treePairs };
+}
+
+const ROOT = "10 502_Term";
+const orderedLayout = buildFeederLayout(D.lines, ROOT);
+let layoutMode = localStorage.getItem("topo-layout") || "ordered";
+if (layoutMode === "vertical") layoutMode = "ordered";
+if (layoutMode === "horizontal") layoutMode = "organic";
+if (layoutMode !== "ordered" && layoutMode !== "organic") layoutMode = "ordered";
+let layoutPos = layoutMode === "ordered" ? orderedLayout.pos : buildRandomLayout(Date.now());
+let treePairs = orderedLayout.treePairs;
+let physicsActive = false;
+
+function layoutLabel(mode = layoutMode) {
+  return mode === "ordered" ? "ordenado" : "desordenado";
+}
+
+function updateLayoutButton() {
+  const btn = document.getElementById("btnLayout");
+  if (layoutMode === "ordered") {
+    btn.textContent = "Ordenado";
+    btn.title = "Unifilar vertical sin cruces. Clic para grafo libre aleatorio.";
+    btn.classList.add("toggle-on");
+  } else {
+    btn.textContent = "Desordenado";
+    btn.title = "Grafo libre (física + posición aleatoria). Clic para volver al unifilar ordenado.";
+    btn.classList.remove("toggle-on");
+  }
+}
+
+function edgeStyle(L, mode = layoutMode) {
+  const onPath = pathLines.has(L.id);
+  if (mode === "organic") {
+    return {
+      color: { color: onPath ? "#ff6b4a" : "#7b8aa5" },
+      width: onPath ? 3 : (L.conductor.includes("ACSR") ? 2 : 1),
+      dashes: false,
+      smooth: { enabled: true, type: "dynamic", roundness: 0.45 }
+    };
+  }
+  const tree = treePairs.has([L.from, L.to].sort().join("|"));
+  return {
+    color: { color: onPath ? "#ff6b4a" : (tree ? "#7b8aa5" : "#5a6a85") },
+    width: onPath ? 3 : (L.conductor.includes("ACSR") ? 2 : 1),
+    dashes: tree ? false : [6, 6],
+    smooth: tree
+      ? { enabled: true, type: "straightCross", roundness: 0, forceDirection: "vertical" }
+      : { enabled: true, type: "curvedCW", roundness: 0.35 }
+  };
+}
+
+function syncVisNodeLayout(vn) {
+  const p = layoutPos.get(vn.id);
+  if (p) { vn.x = p.x; vn.y = p.y; }
+  vn.font = { color: nodeFontColor(), size: vn.id === ROOT ? 12 : 11 };
+  vn.fixed = layoutMode === "ordered" ? { x: true, y: true } : false;
+}
+
+function syncPositionsFromNetwork(ids = null) {
+  const positions = network.getPositions(ids || allNodes.map(n => n.id));
+  Object.entries(positions).forEach(([id, p]) => {
+    layoutPos.set(id, p);
+    const vn = allNodes.find(n => n.id === id);
+    if (vn) { vn.x = p.x; vn.y = p.y; }
+  });
+}
+
+function runOrganicPhysics() {
+  physicsActive = true;
+  network.setOptions({
+    physics: {
+      enabled: true,
+      barnesHut: {
+        gravitationalConstant: -12000,
+        centralGravity: 0.25,
+        springLength: 95,
+        springConstant: 0.05,
+        damping: 0.12,
+        avoidOverlap: 0.65
+      },
+      stabilization: { iterations: 280, updateInterval: 25, fit: true }
+    },
+    interaction: { dragNodes: true }
+  });
+  network.stabilize(280);
+  network.once("stabilizationIterationsDone", () => {
+    physicsActive = false;
+    syncPositionsFromNetwork();
+    network.setOptions({ physics: { enabled: false } });
+    network.fit({ animation: { duration: 400, easingFunction: "easeInOutQuad" } });
+  });
+}
+
+function applyGraphLayout(mode) {
+  layoutMode = mode;
+  localStorage.setItem("topo-layout", mode);
+  network.off("stabilizationIterationsDone");
+  document.getElementById("legendOrganic").style.display = mode === "organic" ? "inline" : "none";
+
+  if (mode === "ordered") {
+    layoutPos = orderedLayout.pos;
+    treePairs = orderedLayout.treePairs;
+    network.setOptions({ physics: { enabled: false }, interaction: { dragNodes: false } });
+    allNodes.forEach(vn => {
+      syncVisNodeLayout(vn);
+      vn.color = {
+        background: nodeColor(vn._data),
+        border: nodeBorder(vn._data),
+        highlight: { background: nodeColor(vn._data), border: "#fff" }
+      };
+    });
+    allEdges.forEach(e => Object.assign(e, edgeStyle(e._data, "ordered")));
+    updateLayoutButton();
+    applyFilter();
+    setTimeout(() => network.fit({ animation: { duration: 350, easingFunction: "easeInOutQuad" } }), 60);
+    return;
+  }
+
+  layoutPos = buildRandomLayout(Date.now() + Math.random() * 1e6);
+  allNodes.forEach(vn => {
+    syncVisNodeLayout(vn);
+    vn.color = {
+      background: nodeColor(vn._data),
+      border: nodeBorder(vn._data),
+      highlight: { background: nodeColor(vn._data), border: "#fff" }
+    };
+  });
+  allEdges.forEach(e => Object.assign(e, edgeStyle(e._data, "organic")));
+  updateLayoutButton();
+  applyFilter();
+  setTimeout(runOrganicPhysics, 80);
+}
+
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme === "light" ? "light" : "";
+  localStorage.setItem("topo-theme", theme);
+  const btn = document.getElementById("btnTheme");
+  btn.textContent = theme === "light" ? "Modo oscuro" : "Modo claro";
+  btn.classList.toggle("toggle-on", theme === "light");
+  allNodes.forEach(vn => { vn.font = { ...vn.font, color: nodeFontColor() }; });
+  applyFilter();
+}
+
+function buildVisNode(n) {
+  return {
+    id: n.id,
+    label: n.id === ROOT ? "SE Conucos" : n.id,
+    title: tipNode(n),
+    color: { background: nodeColor(n), border: nodeBorder(n), highlight: { background: nodeColor(n), border: "#fff" } },
+    size: nodeSize(n),
+    font: { color: nodeFontColor(), size: n.id === ROOT ? 12 : 11 },
+    x: layoutPos.get(n.id).x,
+    y: layoutPos.get(n.id).y,
+    fixed: layoutMode === "ordered" ? { x: true, y: true } : false,
+    _role: n.role, _data: n
+  };
+}
+const allNodes = D.nodes.map(n => buildVisNode(n));
 const allEdges = D.lines.map(L => ({
   id: "L"+L.id, from: L.from, to: L.to,
   title: tipLine(L),
-  color: { color: pathLines.has(L.id) ? "#ff6b4a" : "#7b8aa5" },
-  width: pathLines.has(L.id) ? 3 : (L.conductor.includes("ACSR") ? 2 : 1),
+  ...edgeStyle(L),
   _data: L
 }));
 
@@ -188,12 +522,12 @@ const network = new vis.Network(document.getElementById("net"), {
   nodes: new vis.DataSet(allNodes),
   edges: new vis.DataSet(allEdges)
 }, {
-  physics: { barnesHut: { gravitationalConstant: -28000, springLength: 95, springConstant: 0.04 }, stabilization: { iterations: 180 } },
-  interaction: { hover: true, tooltipDelay: 80, navigationButtons: true, keyboard: true },
-  edges: { smooth: { type: "continuous" } },
+  physics: false,
+  layout: { improvedLayout: false },
+  interaction: { hover: true, tooltipDelay: 80, navigationButtons: true, keyboard: true, zoomView: true, dragView: true, dragNodes: false },
+  edges: { smooth: { enabled: true } },
   nodes: { shape: "dot", borderWidth: 1 }
 });
-network.on("stabilizationIterationsDone", () => network.setOptions({ physics: false }));
 
 function neighborsOf(id) {
   const ns = new Set([id]);
@@ -235,12 +569,20 @@ function applyFilter() {
     nodes: new vis.DataSet(allNodes.filter(n => keepN.has(n.id))),
     edges: new vis.DataSet(allEdges.filter(e => keepE.has(e._data.id)))
   });
-  document.getElementById("netstat").textContent = `${keepN.size} nodos · ${keepE.size} líneas`;
+  document.getElementById("netstat").textContent = `${keepN.size} nodos · ${keepE.size} líneas · ${layoutLabel()}`;
+  if (!physicsActive) setTimeout(() => network.fit({ animation: false }), 30);
 }
 
 document.getElementById("filter").onchange = applyFilter;
 document.getElementById("q").oninput = () => { clearTimeout(window._t); window._t = setTimeout(applyFilter, 180); };
 document.getElementById("fit").onclick = () => network.fit({ animation: true });
+document.getElementById("btnLayout").onclick = () => {
+  if (layoutMode === "ordered") applyGraphLayout("organic");
+  else applyGraphLayout("ordered");
+};
+document.getElementById("btnTheme").onclick = () => {
+  setTheme(document.documentElement.dataset.theme === "light" ? "dark" : "light");
+};
 document.getElementById("focusPoc").onclick = () => {
   document.getElementById("filter").value = "poc";
   applyFilter();
@@ -255,6 +597,10 @@ network.on("click", ev => {
     const e = allEdges.find(x => x.id === ev.edges[0]);
     if (e) showLine(e._data);
   }
+});
+network.on("dragEnd", ev => {
+  if (layoutMode !== "organic" || !ev.nodes.length) return;
+  syncPositionsFromNetwork(ev.nodes);
 });
 
 function showNode(n) {
@@ -354,6 +700,14 @@ document.getElementById("cargas").innerHTML = table(
   D.loads.sort((a,b)=>b.s_mva-a.s_mva).map(l => [l.name.replace("_LV_LOAD",""), l.node, l.s_mva, l.fp, l.p_kw, l.q_kvar])
 );
 ["nodos","lineas","cargas"].forEach(id => sortable(document.getElementById(id)));
+
+
+
+
+
+if (localStorage.getItem("topo-theme") === "light") setTheme("light");
+else document.getElementById("btnTheme").textContent = "Modo claro";
+applyGraphLayout(layoutMode);
 
 document.querySelectorAll(".tab").forEach(t => t.onclick = () => {
   document.querySelectorAll(".tab").forEach(x => x.classList.remove("active"));

@@ -1,0 +1,1730 @@
+===== PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ESTUDIO DE CONEXIÓN SIMPLIFICADO 
+SUPERMERCADO MAS X MENOS GUARÍN 
+- 
+ 
+PROYECTO SOLAR 
+FOTOVOLTAICO MAS X MENOS 
+141,6 kWp 
+ 
+ELABORADO POR: COPOWER LTDA 
+FECHA: 08 de enero de 2025 
+ 
+ 
+ 
+ELABORACIÓN – REVISIÓN – APROBACIÓN 
+Revisión Elaborado por: Revisado por: Aprobado por: Fecha 
+0 JMCC AJRB AJRB 09/01/25 
+1 JMCC AJRB AJRB 28/02/25 
+2     
+  
+  
+ 
+
+
+===== PAGE 2 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+TABLA DE CONTENIDO 
+ELABORACIÓN – REVISIÓN – APROBACIÓN .................................................................................... 1 
+INTRODUCCIÓN ................................................................................................................................... 5 
+RESUMEN ............................................................................................................................................ 5 
+1. ANTECEDENTES Y ALCANCE ............................................................................................................ 5 
+2. OBJETIVO ..................................................................................................................................... 6 
+3. INFORMACIÓN GENERAL DEL PROYECTO .................................................................................. 6 
+3.1 Ubicación geográfica del proyecto y fecha de entrada en operación ........................................ 6 
+3.2. Parámetros técnicos paneles y micro inversores .............................................................. 7 
+3.3. Cálculo de Energía producida por el proyecto ................................................................... 7 
+3.3.1. Sombras ................................................................................................................................. 7 
+3.3.2. Cálculo de generación de energía ......................................................................................... 8 
+3.4. Parámetros técnicos NODO 3272966 ................................................................................ 9 
+3.5. Flujo de carga del sistema.................................................................................................. 9 
+3.6. Demanda del cliente ........................................................................................................ 10 
+4. METODOLOGÍA .......................................................................................................................... 12 
+4.1.1 Flujo de carga ................................................................................................................... 12 
+4.1.2 Cortocircuito .................................................................................................................... 12 
+4.2 Modelado del sistema ............................................................................................................. 13 
+4.2.1 Elementos eléctricos y consideraciones .......................................................................... 13 
+4.2.2 Transformadores ............................................................................................................. 13 
+4.2.3 Líneas y conductores ....................................................................................................... 13 
+5. RESULTADOS ANÁLISIS ELÉCTRICOS .......................................................................................... 13 
+5.1. Flujos de carga en operación normal ..................................................................................... 13 
+5.1.1. Tensiones ..................................................................................................................... 14 
+5.1.2. Cargabilidad de líneas de distribución ........................................................................ 18 
+5.1.3. Cargabilidad de Transformadores ............................................................................... 24 
+5.2. Resultados estudio de cortocircuito ...................................................................................... 26 
+5.2.1. Cortocircuito monofásico ............................................................................................ 26 
+5.2.2. Cortocircuito trifásico .......................................................................................................... 31 
+5.3. Protección en el punto de conexión ...................................................................................... 36 
+
+===== PAGE 3 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5.3.1. Elemento de interrupción a utilizar .................................................................................... 37 
+5.4. Cálculo de perdidas ................................................................................................................ 38 
+6. RECOMENDACIONES Y CONCLUSIONES .................................................................................... 43 
+7. BIBLIOGRAFIA ................................................................................................................................ 44 
+ANEXOS ............................................................................................................................................. 45 
+ 
+ÍNDICE DE FIGURAS 
+Figura 1. Localización del proyecto. Tomado de Google Maps .......................................................................... 6 
+Figura 2. Producción estimada de energía en el primer año .............................................................................. 9 
+Figura 3. Corriente horaria en la cabecera del circuito CONUCOS. .................................................................. 10 
+Figura 4. Demanda de Supermercado Mas X Menos sede Guarín. .................................................................. 11 
+Figura 5. Factor de potencia del Supermercado Mas X Menos sede Guarín. ................................................... 11 
+Figura 6. Tensiones en los nodos afectados por el proyecto Mas X Menos sede Guarín 120 kW a las 9 am .. 17 
+Figura 7. Tensiones en los nodos afectados por el proyecto Mas X Menos sede Guarín 120 kW a las 12 pm  18 
+Figura 8. Tensiones en los nodos afectados por el proyecto Mas X Menos sede Guarín 120 kW a las 3 pm .. 18 
+Figura 9. Cargabilidad de líneas afectadas por el proyecto Mas X Menos sede Guarín a las 9 am  .................. 22 
+Figura 10. Cargabilidad de líneas afectadas por el proyecto Mas X Menos sede Guarín a las 12 pm  .............. 23 
+Figura 11. Cargabilidad de líneas afectadas por el proyecto Mas X Menos sede Guarín a las 3 pm  ................ 23 
+Figura 12. Cargabilidad de los transformadores del proyecto Mas X Menos sede Guarín a las 9 am  ............. 25 
+Figura 13. Cargabilidad de los transformadores del proyecto Mas X Menos sede Guarín a las 12 pm  ........... 25 
+Figura 14. Cargabilidad de los transformadores del proyecto Mas X Menos sede Guarín a las 3 pm  ............. 26 
+Figura 15. Corriente de cortocircuito monofásica a las 9 am ........................................................................... 30 
+Figura 16. Corriente de cortocircuito monofásica a las 12 pm ......................................................................... 30 
+Figura 17. Corriente de cortocircuito monofásica a las 3 pm ........................................................................... 31 
+Figura 18. Corriente de cortocircuito trifásico a las 9 am ................................................................................ 34 
+Figura 19. Corriente de cortocircuito trifásico a las 12 pm .............................................................................. 35 
+Figura 20. Corriente de cortocircuito trifásico a las 3 pm ................................................................................ 35 
+Figura 21. Curva de disparo breaker de inversores 3 x (140 - 200) A ............................................................... 38 
+Figura 22. Curva de disparo breaker de inversores 3 x (350 - 500) A ............................................................... 38 
+ 
+ÍNDICE DE TABLAS 
+Tabla 1. Coordenadas ubicación geográfica del proyecto. ................................................................. 6 
+
+===== PAGE 4 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Tabla 2. Parámetros técnicos del inversor .......................................................................................... 7 
+Tabla 3. Parámetros técnicos de los paneles fotovoltaicos ................................................................ 7 
+Tabla 4. Datos de entrada para estimar la energía generada ............................................................. 8 
+Tabla 5. Parámetros técnicos del transformador Serie 21123832-S 13,2 kV/220 V ......................... 13 
+Tabla 6. Característica de la línea de conexión del transformador ESSA Serie 21123832-S 13,2 kV 13 
+Tabla 7. Tensiones en 2024 a las 9 am con el proyecto Mas X Menos sede Guarín 120 kW ............ 14 
+Tabla 8. Tensiones en 2024 a las 12 pm con el proyecto Mas X Menos sede Guarín 120 kW ......... 15 
+Tabla 9. Tensiones en 2024 a las 15 am con el proyecto Mas X Menos sede Guarín 120 kW .......... 16 
+Tabla 10. Variación de la cargabilidad de las líneas por el proyecto Mas X Menos sede Guarín a las 9 
+am ...................................................................................................................................................... 19 
+Tabla 11. Variación de la cargabilidad de las líneas por el proyecto Mas X Menos sede Guarín a las 
+12 pm ................................................................................................................................................ 20 
+Tabla 12. Variación de la cargabilidad de las líneas por el proyecto Mas X Menos sede Guarín a las 3 
+pm ..................................................................................................................................................... 21 
+Tabla 13. Cargabilidad de los transformadores del proyecto Mas X Menos sede Guarín a las 9 am 24 
+Tabla 14. Cargabilidad de los transformadores del proyecto Mas X Menos sede Guarín a las 12 pm
+ ........................................................................................................................................................... 24 
+Tabla 15. Cargabilidad de los transformadores del proyecto Mas X Menos sede Guarín a las 3 pm24 
+Tabla 8. Resultados de cortocircuito monofásico en las barras principales a las 9 am .................... 26 
+Tabla 9. Resultados de cortocircuito monofásico en las barras principales a las 12 pm .................. 27 
+Tabla 10. Resultados de cortocircuito monofásico en las barras principales a las 3 pm .................. 28 
+Tabla 11. Resultados de cortocircuito trifásico en las barras principales a las 9 am ........................ 31 
+Tabla 12. Resultados de cortocircuito trifásico en las barras principales a las 12 pm ...................... 32 
+Tabla 13. Resultados de cortocircuito trifásico en las barras principales a las 3 pm ........................ 33 
+Tabla 22. Requerimientos de valores protección ............................................................................. 36 
+Tabla 23. Requerimiento de protección Supermercado Mas X Menos Sede Guarín........................ 37 
+Tabla 24. Perdidas a las 9 am con el proyecto Mas X Menos Sede Guarín 120 kW ......................... 39 
+Tabla 25. Perdidas a las 12 pm con el proyecto Mas X Menos Sede Guarín 120 kW ....................... 40 
+Tabla 26. Perdidas a las 3 pm con el proyecto Mas X Menos Sede Guarín 120 kW ......................... 41 
+Tabla 27. Pérdidas totales del sistema con el proyecto Mas X Menos Sede Guarín 120 kW ........... 42 
+Tabla 28. Perdidas para el cálculo de la energía producida del proyecto Mas X Menos Sede Guarín 
+120 kW .............................................................................................................................................. 42 
+ 
+
+===== PAGE 5 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+INTRODUCCIÓN 
+En este documento se incluyen los análisis de flujo de carga y cortocircuito para el sistema 
+fotovoltaica de 141,6 kWp instalado en el supermercado MAS X MENOS sede Guarín con conexión 
+a la red de 13,8 kV propiedad de ESSA. 
+Los estudios hacen parte del estudio de conexión simplificado que se debe presentar al operador 
+de red ESSA y tienen como objetivo determinar cómo se ve afectado el sistema eléctrico ante la 
+entrada en funcionamiento de esta generación. 
+RESUMEN 
+Para el año 2024, el supermercado MAS X MENOS sede Guarín, aprobó la instalación y puesta en 
+servicio de un proyecto fotovoltaico de 141,6 kWp en sus instalaciones. 
+La Potencia instalada de generación es de 120 kW, constituida por dos (2) inversores SOLIS 60K-LV-
+5G de 60 kW, con tensión de salida de 220 V. 
+El proyecto se conecta a la red de ESSA a través de un transformador de 150 kVA de 13200 kV/220 
+voltios, al nodo 3272966. Este proyecto fotovoltaico suplirá durante algunos periodos de tiempo la 
+demanda total del cliente y exportará energía hacia el sistema de distribución local. 
+Los resultados más relevantes del estudio son: 
+• Para la alternativa de conexión del nuevo proyecto de generación no se presentaron 
+violaciones a los parámetros de operación normal de la red en operación normal. 
+• Las corrientes de cortocircuito no presentan un aumento significativo debido a la tecnología 
+de generación usada que limita la inyección de corriente. 
+1. ANTECEDENTES Y ALCANCE 
+La matriz energética colombiana es altamente dependiente de la energía producida por centrales 
+hidráulicas con un aporte de éstas, entre un 70% a 80% de la energía eléctrica generada en el país; 
+esto ha evidenciado una fragilidad en el sistema de potencia ante las eventualidades climáticas 
+como el fenómeno del niño de 2015 y 2016. Este fenómeno generó el aumento de los precios de 
+energía a máximos históricos y genero el riesgo de un posible racionamiento. Por lo anterior , la 
+entrada de nuevas plantas de generación que permitan suplir la demanda a bajo coste y no 
+dependan de variaciones climáticas son una necesidad en el corto plazo en el país, ya que estas 
+plantas permiten disminuir los riesgos asociados a la variabilidad climática. El gobierno nacional ha 
+estado promoviendo, regulando y apoyando el uso de tecnologías con fuentes no convencionales 
+de energía renovables (FNCER), que diversifiquen la matriz energética, a través de herramientas 
+legislativas como es el caso de la ley 1715 y la resolución CREG 060 DE 2019. 
+Con miras a la realización del proyecto SOLAR DEL SUPERMERCADO MAS X MENOS GUARÍN 141,6 
+kWp, y como parte de los requerimientos exigidos para su construcción, se presenta el estudio de 
+conexión simplificado del proyecto de acuerdo con los requisitos establecidos resolución CREG 030 
+
+===== PAGE 6 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+de 2018. Para ello, primero, se partió de los requerimientos exigidos por el operador de red (OR) del 
+punto de conexión de proyecto, en este caso ESSA. Después, a partir de los datos suministrados, se 
+desarrolló este estudio. 
+2. OBJETIVO 
+El objetivo general del presente estudio es analizar la conexión para el desarrollo del proyecto 
+fotovoltaico de 141,6 kWp de capacidad en el nodo 3272966 de ESSA a un nivel de tensión de 13,8 
+kV. Para ello, se realizaron análisis técnicos que determinen los impactos de la nueva generación. 
+3. INFORMACIÓN GENERAL DEL PROYECTO 
+3.1 Ubicación geográfica del proyecto y fecha de entrada en operación 
+El proyecto está ubicado en Bucaramanga, departamento de Santander con entrada en operación 
+para 2025. A continuación, se muestra su ubicación y coordenadas en la Tabla 1 y Figura 1. 
+Tabla 1. Coordenadas ubicación geográfica del proyecto. 
+COORDENADAS 
+Latitud Longitud 
+7,12621563 -73,11227598 
+ 
+ 
+Figura 1. Localización del proyecto. Tomado de Google Maps 
+
+
+===== PAGE 7 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3.2. Parámetros técnicos paneles y micro inversores 
+En la Tabla 2 y Tabla 3 se muestran los parámetros técnicos del inversor y los paneles a usar en el 
+proyecto. 
+Tabla 2. Parámetros técnicos del inversor 
+RESUMEN PARÁMETROS TÉCNICOS INVERSOR: 
+SOLIS 60K LV 5G 
+Numero de inversores 2 UND 
+Tensión máxima de arranque 195 VDC 
+Tensión MPPT en DC entrada por inversor 180 - 1000 VDC 
+Tensión máxima DC entrada por micro inversor 1100 VDC 
+Máxima corriente de entrada por MPPT 26 x 8 A DC 
+Potencia máxima del inversor 69000 W 
+Voltaje Nominal de salida 220 VAC 
+Frecuencia de salida 60 Hz 
+Corriente de salida 157,5 A 
+Número de fases 3 - 
+Protección Anti – Isla Si - 
+Factor de potencia 0.99 - 
+ 
+Tabla 3. Parámetros técnicos de los paneles fotovoltaicos 
+RESUMEN PARÁMETROS TÉCNICOS PANELES 
+FOTOVOLTAICOS: 
+JINKO MONOCRISTALINO MONO-FACIAL 
+Potencia  nominal por panel 590 W 
+Voltaje máximo de salida 41,05 VDC 
+Corriente máxima de salida 10,83 A 
+Eficiencia 22,84 % 
+Cantidad de Paneles 240 UND 
+3.3. Cálculo de Energía producida por el proyecto 
+Teniendo en cuenta la radiación diaria promedio mensual y el número de días que conforman los 
+doce meses del año, se puede determinar el valor de la radiación global anual sobre una superficie 
+horizontal para la ubicación de Bucaramanga, Santander. Este valor es igual a 4,7 [kWh/m²] en 
+promedio. 
+3.3.1. Sombras 
+Normalmente, en un sistema fotovoltaico el sombreado debe evitarse, ya que causa pérdida de 
+potencia y por tanto de la energía producida. Sin embargo, los fenómenos limitados se podrán 
+permitir cuando se evaluaron adecuadamente. En el caso de la planta en cuestión no existe sombra. 
+
+===== PAGE 8 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3.3.2. Cálculo de generación de energía 
+La producción de energía del sistema se calculó sobre la base de datos climáticos  de la PVGIS-
+NSRDB/ERA-Interim del lugar de la instalación, en relación con el promedio global  mensual de la 
+radiación solar incidente sobre la superficie horizontal. 
+El procedimiento para el cálculo de la energía producida por el sistema toma en cuenta los datos de 
+la Tabla 4 que incluyen  la potencia nominal en  corriente directa (141,6 kWdc), el ángulo de  
+inclinación y acimut (10°, 180°) de la generación fotovoltaica, las pérdidas de este  (pérdidas 
+resistivas, las pérdidas por diferencia de temperatura de los módulos, de reflexión entre otras), la 
+eficiencia del inversor, así como el coeficiente de reflexión de la tierra delante de los módulos (20%) 
+(albedo). En la Figura 2 se observan los  valores en la aplicación PV Watts Calculator de NREL 
+mediante la cual se estimó la energía a generar. 
+Tabla 4. Datos de entrada para estimar la energía generada 
+Ubicación del proyecto Bucaramanga 
+Coordenadas (LAT, LONG) 7.12621563, -73.112275 
+Capacidad instalada en DC 141,6 [KWp] 
+Capacidad instalada en AC 120 [KW] 
+Tipo de modulo Premium 
+Inclinación 10° 
+Azimut 180 
+Perdidas del sistema 26% 
+Eficiencia del inversor 98,50% 
+Relación DC a AC 1.18 
+Por lo tanto, la energía producida por el sistema sobre una base anual (Ep, y) se calcula: 
+𝐸𝑝, 𝑦 =  𝑃𝑛𝑜𝑚 (𝑑. 𝑐)  ∗  𝐼𝑟𝑟 ∗  (1 −  𝐿𝑜𝑠𝑠𝑒𝑠)  =  179.756,95 𝑘𝑊ℎ −  𝑑𝑖𝑎 
+• Pnom (d.c) = Potencia Nominal del sistema: 141,6 kWp. 
+• Irr = Radiación anual sobre la superficie de los módulos: 1.715,5 kWh/m². 
+• Losses = Pérdidas de potencia: 26%. 
+Las pérdidas de potencia se dan debido a varios factores por ejemplo pérdidas por efecto Joule, 
+disminución de la eficiencia de los equipos debido a la temperatura, entre otros. 
+En la Figura 2 se muestra la evolución de la producción mensual de energía que se espera durante 
+el primer año: 
+ 
+
+===== PAGE 9 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 2. Producción estimada de energía en el primer año 
+3.4. Parámetros técnicos NODO 3272966 
+Los parámetros eléctricos de las líneas en el SDL fueron suministrados por el operador de red y 
+fueron los utilizados para modelar el sistema de distribución de ESSA, así como también el 
+equivalente de red en la subestación CONUCOS. 
+3.5. Flujo de carga del sistema 
+Para modelar la red equivalente propuesta por el operador de red se utilizarán los datos 
+suministrados por el mismo en el archivo “Datos Circuito 10502.xlsx” con el cual se modelo todo el 
+circuito. 
+Para modelar la demanda del circuito 10502 se utilizarán los datos suministrados por el operador 
+de red en el archivo “Datos Circuito 10502.xlsx” con el cual se modelo todo el circuito y la corriente 
+demandada en el alimentador. Estos datos fueron usados para ajustar la demanda a las 9 am, 12 
+pm y 3 pm en este estudio. La Figura 3 muestra la corriente en la cabecera de circuito. 
+
+
+===== PAGE 10 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 3. Corriente horaria en la cabecera del circuito CONUCOS. 
+3.6. Demanda del cliente 
+La demanda del cliente para los diferentes periodos simulados se modelo a través de información 
+existente de facturación horaria para las 9 am, 12 pm y 3 pm, tomando el promedio de las demandas 
+en estos horarios. En la Figura 4 y Figura 5 se observa la curva de demanda del cliente y el factor de 
+potencia de esta demanda respectivamente durante 24 horas. 
+
+
+===== PAGE 11 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 4. Demanda de Supermercado Mas X Menos sede Guarín. 
+ 
+Figura 5. Factor de potencia del Supermercado Mas X Menos sede Guarín. 
+
+
+===== PAGE 12 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4. METODOLOGÍA 
+Para el desarrollo del estudio simplificado de conexión, se realizaron los estudios de flujo de carga 
+y corto circuito en el NODO 3272966, a continuación, se describen los análisis a realizar. 
+4.1.1 Flujo de carga 
+El objetivo es determinar el desempeño del sistema ante la conexión de la nueva generación, es 
+decir, si en condiciones de estado estable la incorporación del nuevo proyecto causará dificultades 
+operativas en el sistema, (sobrecargas y/o bajos o incluso al tos voltajes), lo anterior garantizando 
+un suministro acorde con las exigencias de calidad y balance, contenidas en la resolución CREG 025 
+de 1995 (Código de Redes) y demás regulación aplicable al tipo de generación. A través de este 
+análisis se obtienen las tensiones en las barras del sistema, la distribución de los flujos de potencia 
+activa, reactiva y las pérdidas. 
+Para evaluar la cargabilidad y los voltajes del sistema, se consideran los siguientes límites operativos: 
+• Las tensiones de estado permanente aceptables se encuentran entre 90% y 110% de la 
+tensión nominal del barraje. 
+• La evaluación para determinar la cargabilidad de las líneas y transformadores se calculó con 
+base en la corriente nominal, así se considera que todos los transformadores de potencia y 
+conductores eléctricos se pueden cargar hasta el 100% de su capacidad nominal. 
+En este numeral se describe el comportamiento del sistema cercano a la ubicación del proyecto CON 
+y SIN la incorporación del nuevo generador fotovoltaico, tanto en condición normal de operación 
+como ante algunas contingencias analizadas  y se expresa el compromiso de realizar medidas en 
+campo antes y después de la instalación del proyecto dando cumplimiento a los límites de los 
+parámetros anteriormente mencionados. 
+4.1.2 Cortocircuito 
+El análisis de cortocircuito se realizó para el año 2024. Se calcularon las corrientes de cortocircuito 
+trifásico (L-L-L) y monofásico (L-G) para los nodos aledaños al proyecto generación fotovoltaico, así 
+como también la variación en los nodos cercanos a la subestación CONUCOS. Los cálculos de 
+cortocircuito se realizaron bajo la norma IEC-60909, en la cual las tensiones de pre-falla en las barras 
+son de 110% la tensión nominal. 
+Para los análisis se consideró el aporte de cortocircuito definido por el equivalente de red en la 
+subestación CONUCOS 13,8 kV, para los micro inversores del generador fotovoltaico proyectado, se 
+supuso que la corriente de cortocircuito simétrico es igual a 1,5 veces la corriente nominal del micro 
+inversor. 
+Como resultados de este análisis se obtuvieron las corrientes de interrupción simétrica de 
+cortocircuito (Ik). Esta corriente se define como el valor r.m.s. de la componente simétrica de la 
+corriente de cortocircuito, para el instante de separación de los contactos del dispositivo de 
+interrupción. 
+
+===== PAGE 13 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4.2 Modelado del sistema 
+Para modelar la red equivalente propuesta por el operador de red, se utilizar on los datos 
+suministrados por el mismo en el archivo “Datos Circuito 10502.xlsx” con el cual se modelo todo el 
+circuito. 
+4.2.1 Elementos eléctricos y consideraciones 
+A continuación, se presentan las consideraciones que se tuvieron en cuenta para el modelado de 
+los elementos del sistema eléctrico, a los cuales hace referencia este estudio. Los siguientes ítems 
+hacen referencia a los modelos básicos que en general se utilizaron para modelar el sistema eléctrico 
+de conexión del proyecto fotovoltaico. 
+4.2.2 Transformadores 
+El transformador utilizado para la conexión del Supermercado Mas X Menos Sede Guarín a la red se 
+modeló con los parámetros mostrados en la Tabla 5. 
+Tabla 5. Parámetros técnicos del transformador Serie 21123832-S 13,2 kV/220 V 
+TRANSFORMADOR SERIE 21123832-S 
+Potencia 150 kVA 
+Tensión 13,2 kV / 220 V 
+Zcc 4,9% 
+Grupo Conexión Dyn5 
+4.2.3 Líneas y conductores 
+Las características técnicas de los conductores (R y X) de baja tensión empleados en el modelado se 
+presentan en la Tabla 6. El conductor propuesto es el mismo utilizado para alimentar la demanda 
+en el nodo 3272966, para este caso cable CU 2 XLPE. 
+Tabla 6. Característica de la línea de conexión del transformador ESSA Serie 21123832-S 13,2 kV 
+LINEA 3272869 - 3272966 
+No. Circuitos 1 
+R'(AC,20°C) 0,0020 
+X' 0,0013 
+R0'(AC) 0,0033 
+X0' 0,0012 
+5. RESULTADOS ANÁLISIS ELÉCTRICOS 
+5.1. Flujos de carga en operación normal 
+Los análisis de flujo de carga se realizaron en condición normal de operación para evaluar el 
+desempeño del sistema ante la entrada en operación del sistema, y evidenciar sobrecargas o 
+
+===== PAGE 14 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+variaciones de tensión por fuera de los límites establecidos por la normatividad. Para ello, se evaluó 
+la tensión de todos los nodos del circuito, la cargabilidad de todas las líneas y el transformador 
+encargado de alimentar la demanda del supermercado Mas X Menos Sede Guarín. 
+Con el fin de analizar en detalle el impacto sistema solar fotovoltaico, se presentan los resultados 
+obtenidos en los nodos adyacentes al nodo 3272966. Los resultados detallados del estudio de flujos 
+de carga, que incluye todos los nodos del sistema, se presentan a modo de anexo. 
+5.1.1. Tensiones 
+El proyecto genera unas variaciones en la tensión en los nodos cercanos el proyecto, generando un 
+cambio máximo de 0,00062 p.u, sin que estas variaciones generen una violación a los parámetros 
+operativos normales del sistema establecidos en el código de redes. 
+Los valores de tensión en los diferentes escenarios evaluados se presentan en la Tabla 7 a la Tabla 
+9, y también de manera gráfica en la Figura 6 a Figura 8. 
+Tabla 7. Tensiones en 2024 a las 9 am con el proyecto Mas X Menos sede Guarín 120 kW  
+NODOS TENSIONES [p.u] VARIACION DE 
+TENSIÓN [p.u] 9 Hr sin SSFV 9 Hr con SSFV 
+1045288 0,99511 0,99554 0,00044 
+1065971 0,99471 0,99531 0,00060 
+1101340 0,99512 0,99555 0,00043 
+1101358 0,99508 0,99552 0,00045 
+1101374 0,99501 0,99548 0,00047 
+1101382 0,99496 0,99545 0,00049 
+1101391 0,99492 0,99543 0,00051 
+1101404 0,99484 0,99538 0,00054 
+1101412 0,99480 0,99536 0,00055 
+1101421 0,99477 0,99533 0,00057 
+1101447 0,99474 0,99533 0,00058 
+1101455 0,99472 0,99532 0,00060 
+1101471 0,99471 0,99531 0,00060 
+1101480 0,99471 0,99531 0,00060 
+1155652 0,99512 0,99555 0,00043 
+1155741 0,99476 0,99533 0,00057 
+1155750 0,99476 0,99533 0,00057 
+1155776 0,99476 0,99533 0,00057 
+1155792 0,99476 0,99533 0,00057 
+1155806 0,99476 0,99533 0,00057 
+1155822 0,99476 0,99533 0,00057 
+1155849 0,99484 0,99538 0,00054 
+1155857 0,99484 0,99538 0,00054 
+1155881 0,99484 0,99538 0,00054 
+1155938 0,99512 0,99555 0,00043 
+1155946 0,99512 0,99555 0,00043 
+1155971 0,99512 0,99555 0,00043 
+
+===== PAGE 15 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1155997 0,99512 0,99555 0,00043 
+1618733 0,99484 0,99538 0,00054 
+1618741 0,99484 0,99538 0,00054 
+1618750 0,99484 0,99538 0,00054 
+2479567 0,99471 0,99531 0,00060 
+2789132 0,99476 0,99533 0,00057 
+2789141 0,99476 0,99533 0,00057 
+3272567 0,99471 0,99532 0,00060 
+3272664 0,99471 0,99532 0,00061 
+3272761 0,99470 0,99532 0,00061 
+3272869 0,99470 0,99532 0,00062 
+3272966 0,99470 0,99532 0,00062 
+9219013 0,99484 0,99537 0,00054 
+ 
+Tabla 8. Tensiones en 2024 a las 12 pm con el proyecto Mas X Menos sede Guarín 120 kW 
+NODOS TENSIONES [p.u] VARIACION DE 
+TENSIÓN [p.u] 12 Hr sin SSFV 12 Hr con SSFV 
+1045288 0,99475 0,99519 0,00044 
+1065971 0,99433 0,99493 0,00060 
+1101340 0,99476 0,99519 0,00043 
+1101358 0,99472 0,99516 0,00045 
+1101374 0,99465 0,99512 0,00047 
+1101382 0,99460 0,99509 0,00049 
+1101391 0,99455 0,99506 0,00051 
+1101404 0,99447 0,99501 0,00054 
+1101412 0,99443 0,99498 0,00055 
+1101421 0,99439 0,99496 0,00057 
+1101447 0,99437 0,99495 0,00058 
+1101455 0,99434 0,99494 0,00060 
+1101471 0,99433 0,99493 0,00060 
+1101480 0,99433 0,99493 0,00060 
+1155652 0,99476 0,99519 0,00043 
+1155741 0,99439 0,99496 0,00057 
+1155750 0,99438 0,99495 0,00057 
+1155776 0,99438 0,99495 0,00057 
+1155792 0,99439 0,99495 0,00057 
+1155806 0,99438 0,99495 0,00057 
+1155822 0,99438 0,99495 0,00057 
+1155849 0,99447 0,99501 0,00054 
+1155857 0,99447 0,99500 0,00054 
+1155881 0,99447 0,99500 0,00054 
+1155938 0,99476 0,99519 0,00043 
+1155946 0,99476 0,99519 0,00043 
+1155971 0,99476 0,99519 0,00043 
+1155997 0,99476 0,99519 0,00043 
+
+===== PAGE 16 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1618733 0,99447 0,99500 0,00054 
+1618741 0,99447 0,99501 0,00054 
+1618750 0,99447 0,99501 0,00054 
+2479567 0,99433 0,99493 0,00060 
+2789132 0,99438 0,99495 0,00057 
+2789141 0,99438 0,99495 0,00057 
+3272567 0,99433 0,99494 0,00060 
+3272664 0,99433 0,99494 0,00061 
+3272761 0,99432 0,99494 0,00061 
+3272869 0,99432 0,99494 0,00062 
+3272966 0,99432 0,99494 0,00062 
+9219013 0,99447 0,99500 0,00054 
+ 
+Tabla 9. Tensiones en 2024 a las 15 am con el proyecto Mas X Menos sede Guarín 120 kW 
+NODOS 
+TENSIONES [p.u] VARIACION DE 
+TENSIÓN [p.u] 15 Hr sin SSFV 15 Hr con SSFV 
+1045288 0,99437 0,99481 0,00044 
+1065971 0,99393 0,99453 0,00060 
+1101340 0,99438 0,99482 0,00043 
+1101358 0,99434 0,99478 0,00045 
+1101374 0,99427 0,99474 0,00047 
+1101382 0,99421 0,99470 0,00049 
+1101391 0,99416 0,99467 0,00051 
+1101404 0,99408 0,99461 0,00053 
+1101412 0,99403 0,99459 0,00055 
+1101421 0,99399 0,99456 0,00057 
+1101447 0,99397 0,99455 0,00058 
+1101455 0,99394 0,99454 0,00060 
+1101471 0,99393 0,99453 0,00060 
+1101480 0,99393 0,99453 0,00060 
+1155652 0,99438 0,99482 0,00043 
+1155741 0,99399 0,99456 0,00057 
+1155750 0,99399 0,99456 0,00057 
+1155776 0,99399 0,99456 0,00057 
+1155792 0,99399 0,99456 0,00057 
+1155806 0,99399 0,99455 0,00057 
+1155822 0,99399 0,99455 0,00057 
+1155849 0,99408 0,99461 0,00053 
+1155857 0,99408 0,99461 0,00053 
+1155881 0,99408 0,99461 0,00053 
+1155938 0,99438 0,99482 0,00043 
+1155946 0,99438 0,99481 0,00043 
+1155971 0,99438 0,99481 0,00043 
+1155997 0,99438 0,99481 0,00043 
+1618733 0,99407 0,99461 0,00053 
+
+===== PAGE 17 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1618741 0,99408 0,99461 0,00053 
+1618750 0,99408 0,99461 0,00053 
+2479567 0,99393 0,99453 0,00060 
+2789132 0,99399 0,99455 0,00057 
+2789141 0,99399 0,99455 0,00057 
+3272567 0,99393 0,99454 0,00060 
+3272664 0,99393 0,99454 0,00061 
+3272761 0,99393 0,99454 0,00061 
+3272869 0,99392 0,99454 0,00061 
+3272966 0,99392 0,99454 0,00062 
+9219013 0,99407 0,99461 0,00053 
+ 
+ 
+Figura 6. Tensiones en los nodos afectados por el proyecto Mas X Menos sede Guarín 120 kW a las 9 am 
+
+
+===== PAGE 18 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 7. Tensiones en los nodos afectados por el proyecto Mas X Menos sede Guarín 120 kW a las 12 pm 
+ 
+Figura 8. Tensiones en los nodos afectados por el proyecto Mas X Menos sede Guarín 120 kW a las 3 pm 
+ 
+5.1.2. Cargabilidad de líneas de distribución 
+Se evaluaron las líneas cercanas al proyecto para identificar si existe variación en la dirección de los 
+flujos de potencia y reducciones o aumentos en la cargabilidad de las líneas. A partir de los datos 
+consignados en la Tabla 10 a la Tabla 12, se identificó que existe una variación máxima de 1,725% 
+ante la entrada del proyecto, además, se observa que no existe un aumento de la cargabilidad en 
+
+
+===== PAGE 19 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ninguna línea. Esto indica que toda la energía generada es consumida de manera local reduciendo 
+de esta manera la cargabilidad y por ende las pérdidas en las líneas. 
+En la Figura 9 a la Figura 11 se presentan los resultados de manera gráfica, se aprecia que en ningún 
+caso se violan los límites de cargabilidad del sistema de distribución de ESSA. 
+Tabla 10. Variación de la cargabilidad de las líneas por el proyecto Mas X Menos sede Guarín a las 9 am 
+NODOS CARGABILIDAD [%] VARIACION DE 
+CARGABILIDAD [%] 9 Hr sin SSFV 9 Hr con SSFV 
+11284 0,542 0,542 0,000 
+11285 0,587 0,587 0,000 
+11286 0,903 0,903 0,001 
+11287 0,542 0,542 0,000 
+11288 0,452 0,451 0,000 
+11289 0,452 0,451 0,000 
+11290 0,452 0,451 0,000 
+11342 0,452 0,451 0,000 
+11343 0,452 0,451 0,000 
+11344 0,452 0,451 0,000 
+11381 0,452 0,451 0,000 
+11382 0,452 0,451 0,000 
+11383 0,452 0,451 0,000 
+11384 0,452 0,451 0,000 
+11385 0,452 0,451 0,000 
+26920 0,435 0,435 0,000 
+26921 2,692 1,221 1,471 
+47594 0,542 0,542 0,000 
+47595 0,587 0,587 0,000 
+47596 0,271 0,271 0,000 
+47597 0,271 0,271 0,000 
+5291 4,316 2,606 1,710 
+5292 4,316 2,606 1,710 
+5294 4,316 2,607 1,710 
+5295 4,317 2,607 1,710 
+5296 4,317 2,607 1,709 
+5297 3,737 2,073 1,663 
+5298 3,737 2,074 1,663 
+5300 2,691 1,220 1,471 
+5303 0,002 0,002 0,000 
+5304 0,001 0,001 0,000 
+5305 0,001 0,001 0,000 
+5373 4,317 2,608 1,709 
+791042 0,452 0,451 0,000 
+791043 0,452 0,451 0,000 
+791044 0,452 0,451 0,000 
+791045 0,452 0,451 0,000 
+807671 2,154 1,593 0,562 
+
+===== PAGE 20 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+807672 2,154 1,593 0,562 
+807673 2,154 1,593 0,562 
+807674 2,154 1,593 0,562 
+807675 2,154 1,593 0,562 
+ 
+Tabla 11. Variación de la cargabilidad de las líneas por el proyecto Mas X Menos sede Guarín a las 12 pm 
+NODOS CARGABILIDAD [%] VARIACION DE 
+CARGABILIDAD [%] 12 Hr sin SSFV 12 Hr con SSFV 
+11284 0,585 0,584 0,000 
+11285 0,633 0,633 0,000 
+11286 0,975 0,974 0,001 
+11287 0,585 0,584 0,000 
+11288 0,487 0,487 0,000 
+11289 0,487 0,487 0,000 
+11290 0,487 0,487 0,000 
+11342 0,487 0,487 0,000 
+11343 0,487 0,487 0,000 
+11344 0,487 0,487 0,000 
+11381 0,487 0,487 0,000 
+11382 0,487 0,487 0,000 
+11383 0,487 0,487 0,000 
+11384 0,487 0,487 0,000 
+11385 0,487 0,487 0,000 
+26920 0,469 0,469 0,000 
+26921 2,812 1,303 1,510 
+47594 0,585 0,584 0,000 
+47595 0,633 0,633 0,000 
+47596 0,292 0,292 0,000 
+47597 0,292 0,292 0,000 
+5291 4,565 2,839 1,725 
+5292 4,565 2,840 1,725 
+5294 4,565 2,840 1,725 
+5295 4,566 2,841 1,725 
+5296 4,566 2,841 1,724 
+5297 3,940 2,257 1,683 
+5298 3,940 2,257 1,683 
+5300 2,812 1,302 1,510 
+5303 0,002 0,002 0,000 
+5304 0,001 0,001 0,000 
+5305 0,001 0,001 0,000 
+5373 4,566 2,842 1,724 
+791042 0,487 0,487 0,000 
+791043 0,487 0,487 0,000 
+791044 0,487 0,487 0,000 
+791045 0,487 0,487 0,000 
+
+===== PAGE 21 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+807671 2,182 1,573 0,609 
+807672 2,182 1,573 0,609 
+807673 2,182 1,573 0,609 
+807674 2,182 1,573 0,609 
+807675 2,182 1,573 0,609 
+ 
+Tabla 12. Variación de la cargabilidad de las líneas por el proyecto Mas X Menos sede Guarín a las 3 pm 
+NODOS CARGABILIDAD [%] VARIACION DE 
+CARGABILIDAD [%] 15 Hr sin SSFV 15 Hr con SSFV 
+11284 0,630 0,630 0,000 
+11285 0,682 0,682 0,000 
+11286 1,050 1,049 0,001 
+11287 0,630 0,630 0,000 
+11288 0,525 0,525 0,000 
+11289 0,525 0,525 0,000 
+11290 0,525 0,525 0,000 
+11342 0,525 0,525 0,000 
+11343 0,525 0,525 0,000 
+11344 0,525 0,525 0,000 
+11381 0,525 0,525 0,000 
+11382 0,525 0,525 0,000 
+11383 0,525 0,525 0,000 
+11384 0,525 0,525 0,000 
+11385 0,525 0,525 0,000 
+26920 0,506 0,505 0,000 
+26921 2,928 1,395 1,533 
+47594 0,630 0,630 0,000 
+47595 0,682 0,682 0,000 
+47596 0,315 0,315 0,000 
+47597 0,315 0,315 0,000 
+5291 4,816 3,083 1,733 
+5292 4,816 3,083 1,733 
+5294 4,817 3,084 1,733 
+5295 4,817 3,084 1,733 
+5296 4,817 3,085 1,733 
+5297 4,143 2,448 1,694 
+5298 4,143 2,449 1,694 
+5300 2,928 1,394 1,534 
+5303 0,002 0,002 0,000 
+5304 0,001 0,001 0,000 
+5305 0,001 0,001 0,000 
+5373 4,818 3,085 1,733 
+791042 0,525 0,525 0,000 
+791043 0,525 0,525 0,000 
+791044 0,525 0,525 0,000 
+
+===== PAGE 22 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+791045 0,525 0,525 0,000 
+807671 2,192 1,578 0,614 
+807672 2,192 1,578 0,614 
+807673 2,192 1,578 0,614 
+807674 2,192 1,578 0,614 
+807675 2,192 1,578 0,614 
+ 
+ 
+Figura 9. Cargabilidad de líneas afectadas por el proyecto Mas X Menos sede Guarín a las 9 am 
+ 
+
+
+===== PAGE 23 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 10. Cargabilidad de líneas afectadas por el proyecto Mas X Menos sede Guarín a las 12 pm 
+ 
+ 
+Figura 11. Cargabilidad de líneas afectadas por el proyecto Mas X Menos sede Guarín a las 3 pm 
+ 
+
+
+===== PAGE 24 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5.1.3. Cargabilidad de Transformadores 
+Dentro de la información suministrada por parte del operador de red (ESSA) se cuenta con un total 
+de un (1) transformador principal de 13.2 kV/220V en la cabecera de circuito que suministra energía 
+en media tensión. De la Tabla 13 a la Tabla 15 se presentan los valores de cargabilidad para cada 
+una de las horas evaluadas y sus variaciones se observa un aumento máximo de la cargabilidad del 
+transformador de 28,833%. 
+De la Figura 12 a la Figura 14 se presentan los resultados de manera gráfica en todos los escenarios 
+existe un pequeño aumento en la cargabilidad del transformador; sin embargo, la cargabilidad 
+siempre se mantiene por debajo de los límites operativos normales, aún mas esta se encuentra por 
+debajo del 60% lo que deja una capacidad extra que puede ser aprovechada para una generación 
+mayor o para más demanda en la zona. 
+Tabla 13. Cargabilidad de los transformadores del proyecto Mas X Menos sede Guarín a las 9 am 
+TRANSFORMADOR 
+CARGABILIDAD DEL 
+TRANSFORMADOR [%] 
+VARIACION DE 
+CARGABILIDAD 
+[%] 9 Hr sin SSFV 9 Hr con SSFV 
+TF 13,2 kV/220V 29,645 53,655 24,010 
+ 
+Tabla 14. Cargabilidad de los transformadores del proyecto Mas X Menos sede Guarín a las 12 pm 
+TRANSFORMADOR 
+CARGABILIDAD DEL 
+TRANSFORMADOR [%] 
+VARIACION DE 
+CARGABILIDAD 
+[%] 12 Hr sin SSFV 12 Hr con SSFV 
+TF 13,2 kV/220V 28,598 54,403 25,805 
+ 
+Tabla 15. Cargabilidad de los transformadores del proyecto Mas X Menos sede Guarín a las 3 pm 
+TRANSFORMADOR 
+CARGABILIDAD DEL 
+TRANSFORMADOR [%] 
+VARIACION DE 
+CARGABILIDAD 
+[%] 15 Hr sin SSFV 15 Hr con SSFV 
+TF 13,2 kV/220V 27,000 55,833 28,833 
+ 
+
+===== PAGE 25 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 12. Cargabilidad de los transformadores del proyecto Mas X Menos sede Guarín a las 9 am 
+ 
+ 
+Figura 13. Cargabilidad de los transformadores del proyecto Mas X Menos sede Guarín a las 12 pm 
+
+
+===== PAGE 26 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 14. Cargabilidad de los transformadores del proyecto Mas X Menos sede Guarín a las 3 pm 
+5.2. Resultados estudio de cortocircuito 
+Como parte de este estudio se realizó el cálculo de los niveles de cortocircuito trifásico y monofásico 
+del NODO 3272966 del OR ESSA considerado la entrada en servicio del proyecto de generación 
+fotovoltaica de 120 kW. 
+Los resultados presentados a continuación hacen referencia a los nodos más cercanos al punto de 
+conexión 3272966. Los resultados detallados del estudio de corto circuito, que incluye todos los 
+nodos del sistema, se presentan en el anexo. 
+5.2.1. Cortocircuito monofásico 
+En la Tabla 1 6 a la Tabla 1 8 se presentan los resultados del estudio de cortocircuito monofásico y 
+sus representaciones graficas en la Figura 15 a la Figura 17. 
+Tabla 16. Resultados de cortocircuito monofásico en las barras principales a las 9 am 
+NODOS CORTOCIRCUITO MONOFASICO [kA] VARIACION DE 
+CORRIENTE [kA] 9 Hr sin SSFV 9 Hr con SSFV 
+1045288 3,98377 3,98377 0,0000000057 
+1065971 2,97337 2,97337 0,0000000050 
+1101340 4,00832 4,00832 0,0000000057 
+1101358 3,91150 3,91150 0,0000000058 
+1101374 3,77445 3,77445 0,0000000057 
+1101382 3,67687 3,67687 0,0000000057 
+1101391 3,59132 3,59132 0,0000000057 
+1101404 3,45776 3,45776 0,0000000057 
+1101412 3,37814 3,37814 0,0000000057 
+1101421 3,30663 3,30663 0,0000000057 
+
+
+===== PAGE 27 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1101447 3,25259 3,25259 0,0000000057 
+1101455 3,18787 3,18787 0,0000000057 
+1101471 3,10609 3,10609 0,0000000055 
+1101480 3,02189 3,02189 0,0000000051 
+1155652 3,99259 3,99259 0,0000000056 
+1155741 3,30297 3,30297 0,0000000057 
+1155750 3,29114 3,29114 0,0000000057 
+1155776 3,28715 3,28715 0,0000000056 
+1155792 3,28561 3,28561 0,0000000056 
+1155806 3,25396 3,25396 0,0000000055 
+1155822 3,24674 3,24674 0,0000000055 
+1155849 3,44585 3,44585 0,0000000057 
+1155857 3,42407 3,42407 0,0000000056 
+1155881 3,41653 3,41653 0,0000000055 
+1155938 3,99259 3,99259 0,0000000056 
+1155946 3,95160 3,95160 0,0000000056 
+1155971 3,97734 3,97734 0,0000000056 
+1155997 3,97228 3,97228 0,0000000056 
+1618733 3,40046 3,40046 0,0000000056 
+1618741 3,44298 3,44298 0,0000000057 
+1618750 3,44585 3,44585 0,0000000056 
+2479567 2,96588 2,96588 0,0000000050 
+2789132 3,26120 3,26120 0,0000000055 
+2789141 3,25262 3,25262 0,0000000055 
+3272567 3,17766 3,17766 0,0000000057 
+3272664 3,16218 3,16218 0,0000000057 
+3272761 3,15571 3,15571 0,0000000058 
+3272869 3,15235 3,15235 0,0000000058 
+3272966 3,14984 3,14984 0,0000000058 
+9219013 3,39203 3,39203 0,0000000055 
+ 
+Tabla 17. Resultados de cortocircuito monofásico en las barras principales a las 12 pm 
+NODOS CORTOCIRCUITO MONOFASICO [kA] VARIACION DE 
+CORRIENTE [kA] 12 Hr sin SSFV 12 Hr con SSFV 
+1045288 3,9837716 3,9837716 0,0000000057 
+1065971 2,9733669 2,9733669 0,0000000050 
+1101340 4,0083170 4,0083171 0,0000000057 
+1101358 3,9114970 3,9114970 0,0000000058 
+1101374 3,7744456 3,7744456 0,0000000057 
+1101382 3,6768724 3,6768724 0,0000000057 
+1101391 3,5913171 3,5913171 0,0000000057 
+1101404 3,4577588 3,4577588 0,0000000057 
+1101412 3,3781372 3,3781372 0,0000000057 
+1101421 3,3066260 3,3066260 0,0000000057 
+1101447 3,2525852 3,2525852 0,0000000057 
+
+===== PAGE 28 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1101455 3,1878654 3,1878654 0,0000000057 
+1101471 3,1060946 3,1060946 0,0000000055 
+1101480 3,0218862 3,0218862 0,0000000051 
+1155652 3,9925923 3,9925923 0,0000000056 
+1155741 3,3029726 3,3029726 0,0000000057 
+1155750 3,2911400 3,2911400 0,0000000057 
+1155776 3,2871493 3,2871493 0,0000000056 
+1155792 3,2856093 3,2856093 0,0000000056 
+1155806 3,2539622 3,2539622 0,0000000055 
+1155822 3,2467441 3,2467441 0,0000000055 
+1155849 3,4458492 3,4458492 0,0000000057 
+1155857 3,4240721 3,4240721 0,0000000056 
+1155881 3,4165321 3,4165321 0,0000000055 
+1155938 3,9925923 3,9925923 0,0000000056 
+1155946 3,9515978 3,9515978 0,0000000056 
+1155971 3,9773440 3,9773440 0,0000000056 
+1155997 3,9722796 3,9722796 0,0000000056 
+1618733 3,4004571 3,4004571 0,0000000056 
+1618741 3,4429800 3,4429800 0,0000000057 
+1618750 3,4458492 3,4458492 0,0000000056 
+2479567 2,9658763 2,9658763 0,0000000050 
+2789132 3,2612043 3,2612044 0,0000000055 
+2789141 3,2526237 3,2526237 0,0000000055 
+3272567 3,1776578 3,1776578 0,0000000057 
+3272664 3,1621845 3,1621845 0,0000000057 
+3272761 3,1557074 3,1557074 0,0000000058 
+3272869 3,1523505 3,1523505 0,0000000058 
+3272966 3,1498363 3,1498363 0,0000000058 
+9219013 3,3920263 3,3920263 0,0000000055 
+ 
+Tabla 88. Resultados de cortocircuito monofásico en las barras principales a las 3 pm 
+NODOS CORTOCIRCUITO MONOFASICO [kA] VARIACION DE 
+CORRIENTE [kA] 15 Hr sin SSFV 15 Hr con SSFV 
+1045288 3,98377 3,98377 0,0000000057 
+1065971 2,97337 2,97337 0,0000000050 
+1101340 4,00832 4,00832 0,0000000057 
+1101358 3,91150 3,91150 0,0000000058 
+1101374 3,77445 3,77445 0,0000000057 
+1101382 3,67687 3,67687 0,0000000057 
+1101391 3,59132 3,59132 0,0000000057 
+1101404 3,45776 3,45776 0,0000000057 
+1101412 3,37814 3,37814 0,0000000057 
+1101421 3,30663 3,30663 0,0000000057 
+1101447 3,25259 3,25259 0,0000000057 
+1101455 3,18787 3,18787 0,0000000057 
+
+===== PAGE 29 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1101471 3,10609 3,10609 0,0000000055 
+1101480 3,02189 3,02189 0,0000000051 
+1155652 3,99259 3,99259 0,0000000056 
+1155741 3,30297 3,30297 0,0000000057 
+1155750 3,29114 3,29114 0,0000000057 
+1155776 3,28715 3,28715 0,0000000056 
+1155792 3,28561 3,28561 0,0000000056 
+1155806 3,25396 3,25396 0,0000000055 
+1155822 3,24674 3,24674 0,0000000055 
+1155849 3,44585 3,44585 0,0000000057 
+1155857 3,42407 3,42407 0,0000000056 
+1155881 3,41653 3,41653 0,0000000055 
+1155938 3,99259 3,99259 0,0000000056 
+1155946 3,95160 3,95160 0,0000000056 
+1155971 3,97734 3,97734 0,0000000056 
+1155997 3,97228 3,97228 0,0000000056 
+1618733 3,40046 3,40046 0,0000000056 
+1618741 3,44298 3,44298 0,0000000057 
+1618750 3,44585 3,44585 0,0000000056 
+2479567 2,96588 2,96588 0,0000000050 
+2789132 3,26120 3,26120 0,0000000055 
+2789141 3,25262 3,25262 0,0000000055 
+3272567 3,17766 3,17766 0,0000000057 
+3272664 3,16218 3,16218 0,0000000057 
+3272761 3,15571 3,15571 0,0000000058 
+3272869 3,15235 3,15235 0,0000000058 
+3272966 3,14984 3,14984 0,0000000058 
+9219013 3,39203 3,39203 0,0000000055 
+
+===== PAGE 30 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 15. Corriente de cortocircuito monofásica a las 9 am 
+ 
+ 
+Figura 16. Corriente de cortocircuito monofásica a las 12 pm 
+
+
+===== PAGE 31 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 17. Corriente de cortocircuito monofásica a las 3 pm 
+5.2.2. Cortocircuito trifásico 
+En la Tabla 19 a la Tabla 2 1 se presentan los resultados del estudio de cortocircuito trifásico y sus 
+representaciones graficas en la Figura 18 a la Figura 20. 
+Tabla 19. Resultados de cortocircuito trifásico en las barras principales a las 9 am 
+NODOS CORTOCIRCUITO TRIFASICO [kA] VARIACION DE 
+CORRIENTE [kA] 9 Hr sin SSFV 9 Hr con SSFV 
+1045288 6,51128 6,51128 0,00000003 
+1065971 4,87002 4,87002 0,00000002 
+1101340 6,55076 6,55076 0,00000003 
+1101358 6,39488 6,39488 0,00000003 
+1101374 6,17368 6,17368 0,00000003 
+1101382 6,01583 6,01583 0,00000003 
+1101391 5,87717 5,87717 0,00000003 
+1101404 5,66030 5,66030 0,00000003 
+1101412 5,53078 5,53078 0,00000003 
+1101421 5,41431 5,41431 0,00000003 
+1101447 5,32621 5,32621 0,00000003 
+1101455 5,22062 5,22062 0,00000002 
+1101471 5,08707 5,08707 0,00000002 
+1101480 4,94940 4,94940 0,00000002 
+1155652 6,50917 6,50917 0,00000003 
+1155741 5,40459 5,40459 0,00000000 
+1155750 5,37322 5,37322 0,00000000 
+1155776 5,36268 5,36268 0,00000000 
+
+
+===== PAGE 32 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1155792 5,35862 5,35862 0,00000000 
+1155806 5,27577 5,27577 0,00000000 
+1155822 5,25704 5,25704 0,00000000 
+1155849 5,62868 5,62868 0,00000003 
+1155857 5,57130 5,57130 0,00000003 
+1155881 5,55156 5,55156 0,00000003 
+1155938 6,50917 6,50917 0,00000003 
+1155946 6,40189 6,40189 0,00000003 
+1155971 6,46908 6,46908 0,00000003 
+1155997 6,45581 6,45581 0,00000003 
+1618733 5,50968 5,50968 0,00000003 
+1618741 5,62109 5,62109 0,00000003 
+1618750 5,62868 5,62868 0,00000003 
+2479567 4,85776 4,85776 0,00000002 
+2789132 5,29463 5,29463 0,00000000 
+2789141 5,27229 5,27229 0,00000000 
+3272567 5,19351 5,19351 0,00000002 
+3272664 5,15265 5,15265 0,00000002 
+3272761 5,13564 5,13564 0,00000002 
+3272869 5,12685 5,12685 0,00000002 
+3272966 5,12027 5,12027 0,00000002 
+9219013 5,48784 5,48784 0,00000003 
+ 
+Tabla 20. Resultados de cortocircuito trifásico en las barras principales a las 12 pm 
+NODOS CORTOCIRCUITO TRIFASICO [kA] VARIACION DE 
+CORRIENTE [kA] 12 Hr sin SSFV 12 Hr con SSFV 
+1045288 6,51128 6,51128 0,00000003 
+1065971 4,87002 4,87002 0,00000002 
+1101340 6,55076 6,55076 0,00000003 
+1101358 6,39488 6,39488 0,00000003 
+1101374 6,17368 6,17368 0,00000003 
+1101382 6,01583 6,01583 0,00000003 
+1101391 5,87717 5,87717 0,00000003 
+1101404 5,66030 5,66030 0,00000003 
+1101412 5,53078 5,53078 0,00000003 
+1101421 5,41431 5,41431 0,00000003 
+1101447 5,32621 5,32621 0,00000003 
+1101455 5,22062 5,22062 0,00000002 
+1101471 5,08707 5,08707 0,00000002 
+1101480 4,94940 4,94940 0,00000002 
+1155652 6,50917 6,50917 0,00000003 
+1155741 5,40459 5,40459 0,00000000 
+1155750 5,37322 5,37322 0,00000000 
+1155776 5,36268 5,36268 0,00000000 
+1155792 5,35862 5,35862 0,00000000 
+
+===== PAGE 33 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1155806 5,27577 5,27577 0,00000000 
+1155822 5,25704 5,25704 0,00000000 
+1155849 5,62868 5,62868 0,00000003 
+1155857 5,57130 5,57130 0,00000003 
+1155881 5,55156 5,55156 0,00000003 
+1155938 6,50917 6,50917 0,00000003 
+1155946 6,40189 6,40189 0,00000003 
+1155971 6,46908 6,46908 0,00000003 
+1155997 6,45581 6,45581 0,00000003 
+1618733 5,50968 5,50968 0,00000003 
+1618741 5,62109 5,62109 0,00000003 
+1618750 5,62868 5,62868 0,00000003 
+2479567 4,85776 4,85776 0,00000002 
+2789132 5,29463 5,29463 0,00000000 
+2789141 5,27229 5,27229 0,00000000 
+3272567 5,19351 5,19351 0,00000002 
+3272664 5,15265 5,15265 0,00000002 
+3272761 5,13564 5,13564 0,00000002 
+3272869 5,12685 5,12685 0,00000002 
+3272966 5,12027 5,12027 0,00000002 
+9219013 5,48784 5,48784 0,00000003 
+ 
+Tabla 21. Resultados de cortocircuito trifásico en las barras principales a las 3 pm 
+NODOS CORTOCIRCUITO TRIFASICO [kA] VARIACION DE 
+CORRIENTE [kA] 15 Hr sin SSFV 15 Hr con SSFV 
+1045288 6,51128 6,51128 0,00000003 
+1065971 4,87002 4,87002 0,00000002 
+1101340 6,55076 6,55076 0,00000003 
+1101358 6,39488 6,39488 0,00000003 
+1101374 6,17368 6,17368 0,00000003 
+1101382 6,01583 6,01583 0,00000003 
+1101391 5,87717 5,87717 0,00000003 
+1101404 5,66030 5,66030 0,00000003 
+1101412 5,53078 5,53078 0,00000003 
+1101421 5,41431 5,41431 0,00000003 
+1101447 5,32621 5,32621 0,00000003 
+1101455 5,22062 5,22062 0,00000002 
+1101471 5,08707 5,08707 0,00000002 
+1101480 4,94940 4,94940 0,00000002 
+1155652 6,50917 6,50917 0,00000003 
+1155741 5,40459 5,40459 0,00000000 
+1155750 5,37322 5,37322 0,00000000 
+1155776 5,36268 5,36268 0,00000000 
+1155792 5,35862 5,35862 0,00000000 
+1155806 5,27577 5,27577 0,00000000 
+
+===== PAGE 34 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1155822 5,25704 5,25704 0,00000000 
+1155849 5,62868 5,62868 0,00000003 
+1155857 5,57130 5,57130 0,00000003 
+1155881 5,55156 5,55156 0,00000003 
+1155938 6,50917 6,50917 0,00000003 
+1155946 6,40189 6,40189 0,00000003 
+1155971 6,46908 6,46908 0,00000003 
+1155997 6,45581 6,45581 0,00000003 
+1618733 5,50968 5,50968 0,00000003 
+1618741 5,62109 5,62109 0,00000003 
+1618750 5,62868 5,62868 0,00000003 
+2479567 4,85776 4,85776 0,00000002 
+2789132 5,29463 5,29463 0,00000000 
+2789141 5,27229 5,27229 0,00000000 
+3272567 5,19351 5,19351 0,00000002 
+3272664 5,15265 5,15265 0,00000002 
+3272761 5,13564 5,13564 0,00000002 
+3272869 5,12685 5,12685 0,00000002 
+3272966 5,12027 5,12027 0,00000002 
+9219013 5,48784 5,48784 0,00000003 
+ 
+ 
+Figura 18. Corriente de cortocircuito trifásico a las 9 am 
+ 
+
+
+===== PAGE 35 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 19. Corriente de cortocircuito trifásico a las 12 pm 
+ 
+ 
+Figura 20. Corriente de cortocircuito trifásico a las 3 pm 
+A partir del análisis de las corrientes de cortocircuito se identificó una variación máxima de 
+0,00000003 [kA], esto representa una variación de menos del 0.01% respecto al caso base. 
+
+
+===== PAGE 36 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5.3. Protección en el punto de conexión 
+La corriente máxima entregada por el generador fotovoltaico a potencia nominal por el lado de baja 
+del transformador se calcula como: 
+𝐼𝐿 = 𝑆
+√3 ∗ 𝑉𝑙 ∗ 𝐹𝑃
+ 
+Donde: 
+• IL: Corriente nominal. 
+• S: Potencia aparente del generador. 
+• VL: Tensión de línea en media tensión. 
+• FP: Factor de potencia 
+El factor de potencia se asume como 1 ya que se busca optimizar la producción de energía activa.  
+𝐼𝐿 = 120
+√3 ∗ 0,22
+= 393,65 [𝐴] 
+Según el Acuerdo 1322 del Consejo Nacional de Operación (CNO) la conexión de generadores al 
+sistema eléctrico debe cumplir con unos requisitos de protecciones, para el caso específico de la 
+planta SUPERMERCADO MAS POR MENOS SEDE GUARÍN, se debe contar con protección en el punto 
+de conexión por medio de cualquiera de los siguientes medios un interruptor con unidades de 
+disparo, un reconectador o interruptor de potencia, garantizando que se cuente con lo establecido 
+en el acuerdo especificado. 
+• Baja Tensión (ANSI 27). 
+• Sobrepotencia adelante (ANSI 32) en caso de no exportar energía a la red. Para el 
+supermercado Mas X Menos sede Guarín esta función no será implementada debido a que 
+se espera exportar excedentes. 
+• Sobretensión (ANSI 59) 
+• Sobretensión de secuencia cero (ANSI 59N) 
+• Sobrecorriente instantánea/temporizada (ANSI 50/51) 
+Tabla 22. Requerimientos de valores protección  
+NIVEL DE TENSIÓN NIVEL 1 
+RANGO DE POTENCIA <1MW 
+Requerimiento de Protección Valor Umbral Tiempo Desconexión [s] 
+Baja tensión (ANSI 27) Etapa 1 0.85 p.u. 2 s 
+Baja tensión (ANSI 27) Etapa 2 0.5 p.u. 0.2 s 
+Sobretensión (ANSI 59) Etapa 1 ≥1.15 p.u. 2 s 
+Sobretensión (ANSI 59) Etapa 2 ≥1.2 p.u. 0.1 s - 0.2 s 
+Sub frecuencia (ANSI 81 U) 57 Hz 0.5 s 
+Sobre frecuencia (ANSI 81 O) 63 Hz 0.5 s 
+ 
+
+===== PAGE 37 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Verificando las funciones de protección listadas en la Tabla 22, se validó el cumplimiento de estos 
+requisitos para el proyecto fotovoltaico de Supermercado Mas X Menos Sede Guarín concluyendo 
+que no es necesario realizar modificaciones. Los resultados de este análisis se presentan en la Tabla 
+23. 
+Tabla 23. Requerimiento de protección Supermercado Mas X Menos Sede Guarín 
+Requerimiento de Protección PC UG Validación 
+Baja tensión (ANSI 27)   X Cumple 
+Sobre potencia adelante (ANSI 32)   No Aplica 
+Sobretensión (ANSI 56)  X Cumple 
+Frecuencia (ANSI 81 U/O)  X Cumple 
+Anti – Isla   X Cumple 
+ 
+5.3.1. Elemento de interrupción a utilizar 
+Para el cálculo de protecciones contra sobre corrientes en el sistema solar, se tiene que la protección 
+del sistema se da 3x (140-200) A cuya curva de disparo se presenta en la Figura 21, y para la conexión 
+desde tablero de inversores a tablero general de acometida 220 V, se realiza en punto de tablero 
+general con protección coordinada de 3x (350-500) A cuya curva de disparo se presenta en la Figura 
+22. Dicha protección es tomada como medio de seccionamiento y protección en punto de conexión. 
+Conforme a la información entregada por el operador de red, se validaron los niveles de 
+cortocircuito encontrando que no existe un aporte significativo, por tanto, las protecciones actuales 
+del transformador no se ven afectadas ante el ingreso del nuevo proyecto. 
+Se tiene en cuenta el tiempo de disparo de los interruptores, la corriente de cortocircuito de la red 
+y la capacidad de corriente del conductor de acuerdo con la norma IEC 60909, IEEE 242. Capítulo 9 
+o equivalente. De acuerdo con lo especificado en los numerales anteriores, los conductores cumplen 
+con la capacidad de corriente, la capacidad de corto en la instalación, indicada por el operador de 
+red y cumple con los criterios de selección de las protecciones. En la gráfica se muestra los tiempos 
+de respuesta del equipo de protección seleccionado. 
+
+===== PAGE 38 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 21. Curva de disparo breaker de inversores 3 x (140 - 200) A 
+ 
+Figura 22. Curva de disparo breaker de inversores 3 x (350 - 500) A 
+5.4. Cálculo de perdidas  
+Se realizo el cálculo de pérdidas de potencia con y sin la presencia del proyecto solar fotovoltaico 
+dispuesto a conectarse en el NODO 3272966 del OR ESSA. Se verificaron las perdidas en las líneas y 
+
+
+===== PAGE 39 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+transformadores para el rango horario de 9 am, 12 pm y 3 pm y se registraron los resultados en las 
+Tablas 24 a 26. 
+Los resultados presentados a continuación hacen referencia a los elementos más cercanos al punto 
+de conexión 3272966. Los resultados completos del análisis de pérdidas que abarca todos los 
+elementos del sistema se reportan a modo de anexo. 
+Tabla 24. Perdidas a las 9 am con el proyecto Mas X Menos Sede Guarín 120 kW 
+ELEMENTO 
+LÍNEA/TRF 
+PERDIDAS [kW] VARIACIÓN DE 
+PERDIDAS [KW] 9 Hr sin SSFV 9 Hr con SSFV  
+11284 0.0000167 0.00001668 0.00000002 
+11285 0.00004246 0.00004241 0.00000005 
+11286 0.00001701 0.00001699 0.00000002 
+11287 0.0000167 0.00001668 0.00000002 
+11288 0.00001846 0.00001844 0.00000002 
+11289 0.00003402 0.00003398 0.00000004 
+11290 0.00000783 0.00000782 0.00000001 
+11342 0.00001159 0.00001158 0.00000001 
+11343 0.00002135 0.00002133 0.00000002 
+11344 0.00000744 0.00000743 0.00000001 
+11381 0.00001159 0.00001158 0.00000001 
+11382 0.00003051 0.00003049 0.00000002 
+11383 0.00001159 0.00001158 0.00000001 
+11384 0.0000113 0.00001129 0.00000001 
+11385 0.00000377 0.00000376 0.00000001 
+26920 0.0001123 0.00011217 0.00000013 
+26921 0.00325454 0.00066932 0.00258522 
+47594 0.0000167 0.00001668 0.00000002 
+47595 0.00004246 0.00004241 0.00000005 
+47596 0.00001155 0.00001154 0.00000001 
+47597 0.00000334 0.00000334 0.00000000 
+5291 0.00207076 0.00075474 0.00131602 
+5292 0.00624659 0.00227699 0.00396960 
+5294 0.01249488 0.0045557 0.00793918 
+5295 0.00945754 0.00344925 0.00600829 
+5296 0.0087116 0.00317794 0.00553366 
+5297 0.00685786 0.00211104 0.00474682 
+5298 0.00643895 0.00198276 0.00445619 
+5300 0.00262034 0.00053852 0.00208182 
+5303 0.00000000 0.00000000 0.00000000 
+5304 0.00000000 0.00000000 0.00000000 
+5305 0.00000000 0.00000000 0.00000000 
+5373 0.01445382 0.00527424 0.00917958 
+791042 0.00001159 0.00001158 0.00000001 
+791043 0.0000028 0.0000028 0.00000000 
+791044 0.00004193 0.00004189 0.00000004 
+791045 0.00000841 0.0000084 0.00000001 
+
+===== PAGE 40 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+807671 0.00026377 0.00014417 0.00011960 
+807672 0.00040224 0.00021986 0.00018238 
+807673 0.00016925 0.00009251 0.00007674 
+807674 0.00008792 0.00004806 0.00003986 
+807675 0.00006594 0.00003604 0.00002990 
+21123832-S 0.8068921 1.211577 0.40468490 
+ 
+Tabla 25. Perdidas a las 12 pm con el proyecto Mas X Menos Sede Guarín 120 kW 
+ELEMENTO 
+LÍNEA/TRF 
+PERDIDAS [kW] VARIACIÓN DE 
+PERDIDAS [KW] 12 Hr sin SSFV 12 Hr con SSFV 
+11284 0.00001943 0.00001941 0.00000002 
+11285 0.00004941 0.00004936 0.00000005 
+11286 0.00001979 0.00001977 0.00000002 
+11287 0.00001943 0.00001941 0.00000002 
+11288 0.00002148 0.00002146 0.00000002 
+11289 0.00003959 0.00003954 0.00000005 
+11290 0.00000911 0.0000091 0.00000001 
+11342 0.00001349 0.00001348 0.00000001 
+11343 0.00002485 0.00002482 0.00000003 
+11344 0.00000866 0.00000865 0.00000001 
+11381 0.00001348 0.00001347 0.00000001 
+11382 0.00003551 0.00003548 0.00000003 
+11383 0.00001348 0.00001347 0.00000001 
+11384 0.00001315 0.00001314 0.00000001 
+11385 0.00000438 0.00000438 0.00000000 
+26920 0.00013074 0.00013058 0.00000016 
+26921 0.0035531 0.00076188 0.00279122 
+47594 0.00001943 0.00001941 0.00000002 
+47595 0.00004941 0.00004936 0.00000005 
+47596 0.00001344 0.00001343 0.00000001 
+47597 0.00000389 0.00000388 0.00000001 
+5291 0.00231647 0.00089633 0.00142014 
+5292 0.0069878 0.00270408 0.00428372 
+5294 0.01397739 0.00540997 0.00856742 
+5295 0.01057958 0.00409584 0.00648374 
+5296 0.00974506 0.00377351 0.00597155 
+5297 0.00762371 0.00250073 0.00512298 
+5298 0.00715796 0.00234864 0.00480932 
+5300 0.00286074 0.00061304 0.00224770 
+5303 0.00000000 0.00000000 0.00000000 
+5304 0.00000000 0.00000000 0.00000000 
+5305 0.00000000 0.00000000 0.00000000 
+5373 0.01616834 0.00626236 0.00990598 
+791042 0.00001349 0.00001348 0.00000001 
+791043 0.00000326 0.00000326 0.00000000 
+
+===== PAGE 41 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+791044 0.0000488 0.00004875 0.00000005 
+791045 0.00000978 0.00000977 0.00000001 
+807671 0.00027059 0.0001407 0.00012989 
+807672 0.00041265 0.00021457 0.00019808 
+807673 0.00017363 0.00009028 0.00008335 
+807674 0.0000902 0.0000469 0.00004330 
+807675 0.00006765 0.00003518 0.00003247 
+21123832-S 0.7939147 1.227236 0.43332130 
+ 
+Tabla 26. Perdidas a las 3 pm con el proyecto Mas X Menos Sede Guarín 120 kW 
+ELEMENTO 
+LÍNEA/TRF 
+PERDIDAS [kW] VARIACIÓN DE 
+PERDIDAS [KW] 15 Hr sin SSFV 15 Hr con SSFV 
+11284 0.00002255 0.00002253 0.00000002 
+11285 0.00005735 0.00005729 0.00000006 
+11286 0.00002297 0.00002295 0.00000002 
+11287 0.00002255 0.00002253 0.00000002 
+11288 0.00002493 0.0000249 0.00000003 
+11289 0.00004594 0.00004589 0.00000005 
+11290 0.00001057 0.00001056 0.00000001 
+11342 0.00001566 0.00001564 0.00000002 
+11343 0.00002884 0.00002881 0.00000003 
+11344 0.00001005 0.00001004 0.00000001 
+11381 0.00001565 0.00001564 0.00000001 
+11382 0.00004121 0.00004118 0.00000003 
+11383 0.00001565 0.00001564 0.00000001 
+11384 0.00001526 0.00001525 0.00000001 
+11385 0.00000509 0.00000508 0.00000001 
+26920 0.00015179 0.00015161 0.00000018 
+26921 0.00385177 0.00087369 0.00297808 
+47594 0.00002255 0.00002253 0.00000002 
+47595 0.00005735 0.00005729 0.00000006 
+47596 0.0000156 0.00001558 0.00000002 
+47597 0.00000451 0.00000451 0.00000000 
+5291 0.00257881 0.0010565 0.00152231 
+5292 0.00777914 0.00318726 0.00459188 
+5294 0.01556016 0.00637644 0.00918372 
+5295 0.01177751 0.00482735 0.00695016 
+5296 0.01084843 0.00444731 0.00640112 
+5297 0.00842991 0.00294386 0.00548605 
+5298 0.00791485 0.0027647 0.00515015 
+5300 0.00310124 0.00070305 0.00239819 
+5303 0.00000000 0.00000000 0.00000000 
+5304 0.00000000 0.00000000 0.00000000 
+5305 0.00000000 0.00000000 0.00000000 
+5373 0.01799883 0.00738026 0.01061857 
+
+===== PAGE 42 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+791042 0.00001566 0.00001564 0.00000002 
+791043 0.00000378 0.00000378 0.00000000 
+791044 0.00005664 0.00005658 0.00000006 
+791045 0.00001135 0.00001134 0.00000001 
+807671 0.00027318 0.00014157 0.00013161 
+807672 0.00041661 0.00021589 0.00020072 
+807673 0.00017529 0.00009084 0.00008445 
+807674 0.00009106 0.00004719 0.00004387 
+807675 0.0000683 0.00003539 0.00003291 
+21123832-S 0.7751021 1.258438 0.48333590 
+ 
+La suma de las pérdidas de potencia para todo el sistema CON y SIN la presencia del proyecto Mas 
+X Menos Sede Guarín 120 kW se presenta en la Tabla 27 y se reporta para las 3 franjas horarias de 
+interés que son 9 am, 12 p.m y 3 p.m. 
+ 
+Tabla 27. Pérdidas totales del sistema con el proyecto Mas X Menos Sede Guarín 120 kW 
+HORA 
+PERDIDAS [kW] 
+CON SSFV SIN SSFV 
+9 A.M. 4.47 4.77 
+12 P.M. 5.03 5.37 
+3 P.M. 5.69 6.03 
+ 
+Para el cálculo de la energía producida por el sistema se consideraron las pérdidas de la Tabla 28 
+que hacen referencia a perdidas resistivas, diferencia de temperatura de los módulos, las perdidas 
+por conversión, entre otras. 
+Tabla 28. Perdidas para el cálculo de la energía producida del proyecto Mas X Menos Sede Guarín 120 kW 
+Perdidas para el cálculo de la energía producida por el SSFV 
+Perdidas por temperatura 3.00% 
+Perdidas por mismatch 2.00% 
+Perdidas resistivas 4.00% 
+Perdidas por conversión DC/AC 1.00% 
+Otras perdidas asociadas 16.00% 
+Perdidas por sombreado 0% 
+Total 26% 
+ 
+ 
+ 
+ 
+
+===== PAGE 43 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+6. RECOMENDACIONES Y CONCLUSIONES 
+✔ Del análisis de flujo de carga se puede observar que ante la entrada en servicio de la 
+generación: 
+• La cargabilidad de todos los elementos del sistema eléctrico del área de 
+influencia del proyecto y de alimentación (propiedad del OR) se encuentran 
+dentro de los límites de operación. 
+✔ Se recomienda que una vez entre en servicio el proyecto se realicen mediciones de 
+calidad de potencia para determinar que el factor de potencia se encuentre dentro del 
+rango permitido por la regulación y evitar posibles sanciones por parte del OR. Lo 
+anterior se recomienda debido a que al bajar el consumo de potencia activa y 
+permanecer igual el consumo de reactiva el factor de potencia tiende a bajar. Si una vez 
+realizadas las mediciones se determina que el factor de potencia esta fuera de los 
+límites, se podría proceder a la instalación de un banco de condensadores que 
+compense los reactivos necesarios. 
+✔ El análisis de cortocircuito muestra que se presenta un aumento máximo de 
+0,0000000001 kA en la corriente de cortocircuito en el sistema, lo cual no genera la 
+necesidad de cambios en las protecciones existentes en el sistema. 
+o Los resultados del estudio de cortocircuito para el sistema eléctrico del 
+generador fotovoltaico son un valioso insumo para cuando se desee realizar las 
+siguientes actividades, teniendo en cuenta las normas ANSI e IEC: 
+▪ Evaluar y/o especificar las capacidades de interrupción de interruptores 
+y demás equipos de seccionamiento tales como fusibles, seccionadores, 
+etc, 
+▪ Evaluación de saturación de transformadores de corriente. 
+▪ Diseño de mallas de puesta a tierra. 
+▪ Los niveles de cortocircuito presentados en este informe deben ser 
+considerados para efectuar la especificación de nuevos equipos en los 
+casos donde sean requeridos. De esta manera se podrá obtener una 
+adecuada selección y operación del sistema eléctrico. 
+ 
+ 
+ 
+ 
+
+===== PAGE 44 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7. BIBLIOGRAFIA 
+[1] ANDERSON, Paul M. Analysis of Faulted Power Systems: The Iowa State University Press / 
+Ames, Iowa, 1973. 
+[2] COOPER Power Systems. Electrical Distribution System Protection. United States Unidos, 
+1990. 
+[3] STEVENSON, William D. Elements of Power System Analysis: Mc Graw Hill Kogakusha, 
+Ltd. Tokio, 1975 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 45 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ANEXOS 
+Anexo Descripción 
+A Resultados de flujo de carga con y sin SSFV para los 3 rangos horarios 
+establecidos. 
+B Resultados de cortocircuito monofásico con y sin SSFV para los 3 rangos 
+horarios establecidos. 
+C Resultados de cortocircuito trifásico con y sin SSFV para los 3 rangos horarios 
+establecidos. 
+D Ficha técnica micro inversor SOLIS 60K LV 5G 
+E Ficha técnica paneles solares JINKO MONOCRISTALINO MONO-FACIAL 
+F Memoria de calculo 
+G Diagrama unifilar del sistema 
+H Perdidas de potencia 
+ 
+ 
+ 
+ 
