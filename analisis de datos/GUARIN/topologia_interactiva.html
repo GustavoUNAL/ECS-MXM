@@ -74,7 +74,7 @@ h1 { font-size:20px; margin:0; letter-spacing:.2px; }
 .kpi { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:10px 12px; }
 .kpi b { display:block; font-size:18px; }
 .kpi span { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.4px; }
-.layout { display:grid; grid-template-columns: 1.4fr .9fr; gap:12px; padding:0 22px 16px; height: calc(100% - 168px); }
+.layout { display:grid; grid-template-columns: 1.4fr .9fr; gap:12px; padding:0 22px 16px; height: calc(100% - 360px); }
 .scenarios-wrap { padding:10px 22px 0; border-bottom:1px solid var(--line); background:var(--strip-bg); }
 .scenarios-wrap h3 { margin:0 0 8px; font-size:12px; color:var(--muted); font-weight:600; letter-spacing:.3px; text-transform:uppercase; }
 .scenarios { display:flex; flex-wrap:wrap; gap:6px; padding-bottom:10px; }
@@ -173,8 +173,15 @@ table tbody tr.active-sc { background: rgba(61,139,253,.12); box-shadow: inset 0
   </div>
 </header>
 
-<p class="or-note">Datos del operador de red (ESSA): topología, líneas, cargas y perfil de demanda. Sin resultados de flujo de carga simulado.</p>
+<p class="or-note"><b>Insumos ESSA:</b> topología, líneas, cargas y perfil de demanda 19/03/2024. <b>Estados operacionales:</b> 3 horas representativas × Sin/Con AGPE 120 kW — resultados del estudio de conexión (flujo de carga).</p>
+<section class="scenarios-wrap">
+  <h3>Estados operacionales · demanda ESSA · metodología CREG</h3>
+  <div class="scenarios" id="scenarioBtns"></div>
+  <p class="sc-info" id="scInfo">Selecciona un escenario: la hora fija la demanda de cabecera; Sin/Con cambia la operación de la AGPE en el POC.</p>
+</section>
 <section class="kpis" id="kpis"></section>
+<section class="kpis scenario" id="kpisScenario" style="display:none"></section>
+<div class="esc-charts" id="escCharts" style="padding:0 22px 8px"></div>
 
 <div class="layout">
   <div class="card">
@@ -200,6 +207,10 @@ table tbody tr.active-sc { background: rgba(61,139,253,.12); box-shadow: inset 0
       <span><i class="dot" style="background:#f4c95d"></i>Ruta al POC</span>
       <span><i class="dot" style="background:#2ec4b6"></i>Nodo con carga</span>
       <span><i class="dot" style="background:#6ea8fe"></i>Barra</span>
+      <span><i class="dot" style="background:#5dd39e"></i>U 0,95–1,05 p.u.</span>
+      <span><i class="dot" style="background:#ffa502"></i>U 0,90–0,95 / 1,05–1,10</span>
+      <span><i class="dot" style="background:#ff4757"></i>U fuera de banda</span>
+      <span><i class="dot" style="border:2px solid #e056fd;background:transparent"></i>ΔU Sin→Con notable</span>
       <span><i class="dot" style="background:#94a3b8;border-radius:2px"></i>Línea (ordenado)</span>
       <span><i class="dot" style="background:transparent;border:1px dashed #5a6a85;border-radius:2px"></i>Lazo (ordenado)</span>
       <span id="legendOrganic" style="display:none"><i class="dot" style="background:#7b8aa5;border-radius:2px"></i>Grafo libre · aristas curvas</span>
@@ -213,6 +224,8 @@ table tbody tr.active-sc { background: rgba(61,139,253,.12); box-shadow: inset 0
       <div class="tab" data-tab="nodos">Nodos</div>
       <div class="tab" data-tab="lineas">Líneas</div>
       <div class="tab" data-tab="cargas">Cargas</div>
+      <div class="tab" data-tab="escenarios">Escenarios</div>
+      <div class="tab" data-tab="comparativa">Comparativa</div>
     </div>
     <div id="detalle" class="panel active">
       <div class="detail" id="detailBox">Selecciona un nodo o una línea en el grafo.</div>
@@ -225,6 +238,8 @@ table tbody tr.active-sc { background: rgba(61,139,253,.12); box-shadow: inset 0
     <div id="nodos" class="panel"></div>
     <div id="lineas" class="panel"></div>
     <div id="cargas" class="panel"></div>
+    <div id="escenarios" class="panel"></div>
+    <div id="comparativa" class="panel"></div>
   </div>
 </div>
 
@@ -717,7 +732,11 @@ document.querySelectorAll(".tab").forEach(t => t.onclick = () => {
 });
 
 applyFilter();
+window.allNodes = allNodes;
+window.network = network;
 showNode(D.nodes.find(n => n.id === POC));
 </script>
+<script src="escenarios_operacion.js"></script>
+<script src="estados_operacion_ui.js"></script>
 </body>
 </html>
