@@ -2,6 +2,8 @@
 .mplconfig/
 .DS_Store
 **/.DS_Store
+Thumbs.db
+**/~$*.xlsx
 __pycache__/
 *.pyc
 .Python

@@ -63,11 +63,13 @@ V_MIN_PU = 0.90
 V_MAX_PU = 1.10
 LOADING_MAX = 100.0
 
-# Ruta ABSOLUTA: PowerFactory suele ejecutar desde Temp y __file__ no apunta al repo
-OUT_DIR = Path(
+# Salida: results/flujo_carga/ (fallback si PF ejecuta desde Temp)
+_OUT_REL = Path(__file__).resolve().parents[1] / "results" / "flujo_carga"
+_OUT_FALLBACK = Path(
     r"C:\Users\Usuario Principal\Documents\copower\Estudio de conexion"
     r"\GUARIN\simulation\results\flujo_carga"
 )
+OUT_DIR = _OUT_REL if (_OUT_REL.parent.parent / "scripts").is_dir() else _OUT_FALLBACK
 
 
 # ---------------------------------------------------------------------------

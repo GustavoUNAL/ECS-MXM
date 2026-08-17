@@ -1,0 +1,700 @@
+{
+  "archivo": "Datos Circuito 10 502 - 2026.xlsx",
+  "circuito": "10-502",
+  "subestacion": "SE Conucos",
+  "resumen": {
+    "lineas": 215,
+    "nodos": 184,
+    "longitud_km": 5.0613,
+    "cargas": 51,
+    "s_cargas_mva": 7.5325,
+    "protecciones": 1,
+    "funciones_proteccion": 4
+  },
+  "lineas": {
+    "hoja": "Líneas",
+    "encabezados_fila1": [
+      "Name",
+      "In Folder",
+      "Grid",
+      "Terminal i",
+      "Terminal j",
+      "Length",
+      "Name",
+      "Rtd.Current",
+      "R1",
+      "X1",
+      "B1",
+      "R0",
+      "X0",
+      "B0"
+    ],
+    "encabezados_fila2": [
+      "",
+      "",
+      "",
+      "Busbar",
+      "Busbar",
+      "km",
+      "",
+      "kA",
+      "Ohm",
+      "Ohm",
+      "uS",
+      "Ohm",
+      "Ohm",
+      "uS"
+    ],
+    "n_lineas": 215,
+    "n_nodos": 184,
+    "longitud_km": 5.0613,
+    "tramos_lazo_mismo_nodo": 19,
+    "n_conductores_distintos": 10,
+    "conductores": [
+      {
+        "name": "3F_15_CU_2_XLPE",
+        "tramos": 144,
+        "km": 2.3279
+      },
+      {
+        "name": "3F_15_ACSR_1/0_AIRE",
+        "tramos": 23,
+        "km": 1.0271
+      },
+      {
+        "name": "3F_15_ACSR_4/0_AIRE",
+        "tramos": 18,
+        "km": 0.7906
+      },
+      {
+        "name": "3F_15_ACSR_2/0_AIRE",
+        "tramos": 16,
+        "km": 0.5504
+      },
+      {
+        "name": "3F_15_CU_4/0_XLPE",
+        "tramos": 4,
+        "km": 0.2346
+      },
+      {
+        "name": "3F_15_CU_1/0_XLPE",
+        "tramos": 3,
+        "km": 0.0401
+      },
+      {
+        "name": "3F_15_CU_350_XLPE",
+        "tramos": 2,
+        "km": 0.0396
+      },
+      {
+        "name": "3F_15_ACSR_2/0_ECO",
+        "tramos": 2,
+        "km": 0.0192
+      },
+      {
+        "name": "3F_15_ACSR_2_AIRE",
+        "tramos": 2,
+        "km": 0.0185
+      },
+      {
+        "name": "3F_15_CU_2/0_XLPE",
+        "tramos": 1,
+        "km": 0.0133
+      }
+    ],
+    "carpetas_distintas": 18,
+    "por_carpeta": {
+      "10 502": 196,
+      "1067079": 2,
+      "1154176": 2,
+      "1103458": 1,
+      "1101455": 1,
+      "1067052": 1,
+      "1067109": 1,
+      "1067125": 1,
+      "1067133": 1,
+      "1067184": 1,
+      "1101293": 1,
+      "1101307": 1,
+      "1101421": 1,
+      "4249372": 1,
+      "1155679": 1
+    },
+    "in_ka_min": 0.155,
+    "in_ka_max": 0.39
+  },
+  "cargas": {
+    "hoja": "Cargas_Demanda_corto",
+    "n_cargas": 51,
+    "s_cargas_mva": 7.5325,
+    "p_cargas_kw": 6779.25,
+    "fp_distintos": {
+      "0.9": 51
+    },
+    "carga_min_mva": 0.03,
+    "carga_max_mva": 0.8,
+    "poc": {
+      "name": "730199_LV_LOAD",
+      "bus": "730199_LV",
+      "node": "3272966",
+      "ti_raw": "3272966",
+      "S_MVA": 0.15,
+      "fp": 0.9,
+      "P_kW": 135.0
+    },
+    "cargas_mayores_0_3_mva": 6,
+    "demanda_cabecera": {
+      "fecha": "2024-03-19",
+      "puntos_24h": 23,
+      "s_max_mva": 1.682856,
+      "s_min_mva": 0.62987,
+      "s_prom_mva": 1.201424,
+      "i_max_a": 70.406,
+      "horas_estudio": {
+        "09:00": 1.459139,
+        "12:00": 1.682856,
+        "15:00": 1.638498
+      }
+    }
+  },
+  "lista_cargas": [
+    {
+      "name": "10755_LV_LOAD",
+      "bus": "10755_LV",
+      "node": "1067052",
+      "ti_raw": "1067052",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "1354_LV_LOAD",
+      "bus": "1354_LV",
+      "node": "1067036",
+      "ti_raw": "1067036",
+      "S_MVA": 0.075,
+      "fp": 0.9,
+      "P_kW": 67.5
+    },
+    {
+      "name": "1357_LV_LOAD",
+      "bus": "1357_LV",
+      "node": "1067087",
+      "ti_raw": "1067087",
+      "S_MVA": 0.075,
+      "fp": 0.9,
+      "P_kW": 67.5
+    },
+    {
+      "name": "1360_LV_LOAD",
+      "bus": "1360_LV",
+      "node": "1067133",
+      "ti_raw": "1067133",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "14224_LV_LOAD",
+      "bus": "14224_LV",
+      "node": "1101471",
+      "ti_raw": "1101471",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "1436_LV_LOAD",
+      "bus": "1436_LV",
+      "node": "1101307",
+      "ti_raw": "1101307",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "1437_LV_LOAD",
+      "bus": "1437_LV",
+      "node": "1101315",
+      "ti_raw": "1101315",
+      "S_MVA": 0.075,
+      "fp": 0.9,
+      "P_kW": 67.5
+    },
+    {
+      "name": "1438_LV_LOAD",
+      "bus": "1438_LV",
+      "node": "1101455",
+      "ti_raw": "1101455",
+      "S_MVA": 0.225,
+      "fp": 0.9,
+      "P_kW": 202.5
+    },
+    {
+      "name": "2205_LV_LOAD",
+      "bus": "2205_LV",
+      "node": "1154176",
+      "ti_raw": "1154176",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "2238_LV_LOAD",
+      "bus": "2238_LV",
+      "node": "1154087",
+      "ti_raw": "1154087",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "2241_LV_LOAD",
+      "bus": "2241_LV",
+      "node": "1154435",
+      "ti_raw": "1154435",
+      "S_MVA": 0.075,
+      "fp": 0.9,
+      "P_kW": 67.5
+    },
+    {
+      "name": "2242_LV_LOAD",
+      "bus": "2242_LV",
+      "node": "1154281",
+      "ti_raw": "1154281",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "2246_LV_LOAD",
+      "bus": "2246_LV",
+      "node": "1102982",
+      "ti_raw": "1102982",
+      "S_MVA": 0.05,
+      "fp": 0.9,
+      "P_kW": 45.0
+    },
+    {
+      "name": "2250_LV_LOAD",
+      "bus": "2250_LV",
+      "node": "1154494",
+      "ti_raw": "1154494",
+      "S_MVA": 0.075,
+      "fp": 0.9,
+      "P_kW": 67.5
+    },
+    {
+      "name": "2353_LV_LOAD",
+      "bus": "2353_LV",
+      "node": "1154311",
+      "ti_raw": "1154311",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "2366_LV_LOAD",
+      "bus": "2366_LV",
+      "node": "1103318",
+      "ti_raw": "1103318",
+      "S_MVA": 0.045,
+      "fp": 0.9,
+      "P_kW": 40.5
+    },
+    {
+      "name": "2372_LV_LOAD",
+      "bus": "2372_LV",
+      "node": "1154401",
+      "ti_raw": "1154401",
+      "S_MVA": 0.5,
+      "fp": 0.9,
+      "P_kW": 450.0
+    },
+    {
+      "name": "2402_LV_LOAD",
+      "bus": "2402_LV",
+      "node": "1154541",
+      "ti_raw": "1154541",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "2405_LV_LOAD",
+      "bus": "2405_LV",
+      "node": "1103253",
+      "ti_raw": "1103253",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "2412_LV_LOAD",
+      "bus": "2412_LV",
+      "node": "1103385",
+      "ti_raw": "1103385",
+      "S_MVA": 0.05,
+      "fp": 0.9,
+      "P_kW": 45.0
+    },
+    {
+      "name": "2421_LV_LOAD",
+      "bus": "2421_LV",
+      "node": "1103407",
+      "ti_raw": "1103407",
+      "S_MVA": 0.15,
+      "fp": 0.9,
+      "P_kW": 135.0
+    },
+    {
+      "name": "2641_LV_LOAD",
+      "bus": "2641_LV",
+      "node": "1155911",
+      "ti_raw": "1155911",
+      "S_MVA": 0.2,
+      "fp": 0.9,
+      "P_kW": 180.0
+    },
+    {
+      "name": "2663_LV_LOAD",
+      "bus": "2663_LV",
+      "node": "1155679",
+      "ti_raw": "1155679",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "2679_LV_LOAD",
+      "bus": "2679_LV",
+      "node": "1157019",
+      "ti_raw": "1157019",
+      "S_MVA": 0.15,
+      "fp": 0.9,
+      "P_kW": 135.0
+    },
+    {
+      "name": "2753_LV_LOAD",
+      "bus": "2753_LV",
+      "node": "1155776",
+      "ti_raw": "1155776",
+      "S_MVA": 0.15,
+      "fp": 0.9,
+      "P_kW": 135.0
+    },
+    {
+      "name": "2754_LV_LOAD",
+      "bus": "2754_LV",
+      "node": "1155822",
+      "ti_raw": "1155822",
+      "S_MVA": 0.075,
+      "fp": 0.9,
+      "P_kW": 67.5
+    },
+    {
+      "name": "2768_LV_LOAD",
+      "bus": "2768_LV",
+      "node": "1155881",
+      "ti_raw": "1155881",
+      "S_MVA": 0.075,
+      "fp": 0.9,
+      "P_kW": 67.5
+    },
+    {
+      "name": "2777_LV_LOAD",
+      "bus": "2777_LV",
+      "node": "1155946",
+      "ti_raw": "1155946",
+      "S_MVA": 0.075,
+      "fp": 0.9,
+      "P_kW": 67.5
+    },
+    {
+      "name": "2778_LV_LOAD",
+      "bus": "2778_LV",
+      "node": "1155997",
+      "ti_raw": "1155997",
+      "S_MVA": 0.075,
+      "fp": 0.9,
+      "P_kW": 67.5
+    },
+    {
+      "name": "2820_LV_LOAD",
+      "bus": "2820_LV",
+      "node": "1154591",
+      "ti_raw": "1154591",
+      "S_MVA": 0.15,
+      "fp": 0.9,
+      "P_kW": 135.0
+    },
+    {
+      "name": "2821_LV_LOAD",
+      "bus": "2821_LV",
+      "node": "1103229",
+      "ti_raw": "1103229",
+      "S_MVA": 0.03,
+      "fp": 0.9,
+      "P_kW": 27.0
+    },
+    {
+      "name": "3770_LV_LOAD",
+      "bus": "3770_LV",
+      "node": "1154613",
+      "ti_raw": "1154613",
+      "S_MVA": 0.05,
+      "fp": 0.9,
+      "P_kW": 45.0
+    },
+    {
+      "name": "5043_LV_LOAD",
+      "bus": "5043_LV",
+      "node": "2214156",
+      "ti_raw": "2214156",
+      "S_MVA": 0.15,
+      "fp": 0.9,
+      "P_kW": 135.0
+    },
+    {
+      "name": "5981_LV_LOAD",
+      "bus": "5981_LV",
+      "node": "2567831",
+      "ti_raw": "2567831",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "703719_LV_LOAD",
+      "bus": "703719_LV",
+      "node": "1026666",
+      "ti_raw": "1026666",
+      "S_MVA": 0.075,
+      "fp": 0.9,
+      "P_kW": 67.5
+    },
+    {
+      "name": "704517_LV_LOAD",
+      "bus": "704517_LV",
+      "node": "4938216",
+      "ti_raw": "4938216",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "705180_LV_LOAD",
+      "bus": "705180_LV",
+      "node": "5604524",
+      "ti_raw": "5604524",
+      "S_MVA": 0.075,
+      "fp": 0.9,
+      "P_kW": 67.5
+    },
+    {
+      "name": "706157_LV_LOAD",
+      "bus": "706157_LV",
+      "node": "4249372",
+      "ti_raw": "4249372",
+      "S_MVA": 0.5,
+      "fp": 0.9,
+      "P_kW": 450.0
+    },
+    {
+      "name": "708305_LV_LOAD",
+      "bus": "708305_LV",
+      "node": "8338973",
+      "ti_raw": "8338973",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "713722_LV_LOAD",
+      "bus": "713722_LV",
+      "node": "8795266",
+      "ti_raw": "8795266",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "716636_LV_LOAD",
+      "bus": "716636_LV",
+      "node": "9219013",
+      "ti_raw": "9219013",
+      "S_MVA": 0.075,
+      "fp": 0.9,
+      "P_kW": 67.5
+    },
+    {
+      "name": "725416_LV_LOAD",
+      "bus": "725416_LV",
+      "node": "1067079",
+      "ti_raw": "1067079",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "730082_LV_LOAD",
+      "bus": "730082_LV",
+      "node": "3453260",
+      "ti_raw": "3453260",
+      "S_MVA": 0.3,
+      "fp": 0.9,
+      "P_kW": 270.0
+    },
+    {
+      "name": "730199_LV_LOAD",
+      "bus": "730199_LV",
+      "node": "3272966",
+      "ti_raw": "3272966",
+      "S_MVA": 0.15,
+      "fp": 0.9,
+      "P_kW": 135.0
+    },
+    {
+      "name": "733005_LV_LOAD",
+      "bus": "733005_LV",
+      "node": "1067133",
+      "ti_raw": "1067133",
+      "S_MVA": 0.15,
+      "fp": 0.9,
+      "P_kW": 135.0
+    },
+    {
+      "name": "735969_LV_LOAD",
+      "bus": "735969_LV",
+      "node": "1154214",
+      "ti_raw": "1154214",
+      "S_MVA": 0.5,
+      "fp": 0.9,
+      "P_kW": 450.0
+    },
+    {
+      "name": "736594_LV_LOAD",
+      "bus": "736594_LV",
+      "node": "1103458",
+      "ti_raw": "1103458",
+      "S_MVA": 0.075,
+      "fp": 0.9,
+      "P_kW": 67.5
+    },
+    {
+      "name": "738639_LV_LOAD",
+      "bus": "738639_LV",
+      "node": "4916671",
+      "ti_raw": "4916671",
+      "S_MVA": 0.3,
+      "fp": 0.9,
+      "P_kW": 270.0
+    },
+    {
+      "name": "7985_LV_LOAD",
+      "bus": "7985_LV",
+      "node": "1067109",
+      "ti_raw": "1067109",
+      "S_MVA": 0.1125,
+      "fp": 0.9,
+      "P_kW": 101.25
+    },
+    {
+      "name": "8628_LV_LOAD",
+      "bus": "8628_LV",
+      "node": "2765837",
+      "ti_raw": "2765837",
+      "S_MVA": 0.8,
+      "fp": 0.9,
+      "P_kW": 720.0
+    },
+    {
+      "name": "9712_LV_LOAD",
+      "bus": "9712_LV",
+      "node": "2789141",
+      "ti_raw": "2789141",
+      "S_MVA": 0.045,
+      "fp": 0.9,
+      "P_kW": 40.5
+    }
+  ],
+  "protecciones": {
+    "hoja": "Protecciones",
+    "encabezados": [
+      "SUBESTACIÓN",
+      "BAHÍA",
+      "TENSIÓN (kV)",
+      "RTC",
+      "RTP",
+      "FABRICANTE",
+      "MODELO",
+      "NÚMERO SERIAL",
+      "PROTECCIÓN",
+      "FUNCIÓN DEL RELÉ",
+      "TIPO DE PROTECCIÓN",
+      "AJUSTES DE FASE",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "AJUSTES DE TIERRA",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "RECIERRE",
+      ""
+    ],
+    "n_reles": 1,
+    "n_funciones_totales": 4,
+    "elementos": [
+      {
+        "subestacion": "CONUCO",
+        "bahia": "CTO 10502",
+        "tension_kv": 13.8,
+        "rtc": 60,
+        "rtp": 120,
+        "fabricante": "AREVA",
+        "modelo": "MICOM P142",
+        "serial": 360,
+        "protecciones_activas": "(50), (50N), (51), (51N)",
+        "funcion": "Sobrecorriente",
+        "tipo": "Protección Principal",
+        "ajustes_fase": {
+          "dir": "None",
+          "51_sec": 6,
+          "51_dial_tms": 0.1,
+          "51_curva": "IEC VI",
+          "50_sec": 36,
+          "50_delay_s": 0
+        },
+        "ajustes_tierra": {
+          "dir": "None",
+          "51n_sec": 2,
+          "51n_dial_tms": 0.15,
+          "51n_curva": "IEC VI",
+          "50n_sec": 20,
+          "50n_delay_s": null
+        },
+        "recierre": {
+          "79": "15/30",
+          "reset_s": 60
+        },
+        "primarios": {
+          "51_A": 360.0,
+          "50_A": 2160.0,
+          "51N_A": 120.0,
+          "50N_A": 1200.0
+        },
+        "funciones_detectadas": [
+          "51",
+          "50",
+          "51N",
+          "50N"
+        ]
+      }
+    ]
+  }
+}
