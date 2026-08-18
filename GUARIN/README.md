@@ -24,8 +24,8 @@ GUARIN/
 |----------|--------|
 | Ver topología + informe + estados | `analysis/web/topologia_interactiva.html` |
 | Regenerar datos del informe | `python analysis/scripts/generar_informe_circuito.py` |
-| Comparar Excel ↔ PDF ↔ PF | `simulation/results/comparacion_*.txt` |
-| Flujo de carga 6 escenarios | `simulation/scripts/exportar_flujo_carga.py` |
+| Comparar Excel ↔ PDF ↔ PF | `simulation/resultados de scripts/validar_red/comparacion_*.txt` |
+| Flujo de carga 6 escenarios | `simulation/scripts/flujo_carga/exportar_flujo_carga.py` |
 | Compilar estudio PDF | `cd latex && tectonic main.tex` |
 
 ## Parámetros clave

@@ -1,0 +1,29 @@
+SYNC NODOS OR -> POWERFACTORY — GUARIN 10-502
+Fecha: 2026-08-17 19:24:46
+Proyecto: \Usuario Principal.IntUser\Mas X Menos Guarin.IntPrj
+Modo: raiz | DRY_RUN: False
+Red destino: Red | Vnom: 13.8 kV
+OR nodos exactos (lineas_base): 245
+PF ElmTerm antes: 186
+======================================================================
+
+--- Renombres PF -> OR ---
+SKIP Terminal(1) -> 10 502_Term: 'Terminal(1)' no existe en PF
+
+Nodos a crear (lista 6): 4637844, 4637852, 4637861, 4916671, 10 502_Term, 4916671A
+
+--- Crear ElmTerm faltantes (modo=raiz, uknom=13.8 kV) ---
+EXISTS 4637844
+EXISTS 4637852
+EXISTS 4637861
+EXISTS 4916671
+EXISTS 10 502_Term
+EXISTS 4916671A
+
+======================================================================
+=== RESUMEN ===
+Renombres OK:     0 | omitidos: 1
+Crear OK:         0 | ya existian: 6 | omitidos/error: 0
+PF ElmTerm despues: 186
+
+Cambios aplicados. Ejecuta exportar_parametros_lineas.py y comparar_nodos_or_pf.py

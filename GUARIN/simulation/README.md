@@ -1,49 +1,111 @@
 # Simulación PowerFactory — Guarín (10-502)
 
-Base SDL del circuito: [`../../sdl/10-502.pfd`](../../sdl/10-502.pfd)
+
+
+Base SDL: [`../../sdl/10-502.pfd`](../../sdl/10-502.pfd)
+
+
+
+**Salidas:** [`resultados de scripts/`](resultados%20de%20scripts/) — misma estructura que `scripts/`.
+
+
+
+## Estructura
+
+
+
+```
+
+scripts/
+
+├── _lib/pf_or_insumos.py       # rutas, Excel OR, utilidades PF
+
+├── construir_red/              # alinear modelo con insumos OR
+
+├── validar_red/                # comparar y validar sin modificar PF
+
+└── flujo_carga/                # 6 escenarios LF (09/12/15 h)
+
+
+
+resultados de scripts/
+
+├── construir_red/
+
+├── validar_red/
+
+└── flujo_carga/
+
+```
+
+
 
 ## Scripts
 
-| Script | Uso |
-|--------|-----|
-| `scripts/validar_modelo_pf.py` | Validación inventarios + LF + CC en POC 3272966 |
-| `scripts/exportar_flujo_carga.py` | **Exporta LF** 09/12/15 × sin/con FV (`SSFV 1/2 CPW`) |
-| `scripts/exportar_parametros_lineas.py` | Exporta líneas a CSV |
-| `scripts/_cmp_*.py` | Compara diagrama / OR / modelo PF |
-| `scripts/test_crear_linea.py` | Prueba creación de tramo |
 
-## Resultados
 
-```
-results/
-├── comparacion_nodos.txt      # OR vs PF
-├── comparacion_lineas.txt     # 215 OR vs 191 PF · 30 por crear
-├── comparacion_cto_10_502.txt # Diagrama PDF vs OR vs PF
-├── lineas_parametros.csv      # Export desde PF
-├── validacion_pf.txt          # (generar con validar_modelo_pf.py)
-└── flujo_carga/               # 6 escenarios LF
-    ├── resumen.csv
-    ├── reporte.txt
-    └── analisis_tensiones/    # Figuras intermedias (copiar a latex/figuras/)
-```
+| Carpeta | Script | Donde ejecutar | Salida |
+
+|---------|--------|------------------|--------|
+
+| `construir_red/` | `exportar_parametros_lineas.py` | PowerFactory | `construir_red/lineas_parametros.csv` |
+
+| `construir_red/` | `sync_nodos_or_a_pf.py` | PowerFactory | `construir_red/sync_nodos_or_pf.txt` |
+
+| `construir_red/` | `sync_lineas_or_a_pf.py` | PowerFactory | `construir_red/sync_lineas_or_pf.txt` |
+
+| `validar_red/` | `comparar_nodos_or_pf.py` | Python | `validar_red/comparacion_nodos.txt` |
+
+| `validar_red/` | `comparar_lineas_or_pf.py` | Python | `validar_red/comparacion_lineas.txt` |
+
+| `validar_red/` | `comparar_diagrama_or_pf.py` | Python | `validar_red/comparacion_diagrama.txt` |
+
+| `validar_red/` | `validar_modelo_pf.py` | PowerFactory | `validar_red/validacion_pf.txt` |
+
+| `flujo_carga/` | `calibrar_demanda_or.py` | PowerFactory | `flujo_carga/calibrar_demanda_or.txt` |
+
+| `flujo_carga/` | `exportar_flujo_carga.py` | PowerFactory | `flujo_carga/` |
+
+
+
+## Flujo: construir y validar la red
+
+
+
+1. **PF** — `construir_red/exportar_parametros_lineas.py`
+
+2. **Python** — `validar_red/comparar_nodos_or_pf.py`, `comparar_lineas_or_pf.py`, `comparar_diagrama_or_pf.py`
+
+3. **PF** — `construir_red/sync_nodos_or_a_pf.py` (`DRY_RUN=True` primero, luego `False`)
+
+4. Repetir export + comparar hasta cuadrar nodos y líneas
+
+
 
 ## Flujo de carga
 
-1. Abrir proyecto `Mas X Menos Guarin` en PF.
-2. Confirmar ElmPvsys **`SSFV 1 CPW`** y **`SSFV 2 CPW`**.
-3. Ejecutar `scripts/exportar_flujo_carga.py`.
-4. Revisar `results/flujo_carga/`.
 
-Control FV: `outserv=1` = sin FV · `outserv=0` = con FV.
 
-## Enlace con análisis interactivo
+Objetivo de cabecera (Excel OR, 19/03/2024, **sin** SSFV, línea `804306`):
 
-Los resultados LF alimentan el informe web en [`../analysis/`](../analysis/README.md) (`escenarios_operacion.json` / `.js`).
+- 09:00 → 61,05 A · 1,459 MVA
+- 12:00 → 70,41 A · 1,683 MVA (pico)
+- 15:00 → 68,55 A · 1,638 MVA
+
+1. PF: proyecto `Mas X Menos Guarin`, SSFV 1/2 CPW
+2. PF: `flujo_carga/exportar_flujo_carga.py` (`AJUSTAR_A_OR=True` calibra I de cabecera al Excel)
+3. Revisar `resultados de scripts/flujo_carga/reporte.txt` — en `SIN_SSFV`, `err_I_pct` debe quedar dentro de ±1 %
+4. Opcional: `flujo_carga/calibrar_demanda_or.py` (`DRY_RUN=True` primero, luego `False`) para persistir escalas en Operation Scenarios
+
+
 
 ## Validación del modelo
 
-1. PowerFactory 2024 → proyecto `Mas X Menos Guarin`.
-2. Ejecutar `validar_modelo_pf.py`.
-3. Revisar `results/validacion_pf.txt`.
 
-**Conteos esperados (Excel OR):** 215 líneas · 51 cargas · POC 3272966.
+
+PF: `validar_red/validar_modelo_pf.py` → `validar_red/validacion_pf.txt`
+
+
+
+Conteos esperados (Excel OR): **215** líneas · **51** cargas · POC **3272966**
+

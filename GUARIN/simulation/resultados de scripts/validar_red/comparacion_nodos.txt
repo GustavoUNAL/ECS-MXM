@@ -1,0 +1,31 @@
+=== RESUMEN NODOS / BUSBAR ===
+OR (Excel / insumos):     245 nombres exactos
+Modelo PF:                184 nombres exactos
+Coinciden exactos:        107
+Solo en OR (exacto):      138
+Solo en Modelo (exacto):  77
+
+--- Por bus raiz (sin sufijo A/B/C de cubículo) ---
+OR buses raiz:            184
+Modelo buses raiz:        184
+Coinciden raiz:           184
+Solo en OR (raiz):        0
+Solo en Modelo (raiz):    0
+OR cubiertos por raiz en PF (distinto sufijo): 138
+
+=== SOLO EN OR — buses raiz que NO existen en el modelo ===
+
+=== SOLO EN MODELO — buses raiz que NO estan en la base OR ===
+
+=== RENOMBRES SUGERIDOS (PF -> OR) ===
+Terminal(1) -> 10 502_Term	(PF tiene origen=False, destino libre=False)
+
+=== NODOS PRIORITARIOS A CREAR (raiz) ===
+4637844	OK en PF
+4637852	OK en PF
+4637861	OK en PF
+4916671	OK en PF
+10 502_Term	OK en PF
+
+Fuente OR: Excel insumos (245 nodos exactos)
+Fuente PF: lineas_parametros.csv

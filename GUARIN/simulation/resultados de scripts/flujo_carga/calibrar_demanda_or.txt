@@ -1,0 +1,34 @@
+CALIBRAR DEMANDA CABECERA AL PERFIL OR — GUARIN 10-502
+Fecha: 2026-08-17 20:51:03
+DRY_RUN: False
+Linea cabecera: 804306  |  TOL I = 1.0 %
+IntCase en el proyecto: Hora 9, Hora 12, Hora 15
+======================================================================
+Cargas base (en servicio): 52
+
+--- 09:00  OR I=61.05 A  S=1.459 MVA ---
+  IntCase: Hora 9
+  Base SIN_SSFV: I=68.87 A (OR 61.05, +12.8 %)  S=1.646 MVA (OR 1.459)  LDF=0
+  iter 1  escala=0.8865  I=61.03 A  err=-0.03 %  S=1.459 MVA
+  APLICADO escala=0.8865  I=61.03 A  err=-0.03 %  OK
+  Creado Operation Scenario: Demanda OR 09h00
+  Guardado Operation Scenario: Demanda OR 09h00
+
+--- 12:00  OR I=70.41 A  S=1.683 MVA ---
+  AVISO: no hay IntCase para esta hora.
+  Se calibra el caso ACTIVO como 12:00
+  Base SIN_SSFV: I=68.87 A (OR 70.41, -2.2 %)  S=1.646 MVA (OR 1.683)  LDF=0
+  iter 1  escala=1.0224  I=70.41 A  err=+0.01 %  S=1.683 MVA
+  APLICADO escala=1.0224  I=70.41 A  err=+0.01 %  OK
+  Creado Operation Scenario: Demanda OR 12h00
+  Guardado Operation Scenario: Demanda OR 12h00
+
+--- 15:00  OR I=68.55 A  S=1.638 MVA ---
+  AVISO: no hay IntCase para esta hora.
+  SKIP (solo se calibra el caso activo si es 12:00)
+
+======================================================================
+IntCase emparejados: 1 / 3
+Resultado: OK
+Cargas calibradas (SIN_SSFV = perfil Excel). SSFV dejado EN SERVICIO.
+Ejecuta flujo_carga/exportar_flujo_carga.py

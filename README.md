@@ -24,7 +24,7 @@ Estudios de Conexión Simplificados — Proyectos solares **MAS X MENOS** (COPOW
 │   ├── scripts/
 │   ├── output/            # JSON, CSV, tablas
 │   └── web/               # topologia_interactiva.html
-├── simulation/            # Scripts PowerFactory + results/
+├── simulation/            # Scripts PowerFactory + resultados de scripts/
 ├── docs/                  # Notas de modelado
 └── latex/                 # Fuentes PDF del estudio
 ```
@@ -72,7 +72,7 @@ python GUARIN/latex/scripts/generar_figuras.py
 
 | Sitio | Script validación |
 |-------|-------------------|
-| GUARIN | `GUARIN/simulation/scripts/validar_modelo_pf.py` |
+| GUARIN | `GUARIN/simulation/scripts/validar_red/validar_modelo_pf.py` |
 | COLOMBIA | `COLOMBIA/simulation/scripts/validar_modelo_pf.py` |
 | CRA27 | `CRA27/simulation/scripts/validar_modelo_pf.py` |
 

@@ -1,0 +1,31 @@
+CORREGIR PARAMETROS LINEAS OR -> PF — GUARIN 10-502
+Fecha: 2026-08-17 20:17:13
+Proyecto: \Usuario Principal.IntUser\Mas X Menos Guarin.IntPrj
+DRY_RUN: False
+======================================================================
+No se crean puentes 0,0012 km ni la linea 9343 (duplicado de 9344).
+Idempotente: si longitudes/tipos ya estan OK, solo reporta EXISTS.
+
+--- TypLne CU 4/0 ---
+EXISTS TypLne '3F_15_CU_4_0_XLPE'
+
+--- Longitudes (dline) ---
+OK 825166 ya tiene 0.0165 km
+OK 825167 ya tiene 0.0299 km
+
+--- Asignar tipo 3F_15_CU_4_0_XLPE ---
+OK 828934 ya tiene 3F_15_CU_4_0_XLPE
+OK 828942 ya tiene 3F_15_CU_4_0_XLPE
+OK 828945 ya tiene 3F_15_CU_4_0_XLPE
+OK 828948 ya tiene 3F_15_CU_4_0_XLPE
+
+--- Islas / barras huerfanas (outserv) ---
+OK outserv=1 en ElmTerm '4916671' (existe 4916671A conectado)
+
+======================================================================
+=== RESUMEN ===
+Longitudes OK: 2 | omitidos: 0
+Tipos OK:      4 | omitidos: 0
+Islas OK:      1 | omitidos: 0
+
+Cambios aplicados. Ejecuta flujo_carga/exportar_flujo_carga.py

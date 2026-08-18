@@ -1,0 +1,62 @@
+======================================================================
+COMPARACION DIAGRAMA CTO_10_502 vs OR vs MODELO PF
+======================================================================
+
+=== NODOS ===
+Diagrama (listados):     184  (origen=1, primarias=78, secundarios=105)
+OR buses raiz:           184
+Modelo PF buses raiz:    184
+
+Diagrama ∩ OR:           183
+Diagrama ∩ Modelo:       183
+En diagrama, NO en OR:   0
+En diagrama, NO en PF:   0
+En OR, NO en diagrama:   0
+En PF, NO en diagrama:   1
+
+--- Origen CONUCO_13.8 ---
+En diagrama: CONUCO_13.8
+En OR (candidatos): ['10 502_Term', '5605024']
+En PF (candidatos): ['10 502_Term', '5605024']
+  -> Equivalencia tipica: CONUCO_13.8 ≈ 10 502_Term (OR) ≈ Terminal(1) (PF)
+
+--- Nodos del diagrama que FALTAN en OR ---
+(ninguno)
+
+--- Nodos del diagrama que FALTAN en el modelo PF ---
+(ninguno)
+
+--- Nodos en OR que NO estan en el diagrama ---
+
+--- Nodos en PF que NO estan en el diagrama ---
+  10 502_Term
+
+======================================================================
+=== LINEAS (IDs mencionados en el diagrama) ===
+IDs unicos en diagrama:  187
+OR lineas:               215
+PF lineas:               195
+
+Diagrama ∩ OR:           187
+Diagrama ∩ PF:           186
+En diagrama, NO en OR:   0
+En diagrama, NO en PF:   1
+En OR, NO en diagrama:   28
+En PF, NO en diagrama:   9
+
+--- Lineas del diagrama que FALTAN en OR ---
+(ninguna)
+
+--- Lineas del diagrama que FALTAN en PF ---
+  9343	1154575 -> 1154583	3F_15_CU_2_XLPE
+
+--- Lineas en OR / PF que el diagrama NO menciona ---
+OR omitidas por diagrama: 28 -> 5129, 5131, 5133, 5134, 5141, 5144, 5146, 5155, 5158, 5284, 5286, 5294, 5299, 9138, 9274, 9275, 9341, 9342, 9991, 10400, 26922, 747634, 783432, 783433, 796468, 802784, 806782, 830652
+PF omitidas por diagrama: 9 -> 5129, 5158, 5294, 9138, 9274, 9275, 9341, 9342, 9991
+
+======================================================================
+=== VEREDICTO ===
+Cobertura nodos diagrama→OR: 183/183 (sin CONUCO)
+Cobertura nodos diagrama→PF: 183/183 (sin CONUCO)
+Cobertura lineas diagrama→OR: 187/187
+Cobertura lineas diagrama→PF: 186/187

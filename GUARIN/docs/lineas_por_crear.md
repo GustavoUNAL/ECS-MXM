@@ -44,7 +44,7 @@ Si las dejas y además creas las del OR, queda topología distinta al diagrama.
 En este orden (primero nodos ya existentes, luego el ramal nuevo):
 
 1. **9344** — `1154575` ↔ `1154583` — 0,0186 km — `3F_15_CU_2_XLPE`  
-   *(ya tienes `test_crear_linea.py` para esta)*
+   *(usar `sync_nodos_or_a_pf.py` en modo exacto o crear lineas en PF)*
 2. **825166** — `1101277` ↔ `1103431` — 0,0165 — CU_2  
 3. **825167** — `1103431` ↔ `1103458` — 0,0299 — CU_2  
 4. **828934** — `1101447` ↔ `1101455` — 0,0493 — `3F_15_CU_4/0_XLPE`  

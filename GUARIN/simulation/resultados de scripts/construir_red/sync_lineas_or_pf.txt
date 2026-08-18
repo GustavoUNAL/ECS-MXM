@@ -1,0 +1,48 @@
+SYNC LINEAS OR -> POWERFACTORY — GUARIN 10-502
+Fecha: 2026-08-17 19:35:21
+Proyecto: \Usuario Principal.IntUser\Mas X Menos Guarin.IntPrj
+DRY_RUN: False
+Red destino: Red
+PF ElmLne antes: 191
+Lineas objetivo: 11
+======================================================================
+
+--- Renombres PF -> OR ---
+OK renombrado 9343 -> 9344
+OK renombrado 10396 -> 825166
+OK renombrado 10397 -> 825167
+OK renombrado 26921 -> 828934
+OK renombrado 26920 -> 828942
+OK renombrado 5303 -> 828945
+OK renombrado 5305 -> 828948
+
+--- Tipo de linea (si el TypLne existe en PF) ---
+OK 9344 ya tiene tipo 3F_15_CU_2_XLPE
+OK 825166 ya tiene tipo 3F_15_CU_2_XLPE
+OK 825167 ya tiene tipo 3F_15_CU_2_XLPE
+AVISO 828934: tipo OR '3F_15_CU_4/0_XLPE' no esta en PF (actual: '3F_15_ACSR_1/0_AIRE'). Se deja el tipo actual.
+AVISO 828942: tipo OR '3F_15_CU_4/0_XLPE' no esta en PF (actual: '3F_15_ACSR_1/0_AIRE'). Se deja el tipo actual.
+AVISO 828945: tipo OR '3F_15_CU_4/0_XLPE' no esta en PF (actual: '3F_15_ACSR_1/0_AIRE'). Se deja el tipo actual.
+AVISO 828948: tipo OR '3F_15_CU_4/0_XLPE' no esta en PF (actual: '3F_15_ACSR_1/0_AIRE'). Se deja el tipo actual.
+
+--- Crear ElmLne faltantes ---
+EXISTS 9344 (ya en PF o cubierta por renombre)
+EXISTS 825166 (ya en PF o cubierta por renombre)
+EXISTS 825167 (ya en PF o cubierta por renombre)
+EXISTS 828934 (ya en PF o cubierta por renombre)
+EXISTS 828942 (ya en PF o cubierta por renombre)
+EXISTS 828945 (ya en PF o cubierta por renombre)
+EXISTS 828948 (ya en PF o cubierta por renombre)
+OK creado ElmLne '830653' | 1101382 <-> 4637844 | 0.0165 km | 3F_15_CU_2_XLPE
+OK creado ElmLne '830654' | 4637844 <-> 4637852 | 0.0092 km | 3F_15_CU_2_XLPE
+OK creado ElmLne '830655' | 4637852 <-> 4637861 | 0.0205 km | 3F_15_CU_2_XLPE
+OK creado ElmLne '830657' | 4637861 <-> 4916671A | 0.0114 km | 3F_15_CU_2_XLPE
+
+======================================================================
+=== RESUMEN ===
+Renombres OK:     7 | omitidos: 0
+Tipos OK/aviso:   3 | sin TypLne OR: 4
+Crear OK:         4 | ya existian: 7 | omitidos/error: 0
+PF ElmLne despues: 195
+
+Cambios aplicados. Ejecuta exportar_parametros_lineas.py
