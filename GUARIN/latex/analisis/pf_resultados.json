@@ -10,6 +10,17 @@
   "cc_from_pf": true,
   "I_sc_inv_HV_kA": 0.00787295821622217,
   "aporte_pct_Ik3": 0.15376066675068903,
+  "n_nodos_lf": {
+    "09:00": 181,
+    "12:00": 181,
+    "15:00": 185
+  },
+  "n_lineas_lf": {
+    "09:00": 191,
+    "12:00": 191,
+    "15:00": 195
+  },
+  "n_nodos_cc": 9,
   "protecciones": {
     "fuente_Ik_POC": "C:\\Users\\Usuario Principal\\Documents\\copower\\Estudio de conexion\\GUARIN\\simulation\\resultados de scripts\\cortocircuito\\resumen.csv",
     "Ik3_POC_kA": 5.120268,

@@ -2,8 +2,8 @@
 """
 Cortocircuito IEC 60909 — MAS X MENOS GUARIN (10-502).
 
-Calcula falla trifasica y monofasica en nodos de la ruta al POC,
-con SSFV fuera de servicio y en servicio.
+Calcula falla trifasica y monofasica en todos los nodos de MT
+(IEC 60909, iopt_allbus=1), con SSFV fuera de servicio y en servicio.
 
 Ejecutar desde PowerFactory (proyecto abierto). Pegar el wrapper
 simulation/scripts/exportar_cortocircuito.py en un ComPython.
@@ -33,7 +33,8 @@ S_AC_KVA = 120.0
 V_LV_KV = 0.22
 V_HV_KV = 13.2
 
-NODOS = [
+# Se listan primero en el CSV; el resto de barras MT se anexan solas.
+NODOS_PRIORIDAD = [
     "3272966",
     "3272869",
     "3272761",
@@ -44,6 +45,7 @@ NODOS = [
     "10 502_Term",
     "1067001",
 ]
+NODOS = NODOS_PRIORIDAD  # compatibilidad con llamadas previas
 
 # Tipo de falla: strings IEC primero (PF a veces ignora el entero 0
 # si el comando ya quedo en 'spgf').
@@ -289,6 +291,31 @@ def read_term_sc(term):
     return ik, ip, sk
 
 
+def list_sc_terminals(app):
+    """Todas las barras de MT energizadas; prioridad al POC y a la cabecera."""
+    terms = []
+    seen = set()
+    for name in NODOS_PRIORIDAD:
+        t = pick_terminal(app, name)
+        if t is None:
+            continue
+        terms.append((name, t))
+        seen.add(name)
+        seen.add(safe_name(t))
+    for term in app.GetCalcRelevantObjects("*.ElmTerm") or []:
+        if safe_attr(term, "outserv") in (1, True, "1"):
+            continue
+        name = safe_name(term)
+        if not name or name in seen:
+            continue
+        un = _as_float(safe_attr(term, "uknom") or safe_attr(term, "e:uknom"))
+        if un is not None and un < 1.0:
+            continue
+        terms.append((name, term))
+        seen.add(name)
+    return terms
+
+
 def pick_terminal(app, name):
     exact = None
     partial = None
@@ -352,21 +379,19 @@ def main():
     else:
         log(app, "AVISO: ComShc no expone flags de convertidor; el aporte puede seguir en 0.")
 
-    terms = []
-    for name in NODOS:
-        t = pick_terminal(app, name)
-        if t is None:
-            log(app, "AVISO: no se encontro nodo %s" % name)
-        else:
-            terms.append((name, t))
-            log(app, "OK nodo %s -> %s" % (name, safe_name(t)))
+    terms = list_sc_terminals(app)
+    log(app, "Barras MT para IEC 60909: %d" % len(terms))
+    for name, t in terms[:12]:
+        log(app, "  nodo %s -> %s" % (name, safe_name(t)))
+    if len(terms) > 12:
+        log(app, "  ... +%d barras" % (len(terms) - 12))
 
     rows = []
     report = [
         "CORTOCIRCUITO IEC 60909 — GUARIN 10-502",
         "Fecha: %s" % stamp,
         "IntCase: %s" % (safe_name(icase) if icase else ""),
-        "cmax=1.1  |  nodos: %s" % ", ".join(n for n, _ in terms),
+        "cmax=1.1  |  n_nodos_MT=%d" % len(terms),
         "Aporte FV esperado: Ikss=1.5 In -> %.5f kA @ %.1f kV" % (expected_contrib_ka(), V_HV_KV),
         "=" * 72,
     ]

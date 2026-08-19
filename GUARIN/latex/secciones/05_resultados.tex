@@ -1,4 +1,5 @@
 \chapter{Resultados de Análisis Eléctricos}
+\label{cha:resultados}
 
 Este capítulo presenta los resultados del flujo de carga, del estudio de cortocircuito, de la verificación de protecciones en el punto de conexión y del cálculo de pérdidas técnicas. En cada caso se contrastan los escenarios sin y con sistema solar fotovoltaico, con el fin de cuantificar el impacto neto de la generación sobre el circuito 10-502.
 
@@ -59,7 +60,11 @@ La incorporación del proyecto ocasiona variaciones de tensión en los nodos cer
     \input{generated/tab_v_15}
 \end{table}
 
-En las tres franjas evaluadas las tensiones permanecen dentro de la banda 0,90--1,10~p.u. en todos los nodos considerados. El efecto del SSFV es, por tanto, una leve elevación local de tensión, plenamente compatible con los criterios de operación del SDL.
+En las tres franjas evaluadas las tensiones permanecen dentro de la banda 0,90--1,10~p.u. en \textbf{todos} los nodos energizados. El efecto del SSFV es una leve elevación local de tensión, compatible con el Código de Redes. Las Tablas~\ref{tab:v_todas_09}, \ref{tab:v_todas_12} y~\ref{tab:v_todas_15} listan las 181--185 barras del modelo (sin y con SSFV).
+
+\input{generated/tab_v_todas_09}
+\input{generated/tab_v_todas_12}
+\input{generated/tab_v_todas_15}
 
 \subsection{Cargabilidad de Líneas de Distribución}
 
@@ -79,7 +84,11 @@ Se evaluaron las líneas cercanas al proyecto para identificar posibles sobrecar
     \input{generated/tab_carg_lineas}
 \end{table}
 
-No se violan los límites de cargabilidad del SDL de ESSA. Más aún, en ninguna de las líneas evaluadas se observa un aumento de cargabilidad atribuible a la generación, lo que refuerza el carácter benigno de la conexión desde el punto de vista térmico del alimentador.
+No se violan los límites de cargabilidad del SDL de ESSA. En ninguna línea se observa un aumento de loading atribuible a la generación. Las Tablas~\ref{tab:ln_todas_09}, \ref{tab:ln_todas_12} y~\ref{tab:ln_todas_15} listan las 191--195 líneas en servicio, con loading e intensidad sin y con SSFV.
+
+\input{generated/tab_lineas_todas_09}
+\input{generated/tab_lineas_todas_12}
+\input{generated/tab_lineas_todas_15}
 
 \subsection{Cargabilidad de Transformadores}
 
@@ -114,22 +123,22 @@ Se calcularon los niveles de cortocircuito trifásico y monofásico en el nodo 3
 
 \subsection{Cortocircuito Monofásico}
 
-La Tabla~\ref{tab:cc_1f} presenta las corrientes de falla monofásica a las 12:00 en los nodos principales de la ruta hacia el POC. Las magnitudes se mantienen prácticamente invariantes al incorporar el SSFV, lo que confirma el carácter despreciable del aporte de los inversores en media tensión.
+La Tabla~\ref{tab:cc_1f} presenta las corrientes de falla monofásica a las 12:00 en los nodos de la ruta hacia el POC y en la cabecera del circuito. Las magnitudes se mantienen prácticamente invariantes al incorporar el SSFV, lo que confirma el carácter despreciable del aporte de los inversores en media tensión.
 
 \begin{table}[H]
     \centering
-    \caption{Cortocircuito monofásico a las 12:00 (nodos principales)}
+    \caption{Cortocircuito monofásico a las 12:00 (ruta al POC y cabecera)}
     \label{tab:cc_1f}
     \input{generated/tab_cc_1f}
 \end{table}
 
 \subsection{Cortocircuito Trifásico}
 
-De manera análoga, la Tabla~\ref{tab:cc_3f} reporta las corrientes de falla trifásica obtenidas con IEC~60909 sobre el equivalente de red. En el POC se obtienen 5,120~kA; la variación de $I_k$ entre escenarios en el bus es nula a la resolución del cálculo, porque el inversor se modela como fuente de corriente (full-size converter) y no entra en la malla de impedancias. El aporte propio se evalúa aparte (Tabla~\ref{tab:cc_aporte}): $1{,}5\,I_L$ referidos a 13,2~kV equivalen a 0,008~kA, el 0,15\% de $I_{k3}$ en el POC, por debajo del 1\%. No se requieren modificaciones en las protecciones del circuito 10-502.
+De manera análoga, la Tabla~\ref{tab:cc_3f} reporta las corrientes de falla trifásica obtenidas con IEC~60909 sobre el equivalente de red. En el POC se obtienen 5,120~kA; en la cabecera del circuito el nivel es de 26,985~kA. La variación de $I_k$ entre escenarios en el bus es nula a la resolución del cálculo, porque el inversor se modela como fuente de corriente (full-size converter) y no entra en la malla de impedancias. El aporte propio se evalúa aparte (Tabla~\ref{tab:cc_aporte}): $1{,}5\,I_L$ referidos a 13,2~kV equivalen a 0,008~kA, el 0,15\% de $I_{k3}$ en el POC, por debajo del 1\%. La Tabla~\ref{tab:cc_todas} reúne $I_{k3}$ e $I_{k1}$ en todos los nodos calculados; la Tabla~\ref{tab:cc_lineas} asigna esas corrientes a los extremos $i$--$j$ de \textbf{todas} las líneas del alimentador. No se requieren modificaciones en las protecciones del circuito 10-502.
 
 \begin{table}[H]
     \centering
-    \caption{Cortocircuito trifásico a las 12:00 (nodos principales)}
+    \caption{Cortocircuito trifásico a las 12:00 (ruta al POC y cabecera)}
     \label{tab:cc_3f}
     \input{generated/tab_cc_3f}
 \end{table}
@@ -140,6 +149,10 @@ De manera análoga, la Tabla~\ref{tab:cc_3f} reporta las corrientes de falla tri
     \label{tab:cc_aporte}
     \input{generated/tab_cc_aporte}
 \end{table}
+
+\input{generated/tab_cc_todas}
+\input{generated/tab_cc_ip_todas}
+\input{generated/tab_cc_lineas}
 
 \section{Protección en el Punto de Conexión}
 
