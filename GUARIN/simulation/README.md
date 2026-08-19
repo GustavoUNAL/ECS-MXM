@@ -66,6 +66,10 @@ resultados de scripts/
 
 | `flujo_carga/` | `exportar_flujo_carga.py` | PowerFactory | `flujo_carga/` |
 
+| `cortocircuito/` | `exportar_cortocircuito.py` | PowerFactory | `cortocircuito/` |
+
+| `protecciones/` | `exportar_coordinacion.py` | Python | `protecciones/` |
+
 
 
 ## Flujo: construir y validar la red
@@ -96,6 +100,14 @@ Objetivo de cabecera (Excel OR, 19/03/2024, **sin** SSFV, línea `804306`):
 2. PF: `flujo_carga/exportar_flujo_carga.py` (`AJUSTAR_A_OR=True` calibra I de cabecera al Excel)
 3. Revisar `resultados de scripts/flujo_carga/reporte.txt` — en `SIN_SSFV`, `err_I_pct` debe quedar dentro de ±1 %
 4. Opcional: `flujo_carga/calibrar_demanda_or.py` (`DRY_RUN=True` primero, luego `False`) para persistir escalas en Operation Scenarios
+
+
+
+## Cortocircuito y protecciones
+
+1. **PF** — `exportar_cortocircuito.py` (wrapper ComPython) → `resultados de scripts/cortocircuito/`
+2. **Python** — `scripts/protecciones/exportar_coordinacion.py`
+3. **Python** — `latex/scripts/exportar_tablas_estudio.py` → `latex/generated/*.tex` y `latex/figuras/fig_*.png`
 
 
 

@@ -1,0 +1,7 @@
+COORDINACION PROTECCIONES — GUARIN 10-502
+Fuente Ik POC: C:\Users\Usuario Principal\Documents\copower\Estudio de conexion\GUARIN\simulation\resultados de scripts\cortocircuito\resumen.csv
+Ik3 POC = 5.12027 kA | Ik1 POC = 3.14984 kA
+Margen 51 vs Imax = 5.11 (criterio >= 1.5) OK
+Igen MT = 5.249 A << 360 A  |  aporte SSFV = 0.1538 % de Ik3
+t51 @ Ik3 POC = 0.1021 s | opera 50: True
+Salida: C:\Users\Usuario Principal\Documents\copower\Estudio de conexion\GUARIN\simulation\resultados de scripts\protecciones
